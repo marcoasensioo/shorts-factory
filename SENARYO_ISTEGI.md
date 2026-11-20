@@ -1,0 +1,189 @@
+# Yeni senaryo isteme (Claude Pro, ücretsiz)
+
+Aşağıdaki metni olduğu gibi claude.ai'ye yapıştır. Köşeli parantezli yerleri doldur.
+Gelen her JSON'u `topics/` klasörüne `<id>.json` adıyla kaydet. Autopilot sıradaki
+render edilmemiş konuyu kendisi bulur.
+
+---
+
+Bana "countdown3d" video şablonu için [5] adet senaryo JSON'u yaz. Konular: [Türkiye'nin en yüksek 10 volkanı; Toros Dağları'nın en yüksek 10 zirvesi; ...]
+
+Kurallar:
+- Her bilgiyi web'de doğrula. Kaynaklar arasında çelişen maddeleri alma.
+- Konu, Türkiye'de konumu ve yüksekliği olan 10 doğal yer sıralaması olmalı (dağ, volkan, zirve).
+- hook.say: ilk 2 saniyede şaşırtan tek cümle + "İşte ..." cümlesi.
+- Her maddenin "say" metni 8-12 kelime olsun. Sıra sayısıyla başlasın ("Onuncu sırada, ...") ve rakamla yazılmış değerle bitsin ("... 3524 metre."). Rakamlarda nokta kullanma.
+- 1. madde "Ve birinci: ..." diye başlasın.
+- Toplam anlatım en fazla 150 kelime olsun.
+- fact en fazla 34 karakter olsun. region "Bölge · İl" biçiminde yazılsın. shape "volcano" ya da "alpine" olsun. seed'ler birbirinden farklı tam sayılar olsun. lat/lon ondalık derece olsun.
+- meta.caption ve meta.hashtags (5-8 etiket) ekle. id Türkçe karaktersiz kebab-case olsun.
+- Her senaryoyu ayrı bir indirilebilir .json dosyası olarak ver.
+
+Şema örneği:
+```json
+{
+ "id": "turkiyenin-en-yuksek-10-dagi",
+ "title": "Türkiye'nin En Yüksek 10 Dağı",
+ "template": "countdown3d",
+ "theme": "mountain",
+ "unit": "m",
+ "voice": {
+  "engine": "gtts",
+  "lang": "tr",
+  "speed": 1.28,
+  "gap": 0.18
+ },
+ "hook": {
+  "say": "Türkiye'nin en yüksek dağı, Everest'in yarısından bile yüksek. İşte en yüksek on dağımız!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "TÜRKİYE'NİN EN YÜKSEK 10 DAĞI"
+ },
+ "items": [
+  {
+   "rank": 10,
+   "name": "Medetsiz",
+   "value": 3524,
+   "region": "Bolkar Dağları · Niğde",
+   "lat": 37.42,
+   "lon": 34.62,
+   "shape": "alpine",
+   "seed": 11,
+   "fact": "Bolkar Dağları'nın zirvesi",
+   "say": "Onuncu sırada, Bolkar Dağları'nın zirvesi Medetsiz: 3524 metre."
+  },
+  {
+   "rank": 9,
+   "name": "Artos",
+   "value": 3550,
+   "region": "Gevaş · Van",
+   "lat": 38.25,
+   "lon": 43.11,
+   "shape": "volcano",
+   "seed": 23,
+   "fact": "Van Gölü'ne bakan uyuyan volkan",
+   "say": "Dokuzuncu, Van Gölü'ne tepeden bakan uyuyan volkan Artos: 3550 metre."
+  },
+  {
+   "rank": 8,
+   "name": "Demirkazık",
+   "value": 3756,
+   "region": "Aladağlar · Niğde",
+   "lat": 37.81,
+   "lon": 35.16,
+   "shape": "alpine",
+   "seed": 37,
+   "fact": "Kuzey duvarı efsanevi bir tırmanış",
+   "say": "Sekizinci, kuzey duvarıyla ünlü Demirkazık: 3756 metre."
+  },
+  {
+   "rank": 7,
+   "name": "Kızılkaya",
+   "value": 3767,
+   "region": "Aladağlar · Niğde",
+   "lat": 37.84,
+   "lon": 35.19,
+   "shape": "alpine",
+   "seed": 41,
+   "fact": "Toros Dağları'nın en yüksek zirvesi",
+   "say": "Yedinci, Toros Dağları'nın en yüksek zirvesi Kızılkaya: 3767 metre."
+  },
+  {
+   "rank": 6,
+   "name": "Küçük Ağrı",
+   "value": 3896,
+   "region": "Iğdır",
+   "lat": 39.65,
+   "lon": 44.4,
+   "shape": "volcano",
+   "seed": 53,
+   "fact": "Ağrı Dağı'nın küçük kardeşi",
+   "say": "Altıncı, Ağrı'nın küçük kardeşi Küçük Ağrı: 3896 metre."
+  },
+  {
+   "rank": 5,
+   "name": "Erciyes",
+   "value": 3917,
+   "region": "Kayseri",
+   "lat": 38.53,
+   "lon": 35.45,
+   "shape": "volcano",
+   "seed": 67,
+   "fact": "İç Anadolu'nun en yüksek dağı",
+   "say": "Beşinci, İç Anadolu'nun çatısı Erciyes: 3917 metre."
+  },
+  {
+   "rank": 4,
+   "name": "Kaçkar",
+   "value": 3932,
+   "region": "Rize",
+   "lat": 40.84,
+   "lon": 41.16,
+   "shape": "alpine",
+   "seed": 71,
+   "fact": "Bir yamacı Karadeniz'e bakıyor",
+   "say": "Dördüncü, bir yamacı Karadeniz'e bakan Kaçkar: 3932 metre."
+  },
+  {
+   "rank": 3,
+   "name": "Süphan",
+   "value": 4058,
+   "region": "Bitlis",
+   "lat": 38.93,
+   "lon": 42.83,
+   "shape": "volcano",
+   "seed": 83,
+   "fact": "Van Gölü kıyısının volkanik devi",
+   "say": "Üçüncü, Van Gölü kıyısının devi Süphan: 4058 metre."
+  },
+  {
+   "rank": 2,
+   "name": "Cilo",
+   "value": 4135,
+   "region": "Hakkari",
+   "lat": 37.5,
+   "lon": 44.03,
+   "shape": "alpine",
+   "seed": 97,
+   "fact": "Türkiye'nin en büyük vadi buzulu burada",
+   "say": "İkinci, Türkiye'nin en büyük vadi buzulunu saklayan Cilo: 4135 metre."
+  },
+  {
+   "rank": 1,
+   "name": "Ağrı Dağı",
+   "value": 5137,
+   "region": "Ağrı · Iğdır",
+   "lat": 39.7,
+   "lon": 44.3,
+   "shape": "volcano",
+   "seed": 101,
+   "fact": "Zirvesi dört mevsim buzla kaplı",
+   "say": "Ve birinci: zirvesi dört mevsim buzla kaplı, Türkiye'nin çatısı Ağrı Dağı! Tam 5137 metre.",
+   "extra_peaks": [
+    [
+     1.5,
+     1.0,
+     0.76,
+     0.5
+    ]
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Sen hangisine tırmanmak isterdin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HANGİSİNE TIRMANIRDIN?",
+  "cta": "Yorumlara yaz"
+ },
+ "meta": {
+  "caption": "Türkiye'nin en yüksek dağı Everest'in yarısından bile yüksek! ⛰️ Sen hangisine tırmanırdın?",
+  "hashtags": [
+   "#shorts",
+   "#türkiye",
+   "#dağ",
+   "#ağrıdağı",
+   "#bilgi",
+   "#keşfet",
+   "#coğrafya"
+  ]
+ }
+}
+```

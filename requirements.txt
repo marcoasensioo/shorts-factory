@@ -1,0 +1,5 @@
+gTTS>=2.5
+numpy
+scipy
+soundfile
+playwright
