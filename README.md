@@ -1,3 +1,5 @@
+**Keşif Kutusu YouTube kanalı için video yükleme aracı (YouTube API Servisleri kullanır).** [Gizlilik Politikası](PRIVACY.md)
+
 # Shorts Factory: otomatik 3D bilgi videosu üreticisi
 
 Varsayılan kurulum tamamen ücretsizdir: Python, ffmpeg, Chrome, gTTS (Google TTS). Senaryoları Claude Pro yazar.
