@@ -12,6 +12,8 @@ import re
 import sys
 import unicodedata
 import urllib.request
+import urllib.error
+import gzip
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 QUEUE = os.path.join(ROOT, "topics_queue.txt")
@@ -58,9 +60,17 @@ def ask_github_models(prompt):
         "https://models.github.ai/inference/chat/completions",
         data=json.dumps({"model": os.environ.get("GH_MODEL", "openai/gpt-4.1"), "temperature": 0.4,
                          "messages": [{"role": "user", "content": prompt}]}).encode(),
-        headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=180) as r:
-        return json.load(r)["choices"][0]["message"]["content"]
+        headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json",
+                 "Accept": "application/json", "Accept-Encoding": "identity", "X-GitHub-Api-Version": "2022-11-28"})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            raw = r.read()
+    except urllib.error.HTTPError as e:
+        raise SystemExit(f"GitHub Models hata {e.code}: {e.read()[:500]}")
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    print("MODEL CEVABI:", raw[:300])
+    return json.loads(raw)["choices"][0]["message"]["content"]
 
 
 def ask_claude(prompt):
@@ -114,5 +124,8 @@ if __name__ == "__main__":
         if not lines:
             sys.exit("Kuyruk boş: topics_queue.txt dosyasına konu ekleyin.")
         topic = lines[0]
+        path = generate(topic)
         open(QUEUE, "w", encoding="utf-8").write("\n".join(lines[1:]) + "\n")
+        print(path)
+        sys.exit(0)
     print(generate(topic))
