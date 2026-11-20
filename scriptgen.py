@@ -55,22 +55,35 @@ def slug(s):
 
 
 def ask_github_models(prompt):
-    """GitHub Actions içinde ücretsiz (GitHub Models, GITHUB_TOKEN ile)."""
-    req = urllib.request.Request(
-        "https://models.github.ai/inference/chat/completions",
-        data=json.dumps({"model": os.environ.get("GH_MODEL", "openai/gpt-4.1"), "temperature": 0.4,
-                         "messages": [{"role": "user", "content": prompt}]}).encode(),
-        headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json",
-                 "Accept": "application/json", "Accept-Encoding": "identity", "X-GitHub-Api-Version": "2022-11-28"})
-    try:
-        with urllib.request.urlopen(req, timeout=180) as r:
-            raw = r.read()
-    except urllib.error.HTTPError as e:
-        raise SystemExit(f"GitHub Models hata {e.code}: {e.read()[:500]}")
-    if raw[:2] == b"\x1f\x8b":
-        raw = gzip.decompress(raw)
-    print("MODEL CEVABI:", raw[:300])
-    return json.loads(raw)["choices"][0]["message"]["content"]
+    """GitHub Actions içinde ücretsiz (GitHub Models). Birkaç adres/model sırayla denenir."""
+    tries = [("https://models.github.ai/inference/chat/completions", "openai/gpt-4.1"),
+             ("https://models.github.ai/inference/chat/completions", "openai/gpt-4o"),
+             ("https://models.github.ai/inference/chat/completions", "openai/gpt-4.1-mini"),
+             ("https://models.inference.ai.azure.com/chat/completions", "gpt-4o"),
+             ("https://models.inference.ai.azure.com/chat/completions", "gpt-4o-mini")]
+    if os.environ.get("GH_MODEL"):
+        tries.insert(0, (tries[0][0], os.environ["GH_MODEL"]))
+    errors = []
+    for url, model in tries:
+        req = urllib.request.Request(
+            url, data=json.dumps({"model": model, "temperature": 0.4, "max_tokens": 3500,
+                                  "messages": [{"role": "user", "content": prompt}]}).encode(),
+            headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json",
+                     "Accept": "application/json", "Accept-Encoding": "identity",
+                     "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "shorts-factory"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                raw = r.read()
+            if raw[:2] == b"\x1f\x8b":
+                raw = gzip.decompress(raw)
+            txt = json.loads(raw)["choices"][0]["message"]["content"]
+            print(f"MODEL: {model} @ {url}")
+            return txt
+        except urllib.error.HTTPError as e:
+            errors.append(f"{model}@{url}: HTTP {e.code} {e.read()[:200]}")
+        except Exception as e:  # noqa
+            errors.append(f"{model}@{url}: {type(e).__name__} {str(e)[:120]} | {raw[:80] if 'raw' in dir() else ''}")
+    raise SystemExit("GitHub Models başarısız:\n" + "\n".join(errors))
 
 
 def ask_claude(prompt):
