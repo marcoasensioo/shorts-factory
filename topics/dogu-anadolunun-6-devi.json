@@ -1,0 +1,117 @@
+{
+ "id": "dogu-anadolunun-6-devi",
+ "title": "Doğu Anadolu'nun 6 Devi",
+ "template": "countdown3d",
+ "unit": "m",
+ "voice": {
+  "engine": "gtts",
+  "lang": "tr",
+  "speed": 1.28,
+  "gap": 0.18
+ },
+ "hook": {
+  "say": "Türkiye'nin en yüksek zirvelerinin neredeyse hepsi tek bir bölgede. İşte Doğu Anadolu'nun altı devi!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "DOĞU ANADOLU'NUN 6 DEVİ"
+ },
+ "items": [
+  {
+   "rank": 6,
+   "name": "Nemrut",
+   "value": 2948,
+   "region": "Tatvan · Bitlis",
+   "lat": 38.65,
+   "lon": 42.23,
+   "shape": "volcano",
+   "seed": 311,
+   "fact": "Kraterinde göl saklıyor",
+   "say": "Altıncı sırada, kraterinde göl saklayan Nemrut: 2948 metre."
+  },
+  {
+   "rank": 5,
+   "name": "Artos",
+   "value": 3550,
+   "region": "Gevaş · Van",
+   "lat": 38.25,
+   "lon": 43.11,
+   "shape": "volcano",
+   "seed": 313,
+   "fact": "Van Gölü'ne bakan volkan",
+   "say": "Beşinci, Van Gölü'ne tepeden bakan Artos: 3550 metre."
+  },
+  {
+   "rank": 4,
+   "name": "Küçük Ağrı",
+   "value": 3896,
+   "region": "Iğdır",
+   "lat": 39.65,
+   "lon": 44.4,
+   "shape": "volcano",
+   "seed": 317,
+   "fact": "Ağrı Dağı'nın küçük kardeşi",
+   "say": "Dördüncü, Ağrı'nın küçük kardeşi Küçük Ağrı: 3896 metre."
+  },
+  {
+   "rank": 3,
+   "name": "Süphan",
+   "value": 4058,
+   "region": "Bitlis",
+   "lat": 38.93,
+   "lon": 42.83,
+   "shape": "volcano",
+   "seed": 331,
+   "fact": "Van Gölü kıyısının devi",
+   "say": "Üçüncü, Van Gölü kıyısının devi Süphan: 4058 metre."
+  },
+  {
+   "rank": 2,
+   "name": "Cilo",
+   "value": 4135,
+   "region": "Hakkari",
+   "lat": 37.5,
+   "lon": 44.03,
+   "shape": "alpine",
+   "seed": 337,
+   "fact": "Türkiye'nin en büyük vadi buzulu",
+   "say": "İkinci, buzullarıyla ünlü Hakkari'nin devi Cilo: 4135 metre."
+  },
+  {
+   "rank": 1,
+   "name": "Ağrı Dağı",
+   "value": 5137,
+   "region": "Ağrı · Iğdır",
+   "lat": 39.7,
+   "lon": 44.3,
+   "shape": "volcano",
+   "seed": 347,
+   "fact": "Zirvesi dört mevsim buzla kaplı",
+   "say": "Ve birinci: Türkiye'nin çatısı Ağrı Dağı! Tam 5137 metre.",
+   "extra_peaks": [
+    [
+     1.5,
+     1.0,
+     0.76,
+     0.5
+    ]
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Sen hangisinin zirvesini görmek isterdin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HANGİSİNE TIRMANIRDIN?",
+  "cta": "Yorumlara yaz"
+ },
+ "meta": {
+  "title": "Doğu Anadolu'nun 6 Devi ⛰️ #shorts",
+  "caption": "Türkiye'nin en yüksek zirveleri neredeyse hep aynı bölgede! ⛰️",
+  "hashtags": [
+   "#shorts",
+   "#doğuanadolu",
+   "#dağ",
+   "#ağrıdağı",
+   "#türkiye",
+   "#bilgi",
+   "#keşfet"
+  ]
+ }
+}
