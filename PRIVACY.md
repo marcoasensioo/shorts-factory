@@ -6,4 +6,4 @@ Shorts Factory, Keşif Kutusu YouTube kanalının sahibinin yalnızca kendi kana
 - **Google Gizlilik Politikası:** https://policies.google.com/privacy
 - **Toplanan veriler:** Hiçbir kullanıcı verisi toplanmaz, saklanmaz veya paylaşılmaz. Tek yetki, video yükleme (youtube.upload) iznidir.
 - **Silme ve iptal:** Yetki, https://myaccount.google.com/permissions adresinden istenildiği an iptal edilebilir. İptal edildiğinde saklanan anahtar geçersiz olur ve depodan silinir.
-- **İletişim:** bilgizirvesi4@gmail.com
+- **İletişim:** merakkutusu3434@gmail.com
