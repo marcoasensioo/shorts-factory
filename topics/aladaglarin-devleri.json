@@ -1,0 +1,85 @@
+{
+ "id": "aladaglarin-devleri",
+ "title": "Aladağlar'ın Devleri",
+ "template": "countdown3d",
+ "unit": "m",
+ "voice": {
+  "engine": "gtts",
+  "lang": "tr",
+  "speed": 1.28,
+  "gap": 0.18
+ },
+ "hook": {
+  "say": "Toroslar'ın en yüksek zirveleri birbirine sadece birkaç yüz metre uzaklıkta. İşte Niğde'nin devleri!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ALADAĞLAR'IN DEVLERİ"
+ },
+ "items": [
+  {
+   "rank": 4,
+   "name": "Medetsiz",
+   "value": 3524,
+   "region": "Bolkar Dağları · Niğde",
+   "lat": 37.42,
+   "lon": 34.62,
+   "shape": "alpine",
+   "seed": 601,
+   "fact": "Bolkar Dağları'nın zirvesi",
+   "say": "Dördüncü sırada, Bolkar Dağları'nın zirvesi Medetsiz: 3524 metre."
+  },
+  {
+   "rank": 3,
+   "name": "Emler",
+   "value": 3723,
+   "region": "Aladağlar · Niğde",
+   "lat": 37.8,
+   "lon": 35.18,
+   "shape": "alpine",
+   "seed": 607,
+   "fact": "Aladağlar'ın 3700'lük zirvesi",
+   "say": "Üçüncü, Aladağlar'ın sessiz devi Emler: 3723 metre."
+  },
+  {
+   "rank": 2,
+   "name": "Demirkazık",
+   "value": 3756,
+   "region": "Aladağlar · Niğde",
+   "lat": 37.796,
+   "lon": 35.156,
+   "shape": "alpine",
+   "seed": 613,
+   "fact": "İlk tırmanış 1927'de yapıldı",
+   "say": "İkinci, ilk kez 1927'de tırmanılan Demirkazık: 3756 metre."
+  },
+  {
+   "rank": 1,
+   "name": "Kızılkaya",
+   "value": 3767,
+   "region": "Aladağlar · Niğde",
+   "lat": 37.797,
+   "lon": 35.157,
+   "shape": "alpine",
+   "seed": 617,
+   "fact": "Toros Dağları'nın en yüksek zirvesi",
+   "say": "Ve birinci: Demirkazık'ın komşusu Kızılkaya! Tam 3767 metre."
+  }
+ ],
+ "outro": {
+  "say": "Sen hangisinin zirvesinde fotoğraf çekmek isterdin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HANGİSİNE TIRMANIRDIN?",
+  "cta": "Yorumlara yaz"
+ },
+ "meta": {
+  "title": "Aladağlar'ın Devleri 🧗 #shorts",
+  "caption": "Toroslar'ın en yüksek zirveleri yan yana! 🧗",
+  "hashtags": [
+   "#shorts",
+   "#aladağlar",
+   "#niğde",
+   "#toroslar",
+   "#dağcılık",
+   "#bilgi",
+   "#keşfet"
+  ]
+ }
+}

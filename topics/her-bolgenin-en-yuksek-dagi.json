@@ -1,0 +1,105 @@
+{
+ "id": "her-bolgenin-en-yuksek-dagi",
+ "title": "Her Bölgenin En Yüksek Dağı",
+ "template": "countdown3d",
+ "unit": "m",
+ "voice": {
+  "engine": "gtts",
+  "lang": "tr",
+  "speed": 1.28,
+  "gap": 0.18
+ },
+ "hook": {
+  "say": "Türkiye'nin en yüksek dağı ile Ege'ninki arasında tam 2600 metre fark var. İşte bölgelerin zirveleri!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "HER BÖLGENİN EN YÜKSEK DAĞI"
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Honaz",
+   "value": 2528,
+   "region": "Denizli · Ege",
+   "lat": 37.68,
+   "lon": 29.27,
+   "shape": "alpine",
+   "seed": 401,
+   "fact": "Batı Anadolu'nun en yüksek noktası",
+   "say": "Ege'nin zirvesi, Denizli'deki Honaz Dağı: 2528 metre."
+  },
+  {
+   "rank": 4,
+   "name": "Uludağ",
+   "value": 2543,
+   "region": "Bursa · Marmara",
+   "lat": 40.07,
+   "lon": 29.22,
+   "shape": "alpine",
+   "seed": 409,
+   "fact": "Marmara'nın en yüksek dağı",
+   "say": "Marmara'nın zirvesi, Bursa'nın simgesi Uludağ: 2543 metre."
+  },
+  {
+   "rank": 3,
+   "name": "Erciyes",
+   "value": 3917,
+   "region": "Kayseri · İç Anadolu",
+   "lat": 38.53,
+   "lon": 35.45,
+   "shape": "volcano",
+   "seed": 419,
+   "fact": "Sönmüş dev bir volkan",
+   "say": "İç Anadolu'nun zirvesi, sönmüş volkan Erciyes: 3917 metre."
+  },
+  {
+   "rank": 2,
+   "name": "Kaçkar",
+   "value": 3932,
+   "region": "Rize · Karadeniz",
+   "lat": 40.84,
+   "lon": 41.16,
+   "shape": "alpine",
+   "seed": 421,
+   "fact": "Karadeniz'in çatısı",
+   "say": "Karadeniz'in zirvesi, buzul vadileriyle ünlü Kaçkar: 3932 metre."
+  },
+  {
+   "rank": 1,
+   "name": "Ağrı Dağı",
+   "value": 5137,
+   "region": "Ağrı · Doğu Anadolu",
+   "lat": 39.7,
+   "lon": 44.3,
+   "shape": "volcano",
+   "seed": 431,
+   "fact": "Türkiye'nin en yüksek noktası",
+   "say": "Ve Doğu Anadolu'nun zirvesi, Türkiye'nin çatısı Ağrı Dağı! Tam 5137 metre.",
+   "extra_peaks": [
+    [
+     1.5,
+     1.0,
+     0.76,
+     0.5
+    ]
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Senin bölgenin en yüksek dağı hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HANGİSİNE TIRMANIRDIN?",
+  "cta": "Yorumlara yaz"
+ },
+ "meta": {
+  "title": "Her Bölgenin En Yüksek Dağı ⛰️ #shorts",
+  "caption": "Türkiye'nin her bölgesinin zirvesi! Seninki hangisi? ⛰️",
+  "hashtags": [
+   "#shorts",
+   "#türkiye",
+   "#dağ",
+   "#coğrafya",
+   "#bilgi",
+   "#keşfet",
+   "#ağrıdağı"
+  ]
+ }
+}
