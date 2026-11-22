@@ -31,3 +31,29 @@ def upload(path, title, description, tags, privacy="public"):
                                      headers={"Content-Type": "video/mp4", "Content-Length": str(size)})
         with urllib.request.urlopen(put, timeout=1800) as r:
             return json.load(r)["id"]
+
+
+def comment(video_id, text, tries=4, wait=45):
+    """Videoya kanal adına üst düzey yorum yazar (youtube.force-ssl izni gerekir).
+    Yeni yüklenen video henüz işleniyorsa birkaç kez bekleyip yeniden dener."""
+    import time
+    import urllib.error
+    body = {"snippet": {"videoId": video_id,
+                        "topLevelComment": {"snippet": {"textOriginal": text[:9000]}}}}
+    last = None
+    for i in range(tries):
+        tok = access_token()
+        req = urllib.request.Request(
+            "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet",
+            data=json.dumps(body).encode(), method="POST",
+            headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.load(r)["id"]
+        except urllib.error.HTTPError as e:
+            last = f"{e.code} {e.read().decode('utf-8', 'replace')[:400]}"
+            if e.code in (401, 403) and ("insufficient" in last.lower() or "scope" in last.lower()):
+                raise RuntimeError("Yorum izni yok: YT_REFRESH_TOKEN'ı youtube.force-ssl izniyle yenile. " + last)
+        if i < tries - 1:
+            time.sleep(wait)
+    raise RuntimeError("Yorum yazılamadı: " + str(last))
