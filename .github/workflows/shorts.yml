@@ -4,6 +4,11 @@ on:
     - cron: "41 8 * * *"
     - cron: "11 15 * * *"
   workflow_dispatch:
+    inputs:
+      sadece_ses_testi:
+        description: "Sadece ses testi (video yapma, YouTube'a yükleme)"
+        type: boolean
+        default: false
 permissions:
   contents: write
   models: read
@@ -18,7 +23,23 @@ jobs:
         with: { python-version: "3.12" }
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements.txt
+      - name: Sadece ses testi
+        if: ${{ inputs.sadece_ses_testi }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TTS_VOICE: ${{ vars.GEMINI_TTS_VOICE }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+          GOOGLE_TTS_VOICE: ${{ vars.GOOGLE_TTS_VOICE }}
+          CHIRP_TEMPO: ${{ vars.SES_HIZI }}
+        run: python ses_testi.py
+      - name: Ses dosyasini indirilebilir yap
+        if: ${{ inputs.sadece_ses_testi }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ses-testi
+          path: ses_testi/*.mp3
       - name: Video uret ve yukle
+        if: ${{ !inputs.sadece_ses_testi }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +54,7 @@ jobs:
           CHIRP_TEMPO: ${{ vars.SES_HIZI }}
         run: python autopilot.py
       - name: Durumu kaydet
-        if: always()
+        if: ${{ always() && !inputs.sadece_ses_testi }}
         run: |
           git config user.name "shorts-bot"
           git config user.email "bot@users.noreply.github.com"
