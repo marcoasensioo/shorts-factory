@@ -1,0 +1,67 @@
+{
+ "id": "kalbinin-rakamlari",
+ "title": "Kalbinin İnanılmaz Rakamları",
+ "template": "explainer3d",
+ "theme": "body",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Kalbin şu an bu videoyu izlerken bile durmadan çalışıyor. İşte rakamlar!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "KALBİNİN İNANILMAZ RAKAMLARI",
+  "object": "heart"
+ },
+ "scenes": [
+  {
+   "title": "GÜNDE {n} ATIŞ",
+   "object": "heart",
+   "sub": "Dakikada ortalama 72 atış",
+   "say": "Kalbin her gün yaklaşık 100000 kez atıyor.",
+   "count": 100000
+  },
+  {
+   "title": "GÜNDE {n} LİTRE",
+   "object": "drop",
+   "sub": "Vücudundaki kan günde defalarca döner",
+   "say": "Ve her gün yaklaşık 7500 litre kan pompalıyor.",
+   "count": 7500
+  },
+  {
+   "title": "2,5 MİLYAR ATIŞ",
+   "object": "clock",
+   "sub": "Ortalama bir ömür boyunca",
+   "say": "Ortalama bir ömür boyunca bu sayı 2,5 milyar atışı geçiyor."
+  },
+  {
+   "title": "{n} KM DAMAR",
+   "object": "earth",
+   "sub": "Dünya'nın çevresini 2 kez dolaşır",
+   "say": "Pompaladığı kan yaklaşık 96000 kilometrelik damar ağında dolaşıyor. Bu, Dünya'nın çevresini iki kez dolaşmaya yetiyor.",
+   "count": 96000,
+   "theme": "earth"
+  }
+ ],
+ "outro": {
+  "say": "Sen bugün kalbin için ne yaptın? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "KALBİN İÇİN NE YAPTIN?",
+  "cta": "Yorumlara yaz",
+  "object": "heart"
+ },
+ "meta": {
+  "title": "Kalbinin inanılmaz rakamları ❤️ #shorts",
+  "caption": "Kalbin günde 100.000 kez atıyor! ❤️",
+  "hashtags": [
+   "#shorts",
+   "#kalp",
+   "#sağlık",
+   "#insanvücudu",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

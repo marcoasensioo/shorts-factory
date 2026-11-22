@@ -102,3 +102,58 @@ def build(spec, segs, words, total):
         "scenes": scenes, "captions": chunks,
     }
     return tl, events, intensity, end
+
+
+def build_explainer(spec, segs, words, total):
+    """explainer3d: kanca + N bilgi sahnesi + kapanış. Her sahne bir anlatım parçasıdır."""
+    sc = spec["scenes"]
+    n = len(sc)
+    LEAD = 0.25
+    starts = [segs[k + 1]["t0"] - LEAD for k in range(n)]
+    outro_start = segs[n + 1]["t0"] - LEAD
+    end = segs[n + 1]["t1"] + 1.3
+    scenes = [{"type": "hook", "t0": 0.0, "t1": starts[0]}]
+    events = [{"t": 0.0, "type": "impact", "gain": 0.8},
+              {"t": 0.12, "type": "pop", "gain": 0.5, "args": {"pitch": 1.2}},
+              {"t": 0.3, "type": "whoosh", "gain": 0.4}]
+    for k, d in enumerate(sc):
+        s0, s1 = starts[k], (starts[k + 1] if k + 1 < n else outro_start)
+        ent = {"type": "scene", "k": k, "t0": s0, "t1": s1}
+        last = k == n - 1 and n > 2
+        if last:
+            events += [{"t": s0 - 2.2, "type": "riser", "gain": 0.55, "args": {"d": 2.2}},
+                       {"t": s0, "type": "boom", "gain": 0.8}]
+        else:
+            events += [{"t": s0 - 0.38, "type": "whoosh", "gain": 0.7, "args": {"up": k % 2 == 0}},
+                       {"t": s0 + 0.02, "type": "impact", "gain": 0.6}]
+        events.append({"t": s0 + 0.12, "type": "pop", "gain": 0.4, "args": {"pitch": round(1.0 + 0.05 * k, 2)}})
+        if d.get("sub"):
+            events.append({"t": s0 + 0.48, "type": "pop", "gain": 0.25, "args": {"pitch": 1.4}})
+        if d.get("count") is not None:
+            c0, c1 = s0 + 0.3, s0 + 1.2
+            ent.update(count0=c0, count1=c1)
+            for j in range(12):
+                u = j / 12
+                events.append({"t": c0 + (c1 - c0) * u ** 1.8, "type": "tick", "gain": 0.3, "args": {"pitch": round(0.9 + 0.4 * u, 2)}})
+            events.append({"t": c1, "type": "shimmer", "gain": 0.5, "args": {"base": 880}})
+        scenes.append(ent)
+    scenes.append({"type": "outro", "t0": outro_start, "t1": end})
+    events += [{"t": outro_start - 0.38, "type": "whoosh", "gain": 0.7},
+               {"t": outro_start + 1.0, "type": "pop", "gain": 0.4, "args": {"pitch": 1.1}},
+               {"t": outro_start + 1.1, "type": "shimmer", "gain": 0.4, "args": {"base": 990}}]
+
+    def intensity(t):
+        if t < starts[0]:
+            return 0.35
+        if t >= outro_start:
+            return max(0.0, 0.5 - (t - outro_start) * 0.12)
+        k = max(i for i in range(n) if starts[i] <= t)
+        return min(1.0, 0.4 + 0.5 * k / max(1, n - 1))
+
+    chunks = []
+    for w in words:
+        chunks += caption_chunks(w)
+    tl = {"fps": 30, "W": 1080, "H": 1920, "duration": round(end, 3), "title": spec["title"],
+          "theme": spec.get("theme", "space"), "hook": spec["hook"], "outro": spec["outro"],
+          "spec_scenes": sc, "scenes": scenes, "captions": chunks}
+    return tl, events, intensity, end

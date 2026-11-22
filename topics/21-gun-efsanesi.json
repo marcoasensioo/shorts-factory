@@ -1,0 +1,65 @@
+{
+ "id": "21-gun-efsanesi",
+ "title": "21 Gün Efsanesi",
+ "template": "explainer3d",
+ "theme": "warm",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Bir alışkanlık 21 günde oluşmaz. Bu tamamen bir efsane!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "21 GÜN EFSANESİ",
+  "object": "hourglass"
+ },
+ "scenes": [
+  {
+   "title": "NEREDEN ÇIKTI?",
+   "object": "book",
+   "sub": "1960'ta bir estetik cerrahın kitabı",
+   "say": "21 gün fikri, 1960'ta estetik cerrah Maxwell Maltz'ın kitabından çıktı. Hastalarının yeni yüzlerine alışmasını anlatıyordu."
+  },
+  {
+   "title": "ORTALAMA {n} GÜN",
+   "object": "clock",
+   "sub": "Londra'da yapılan bir araştırma",
+   "say": "Londra'da yapılan bir araştırmaya göre yeni bir alışkanlığın otomatikleşmesi ortalama 66 gün sürüyor.",
+   "count": 66
+  },
+  {
+   "title": "18 İLE 254 GÜN",
+   "object": "hourglass",
+   "sub": "Kişiye ve alışkanlığa göre değişir",
+   "say": "Ama bu süre kişiden kişiye çok değişiyor: 18 günle 254 gün arasında."
+  },
+  {
+   "title": "BİR GÜN KAÇIRMAK SORUN DEĞİL",
+   "object": "dumbbell",
+   "sub": "Önemli olan devam etmek",
+   "say": "İyi haber şu: arada bir gün kaçırmak süreci bozmuyor. Önemli olan tekrar etmeye devam etmek.",
+   "theme": "mind"
+  }
+ ],
+ "outro": {
+  "say": "Sen hangi alışkanlığı kazanmaya çalışıyorsun? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENİN HEDEFİN NE?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "21 gün kuralı bir efsane ⏳ #shorts",
+  "caption": "Alışkanlık 21 günde oluşmaz! Peki kaç gün? ⏳",
+  "hashtags": [
+   "#shorts",
+   "#kişiselgelişim",
+   "#alışkanlık",
+   "#motivasyon",
+   "#psikoloji",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

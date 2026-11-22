@@ -28,8 +28,13 @@ def log(*a):
     print(*a, flush=True)
 
 
+def is_explainer(spec):
+    return spec.get("template") == "explainer3d"
+
+
 def narration(spec):
-    return [spec["hook"]["say"]] + [i["say"] for i in spec["items"]] + [spec["outro"]["say"]]
+    body = spec["scenes"] if is_explainer(spec) else spec["items"]
+    return [spec["hook"]["say"]] + [i["say"] for i in body] + [spec["outro"]["say"]]
 
 
 def make(spec_path, snap=None, workers=2):
@@ -48,14 +53,16 @@ def make(spec_path, snap=None, workers=2):
                                           0.25, voice_wav)
 
     log("2/5 Zaman çizelgesi + altyazı…")
-    tl, events, intensity, T = timeline.build(spec, segs, words, vdur)
+    build = timeline.build_explainer if is_explainer(spec) else timeline.build
+    page = "explainer.html" if is_explainer(spec) else "index.html"
+    tl, events, intensity, T = build(spec, segs, words, vdur)
     tl_path = os.path.join(cache, "timeline.json")
     json.dump(tl, open(tl_path, "w", encoding="utf-8"), ensure_ascii=False)
     open(os.path.join(outdir, f"{vid}.srt"), "w", encoding="utf-8").write(timeline.srt(tl["captions"]))
     log(f"   süre: {T:.1f} sn, {len(tl['captions'])} altyazı öbeği")
 
     if snap:
-        return render.snapshot(tl_path, snap, os.path.join(cache, "snaps"))
+        return render.snapshot(tl_path, snap, os.path.join(cache, "snaps"), page=page)
 
     log("3/5 Ses tasarımı (sentez + miks)…")
     v, _ = sf.read(voice_wav, dtype="float32")
@@ -70,7 +77,7 @@ def make(spec_path, snap=None, workers=2):
     # parça sınırları: her sahnenin ortası (geçişlerden uzak)
     cuts = [(s["t0"] + s["t1"]) / 2 for s in tl["scenes"]]
     silent = render.render_video(tl_path, T, tl["fps"], os.path.join(cache, "frames"), workers=workers,
-                                 cut_points=cuts, log=log)
+                                 cut_points=cuts, log=log, page=page)
 
     log("5/5 Birleştirme…")
     final = os.path.join(outdir, f"{vid}.mp4")

@@ -1,0 +1,66 @@
+{
+ "id": "bal-neden-bozulmaz",
+ "title": "Bal Neden Bozulmaz?",
+ "template": "explainer3d",
+ "theme": "nature",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Mutfağındaki bal, doğru saklanırsa neredeyse hiç bozulmaz. Peki neden?",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "BAL NEDEN BOZULMAZ?",
+  "object": "jar"
+ },
+ "scenes": [
+  {
+   "title": "BİNLERCE YILLIK BAL",
+   "object": "jar",
+   "sub": "Mısır mezarlarında bulundu",
+   "say": "Arkeologlar Mısır mezarlarında binlerce yıllık, hâlâ bozulmamış bal kapları buldu.",
+   "theme": "warm"
+  },
+  {
+   "title": "SADECE %18 SU",
+   "object": "drop",
+   "sub": "Mikroplar bu ortamda yaşayamaz",
+   "say": "Çünkü balın sadece yüzde 18'i kadarı su. Bakteriler bu kadar şekerli ve kuru ortamda yaşayamıyor."
+  },
+  {
+   "title": "ASİDİK BİR SIVI",
+   "object": "virus",
+   "sub": "pH değeri 3 ile 4,5 arası",
+   "say": "Üstelik bal oldukça asidik. pH değeri 3 ile 4,5 arasında, yani mikroplar için çok zorlu bir ortam.",
+   "theme": "lab"
+  },
+  {
+   "title": "ARILARIN SIRRI",
+   "object": "atom",
+   "sub": "Enzim, hidrojen peroksit üretir",
+   "say": "Arılar bala bir enzim ekliyor. Bu enzim az miktarda hidrojen peroksit üreterek mikropları uzak tutuyor.",
+   "theme": "lab"
+  }
+ ],
+ "outro": {
+  "say": "Sen balı en çok neyle yersin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "BALI NEYLE YERSİN?",
+  "cta": "Yorumlara yaz",
+  "object": "jar"
+ },
+ "meta": {
+  "title": "Bal neden bozulmaz? 🍯 #shorts",
+  "caption": "Bal doğru saklanırsa neredeyse hiç bozulmaz! İşte nedeni 🍯",
+  "hashtags": [
+   "#shorts",
+   "#bal",
+   "#bilim",
+   "#yemek",
+   "#bilgi",
+   "#keşfet",
+   "#doğa"
+  ]
+ }
+}

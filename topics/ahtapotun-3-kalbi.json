@@ -1,0 +1,64 @@
+{
+ "id": "ahtapotun-3-kalbi",
+ "title": "Ahtapotun 3 Kalbi",
+ "template": "explainer3d",
+ "theme": "ocean",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Ahtapotun üç kalbi var ve kanı mavi. Ama asıl şaşırtıcı olan bu değil!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "AHTAPOTUN 3 KALBİ VAR",
+  "object": "octopus"
+ },
+ "scenes": [
+  {
+   "title": "{n} KALP",
+   "object": "heart",
+   "sub": "2'si solungaçlara, 1'i tüm vücuda",
+   "say": "Ahtapotun tam 3 kalbi var. İkisi kanı solungaçlara, biri de tüm vücuda pompalıyor.",
+   "count": 3
+  },
+  {
+   "title": "KANI MAVİ",
+   "object": "drop",
+   "sub": "Oksijeni bakırlı hemosiyanin taşır",
+   "say": "Kanı mavi, çünkü oksijeni demirle değil, bakır içeren hemosiyanin adlı bir proteinle taşıyor."
+  },
+  {
+   "title": "YÜZERKEN KALBİ DURUR",
+   "object": "fish",
+   "sub": "Bu yüzden sürünmeyi tercih eder",
+   "say": "Daha da ilginci, ahtapot yüzerken ana kalbi atmayı bırakıyor. Bu yüzden yüzmek yerine sürünmeyi seviyor."
+  },
+  {
+   "title": "KOLLARI DÜŞÜNÜYOR",
+   "object": "brain",
+   "sub": "Nöronlarının üçte ikisi kollarında",
+   "say": "Ve nöronlarının yaklaşık üçte ikisi kollarında. Yani her kol, merkezi beyinden bağımsız hareket edebiliyor."
+  }
+ ],
+ "outro": {
+  "say": "Sence dünyanın en zeki hayvanı hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE EN ZEKİ HAYVAN HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Ahtapotun 3 kalbi var 🐙 #shorts",
+  "caption": "Ahtapotun 3 kalbi, mavi kanı ve düşünen kolları var! 🐙",
+  "hashtags": [
+   "#shorts",
+   "#ahtapot",
+   "#bilgi",
+   "#hayvanlar",
+   "#bilim",
+   "#keşfet",
+   "#bunubiliyormuydun"
+  ]
+ }
+}

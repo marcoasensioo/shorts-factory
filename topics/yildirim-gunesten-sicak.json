@@ -1,0 +1,67 @@
+{
+ "id": "yildirim-gunesten-sicak",
+ "title": "Yıldırım Güneş'ten Sıcak",
+ "template": "explainer3d",
+ "theme": "storm",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Bir yıldırım, Güneş'in yüzeyinden 5 kat daha sıcak!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "YILDIRIM GÜNEŞTEN SICAK",
+  "object": "lightning"
+ },
+ "scenes": [
+  {
+   "title": "{n} °C",
+   "object": "lightning",
+   "sub": "Bir anlığına havayı bu kadar ısıtır",
+   "say": "Bir yıldırım, geçtiği havayı bir anlığına yaklaşık 30000 dereceye kadar ısıtıyor.",
+   "count": 30000
+  },
+  {
+   "title": "GÜNEŞ YÜZEYİ: 5.500 °C",
+   "object": "sun",
+   "sub": "Yıldırım yaklaşık 5 kat sıcak",
+   "say": "Güneş'in görünen yüzeyi ise yaklaşık 5500 derece. Yani yıldırım beş kat daha sıcak.",
+   "theme": "warm"
+  },
+  {
+   "title": "GÖK GÜRÜLTÜSÜ NEDİR?",
+   "object": "question",
+   "sub": "Aniden genleşen havanın sesi",
+   "say": "Bu ani sıcaklık havayı patlarcasına genleştiriyor. Duyduğumuz gök gürültüsü işte bu patlamanın sesi."
+  },
+  {
+   "title": "SANİYEDE {n} ŞİMŞEK",
+   "object": "earth",
+   "sub": "Yılda 1 milyardan fazla",
+   "say": "Dünyada her saniye yaklaşık 40 şimşek çakıyor. Bu da yılda 1 milyardan fazla demek.",
+   "count": 40,
+   "theme": "earth"
+  }
+ ],
+ "outro": {
+  "say": "Sen hiç yakınına yıldırım düştüğünü gördün mü? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HİÇ YILDIRIM GÖRDÜN MÜ?",
+  "cta": "Yorumlara yaz",
+  "object": "lightning"
+ },
+ "meta": {
+  "title": "Yıldırım Güneş'ten 5 kat sıcak ⚡ #shorts",
+  "caption": "Bir yıldırım Güneş'in yüzeyinden 5 kat sıcak! ⚡",
+  "hashtags": [
+   "#shorts",
+   "#yıldırım",
+   "#şimşek",
+   "#bilim",
+   "#doğa",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

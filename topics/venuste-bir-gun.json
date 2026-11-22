@@ -1,0 +1,67 @@
+{
+ "id": "venuste-bir-gun",
+ "title": "Venüs'te Bir Gün Bir Yıldan Uzun",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Bu gezegende bir gün, bir yıldan daha uzun sürüyor!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "VENÜS'TE GÜN YILDAN UZUN",
+  "object": "venus"
+ },
+ "scenes": [
+  {
+   "title": "BİR GÜN: {n} GÜN",
+   "object": "clock",
+   "sub": "Kendi etrafındaki tek tur",
+   "say": "Venüs kendi ekseni etrafındaki tek bir turu 243 Dünya gününde tamamlıyor.",
+   "count": 243
+  },
+  {
+   "title": "BİR YIL: {n} GÜN",
+   "object": "sun",
+   "sub": "Güneş etrafındaki tur daha kısa",
+   "say": "Ama Güneş'in etrafındaki turu sadece 225 gün. Yani orada bir gün, bir yıldan uzun.",
+   "count": 225
+  },
+  {
+   "title": "GÜNEŞ BATIDAN DOĞAR",
+   "object": "venus",
+   "sub": "Çünkü ters yönde dönüyor",
+   "say": "Üstelik Venüs ters yönde dönüyor. Bu yüzden orada Güneş batıdan doğup doğudan batıyor."
+  },
+  {
+   "title": "{n} °C",
+   "object": "venus",
+   "sub": "Merkür'den bile daha sıcak",
+   "say": "Kalın atmosferi ısıyı hapsettiği için yüzeyi yaklaşık 465 derece. Güneş'e daha yakın olan Merkür'den bile sıcak.",
+   "count": 465,
+   "theme": "warm"
+  }
+ ],
+ "outro": {
+  "say": "Sen hangi gezegene gitmek isterdin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HANGİ GEZEGENE GİDERDİN?",
+  "cta": "Yorumlara yaz",
+  "object": "rocket"
+ },
+ "meta": {
+  "title": "Venüs'te bir gün bir yıldan uzun 🪐 #shorts",
+  "caption": "Venüs'te bir gün 243, bir yıl 225 gün sürüyor! 🪐",
+  "hashtags": [
+   "#shorts",
+   "#venüs",
+   "#uzay",
+   "#gezegen",
+   "#bilim",
+   "#keşfet",
+   "#astronomi"
+  ]
+ }
+}

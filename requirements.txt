@@ -3,3 +3,4 @@ numpy
 scipy
 soundfile
 playwright
+edge-tts>=6.1

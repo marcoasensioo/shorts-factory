@@ -1,0 +1,64 @@
+{
+ "id": "beynin-enerjisi",
+ "title": "Beynin Enerji Canavarı",
+ "template": "explainer3d",
+ "theme": "mind",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Beynin vücudunun sadece yüzde 2'si ama enerjinin beşte birini yakıyor!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "BEYNİN ENERJİ CANAVARI",
+  "object": "brain"
+ },
+ "scenes": [
+  {
+   "title": "AĞIRLIĞIN %2'Sİ",
+   "object": "brain",
+   "sub": "Yaklaşık 1,3 kilogram",
+   "say": "Beynimiz vücut ağırlığımızın sadece yüzde 2'si kadar."
+  },
+  {
+   "title": "ENERJİNİN %20'Sİ",
+   "object": "lightbulb",
+   "sub": "Dinlenirken bile",
+   "say": "Ama vücudumuzun harcadığı enerjinin yaklaşık yüzde 20'sini tek başına kullanıyor."
+  },
+  {
+   "title": "{n} MİLYAR NÖRON",
+   "object": "brain",
+   "sub": "Uzun süre 100 milyar sanıldı",
+   "say": "İçinde yaklaşık 86 milyar nöron var. Uzun yıllar bu sayının 100 milyar olduğu sanılıyordu.",
+   "count": 86
+  },
+  {
+   "title": "LOŞ BİR AMPUL KADAR",
+   "object": "lightbulb",
+   "sub": "Yaklaşık 20 watt güç",
+   "say": "Ve harcadığı güç yaklaşık 20 watt. Yani loş bir ampulü yakacak kadar."
+  }
+ ],
+ "outro": {
+  "say": "Sence beynini en çok ne yoruyor? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "BEYNİNİ EN ÇOK NE YORUYOR?",
+  "cta": "Yorumlara yaz",
+  "object": "brain"
+ },
+ "meta": {
+  "title": "Beynin enerjinin %20'sini yakıyor 🧠 #shorts",
+  "caption": "Beynin vücudunun %2'si ama enerjinin %20'sini kullanıyor! 🧠",
+  "hashtags": [
+   "#shorts",
+   "#beyin",
+   "#bilim",
+   "#psikoloji",
+   "#bilgi",
+   "#keşfet",
+   "#insanvücudu"
+  ]
+ }
+}

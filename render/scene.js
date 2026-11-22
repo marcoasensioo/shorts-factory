@@ -301,7 +301,13 @@ function renderScene3D(t) {
   whip = outK * 1.1 - (si > 0 ? inK * 1.1 : 0);
   info.blur = Math.max(outK, si > 0 ? inK : 0);
 
-  if (S.type === "hook") {
+  if (S.type === "hook" && !TL.hook.compare) { // genel kanca: 1. sıradaki zirvenin geniş çekimi
+    const m = terrains[terrains.length - 1], { Hm, peak } = m.userData; m.visible = true;
+    m.scale.y = Math.max(0.05, lerp(0.35, 1, eOutCubic(t / 1.4)));
+    scene.fog.near = 25 + Hm * 2; scene.fog.far = 80 + Hm * 5;
+    const target = placeCamera(Hm, peak, 1.1 + t * 0.07 + whip, lerp(1.6, 1.35, eInOut(t / 4)), t, null);
+    updateEnv(t, target, Hm, false);
+  } else if (S.type === "hook") {
     hook.visible = everest.visible = agriSmall.visible = true; snowPts.visible = false; clouds.forEach((c) => (c.visible = false));
     scene.fog.near = 40; scene.fog.far = 140;
     const ev = eOutCubic((t - 0.1) / 0.9), ag = eOutBack((t - 0.7) / 1.0, 1.2);
@@ -429,12 +435,25 @@ function drawItemOverlay(t, info) {
   }
 }
 
+// başlığı satırlara böl: son satır turuncu ve büyük; her satır 960 px'e sığar
+function headlineLines(text) {
+  const words = UP(text).split(/\s+/), lines = []; let cur = "";
+  for (const w of words) { if (cur && (cur + " " + w).length > 13) { lines.push(cur); cur = w; } else cur = cur ? cur + " " + w : w; }
+  if (cur) lines.push(cur);
+  return lines.slice(0, 4).map((s, i, arr) => {
+    const last = i === arr.length - 1; let size = last ? 190 : 128;
+    while (measure(s, size, "Mont", 900, -2) > 960 && size > 60) size -= 4;
+    return [s, last ? ORANGE : "#fff", size];
+  });
+}
+
 function drawHookOverlay(t, info) {
   const S = info.S, slam = S.slam, pre = t < slam, left = S.t1 - t, exit = eInCubic(1 - left / 0.25);
   ctx.save(); ctx.globalAlpha = 1 - exit;
   // 3D etiketler
   const a = info.hookAnchors, lf = 1 - clamp((t - slam) / 0.25);
   ctx.save(); ctx.globalAlpha *= lf;
+  if (a) {
   const lab = (p, l1, l2, col, k) => {
     if (k <= 0) return; ctx.save(); ctx.globalAlpha *= clamp(k);
     p = { x: clamp(p.x, 150, W - 150), y: Math.max(p.y, 700) };
@@ -446,21 +465,23 @@ function drawHookOverlay(t, info) {
   lab(a.ag, "AĞRI DAĞI", `${fmt(5137 * clamp(info.agUp))} m`, ORANGE, (t - 0.9) / 0.3);
   const lk = clamp((t - 1.9) / 0.3);
   if (lk > 0) txt("EVEREST'İN YARISI · 4.424 m", a.line.x, a.line.y - 18, { size: 30, font: "InterSB", weight: 600, fill: "#ffb36b", stroke: "rgba(0,0,0,0.7)", sw: 6, alpha: lk });
+  }
   ctx.restore();
   // üst metin
   if (pre) {
     const k = eOutBack(t / 0.35, 2);
-    const s = "BUNU BİLİYOR MUYDUN?", fw = measure(s, 46, "Mont", 900, 2) + 70;
+    const s = UP(TL.hook.kicker || "BUNU BİLİYOR MUYDUN?"), fw = measure(s, 46, "Mont", 900, 2) + 70;
     ctx.save(); ctx.translate(W / 2, 290); ctx.scale(k, k);
     rrect(-fw / 2, -48, fw, 92, 46); ctx.fillStyle = ORANGE; ctx.shadowColor = ORANGE; ctx.shadowBlur = 40; ctx.fill(); ctx.shadowBlur = 0;
     txt(s, 0, 16, { size: 46, align: "center", ls: 2 });
     ctx.restore();
     const q = eOutCubic((t - 0.5) / 0.4);
-    txt("Türkiye'nin en yüksek dağı", W / 2, 420, { size: 50, font: "InterSB", weight: 600, align: "center", alpha: q, stroke: "rgba(0,0,0,0.55)", sw: 8 });
-    txt("Everest'in yarısından yüksek!", W / 2, 488, { size: 50, font: "InterSB", weight: 600, align: "center", alpha: clamp((t - 1.4) / 0.3), fill: "#ffd23f", stroke: "rgba(0,0,0,0.55)", sw: 8 });
+    const sub = TL.hook.sub || [];
+    if (sub[0]) txt(sub[0], W / 2, 420, { size: 50, font: "InterSB", weight: 600, align: "center", alpha: q, stroke: "rgba(0,0,0,0.55)", sw: 8 });
+    if (sub[1]) txt(sub[1], W / 2, 488, { size: 50, font: "InterSB", weight: 600, align: "center", alpha: clamp((t - 1.4) / 0.3), fill: "#ffd23f", stroke: "rgba(0,0,0,0.55)", sw: 8 });
   } else {
     const k = (t - slam);
-    const L = [["TÜRKİYE'NİN", "#fff", 112], ["EN YÜKSEK", "#fff", 140], ["10 DAĞI", ORANGE, 210]];
+    const L = headlineLines(TL.hook.headline || TL.title);
     let y = 330;
     L.forEach(([s, col, size], i) => {
       const kk = eOutBack((k - i * 0.09) / 0.32, 2.2);
@@ -501,7 +522,7 @@ function drawOutroOverlay(t, S) {
   });
   ctx.restore();
   const hk = eOutBack((age - 0.15) / 0.4, 1.8);
-  [["SEN HANGİSİNE", 104, "#fff"], ["TIRMANIRDIN?", 122, ORANGE]].forEach(([s, size, col], i) => {
+  headlineLines(TL.outro.headline || "SEN HANGİSİNİ SEÇERDİN?").map(([s, col, size]) => [s, Math.min(size, 122), col]).forEach(([s, size, col], i) => {
     const kk = eOutBack((age - 0.15 - i * 0.12) / 0.4, 1.8); if (kk <= 0) return;
     ctx.save(); ctx.translate(W / 2, 330 + i * 140); ctx.scale(kk, kk);
     txt(s, 0, 0, { size, align: "center", fill: col, stroke: "rgba(5,8,25,0.9)", sw: 14, glow: col === ORANGE ? ORANGE : "rgba(0,0,0,.5)", glowBlur: 35, ls: -2 });

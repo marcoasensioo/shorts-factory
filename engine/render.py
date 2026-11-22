@@ -71,9 +71,9 @@ def render_range(url, f0, f1, fps, out_mp4, log=print):
     os.replace(tmp, out_mp4)
 
 
-def render_video(timeline_path, duration, fps, work_dir, workers=2, cut_points=None, log=print):
+def render_video(timeline_path, duration, fps, work_dir, workers=2, cut_points=None, log=print, page="index.html"):
     srv = serve(RENDER_DIR, os.path.abspath(timeline_path))
-    url = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
+    url = f"http://127.0.0.1:{srv.server_address[1]}/{page}"
     total = int(round(duration * fps))
     # parça sınırları: geçişlerden uzak noktalar (cut_points, saniye)
     cuts = sorted({0, total, *[int(c * fps) for c in (cut_points or [])]})
@@ -110,10 +110,10 @@ def render_video(timeline_path, duration, fps, work_dir, workers=2, cut_points=N
     return silent
 
 
-def snapshot(timeline_path, times, out_dir):
+def snapshot(timeline_path, times, out_dir, page="index.html"):
     """Belirli anların tam boy karelerini JPEG olarak kaydeder (kontrol için)."""
     srv = serve(RENDER_DIR, os.path.abspath(timeline_path))
-    url = f"http://127.0.0.1:{srv.server_address[1]}/index.html"
+    url = f"http://127.0.0.1:{srv.server_address[1]}/{page}"
     os.makedirs(out_dir, exist_ok=True)
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path=chrome_path(), args=CHROME_ARGS, headless=True)

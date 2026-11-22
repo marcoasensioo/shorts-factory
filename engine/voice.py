@@ -1,4 +1,4 @@
-"""Seslendirme: Google TTS (gTTS veya Google Cloud TTS) + temizleme + kelime zamanlaması.
+"""Seslendirme: Microsoft Edge nöral ses (varsayılan, ücretsiz, kelime zamanlı) ya da Google TTS (yedek).
 
 Akış:
   1) Her anlatım parçası için Google TTS'ten mp3 alınır (önbelleğe yazılır).
@@ -70,9 +70,39 @@ def synth_gcloud(text, lang, path, voice_name=None):
     open(path, "wb").write(base64.b64decode(audio))
 
 
+EDGE_VOICE = "tr-TR-AhmetNeural"   # kadın ses için: tr-TR-EmelNeural
+
+
+def synth_edge(text, path, voice=None, rate="+8%", pitch="+0Hz"):
+    """Edge nöral TTS: mp3 + kelime sınırları (path + '.words.json')."""
+    import asyncio
+    import edge_tts
+
+    async def run():
+        kw = dict(rate=rate, pitch=pitch)
+        try:
+            com = edge_tts.Communicate(text, voice or EDGE_VOICE, boundary="WordBoundary", **kw)
+        except TypeError:
+            com = edge_tts.Communicate(text, voice or EDGE_VOICE, **kw)
+        audio, words = bytearray(), []
+        async for ch in com.stream():
+            if ch["type"] == "audio":
+                audio.extend(ch["data"])
+            elif ch["type"] == "WordBoundary":
+                t0 = ch["offset"] / 1e7
+                words.append({"w": ch["text"], "t0": round(t0, 3), "t1": round(t0 + ch["duration"] / 1e7, 3)})
+        if not audio:
+            raise RuntimeError("Edge TTS ses döndürmedi")
+        open(path, "wb").write(audio)
+        json.dump(words, open(path + ".words.json", "w", encoding="utf-8"), ensure_ascii=False)
+    asyncio.run(run())
+
+
 def fetch_segments(texts, cache_dir, voice_cfg):
     os.makedirs(cache_dir, exist_ok=True)
-    engine = os.environ.get("TTS_ENGINE", voice_cfg.get("engine", "gtts"))
+    engine = os.environ.get("TTS_ENGINE", voice_cfg.get("engine", "edge"))
+    if engine == "gtts" and not voice_cfg.get("force_gtts"):
+        engine = "edge"  # eski senaryolar da yeni sesi kullansın
     if engine == "gtts" and os.environ.get("GOOGLE_TTS_API_KEY"):
         engine = "gcloud"
     paths = []
@@ -82,6 +112,16 @@ def fetch_segments(texts, cache_dir, voice_cfg):
         if not (os.path.exists(p) and os.path.exists(meta) and open(meta, encoding="utf-8").read() == t):
             if os.path.exists(p) and not os.path.exists(meta):
                 pass  # önceden indirilmiş (ör. tarayıcıdan) dosya: olduğu gibi kullan
+            elif engine == "edge":
+                try:
+                    synth_edge(t, p, voice_cfg.get("edge_voice"), voice_cfg.get("edge_rate", "+8%"),
+                               voice_cfg.get("edge_pitch", "+0Hz"))
+                except Exception as e:  # noqa — ağ/servis sorunu: Google TTS'e düş
+                    print("Edge TTS başarısız, gTTS kullanılıyor:", e)
+                    engine = "gtts"
+                    synth_gtts(t, voice_cfg.get("lang", "tr"), p)
+                    if os.path.exists(p + ".words.json"):
+                        os.remove(p + ".words.json")
             elif engine == "gcloud":
                 synth_gcloud(t, voice_cfg.get("lang", "tr"), p, voice_cfg.get("gcloud_voice"))
             else:
@@ -201,9 +241,27 @@ def build_voice(texts, mp3s, tempo, gap, lead_in, out_wav):
     import soundfile as sf
     track, segs, words, t = [np.zeros(int(lead_in * SR), np.float32)], [], [], lead_in
     for i, (txt, p) in enumerate(zip(texts, mp3s)):
-        y = tighten(decode(p, tempo))
+        wj = p + ".words.json"
+        if os.path.exists(wj):  # nöral ses: tempo değiştirme, kelime zamanlarını aynen kullan
+            y = decode(p, 1.0)
+            mask, n = speech_mask(y)
+            idx = np.nonzero(mask)[0]
+            a = max(0, int(idx[0] * n - 0.03 * SR)) if len(idx) else 0
+            b = min(len(y), int((idx[-1] + 1) * n + 0.06 * SR)) if len(idx) else len(y)
+            y = y[a:b].copy()
+            shift = a / SR
+            bw = json.load(open(wj, encoding="utf-8"))
+            toks = txt.split()
+            if len(bw) == len(toks):
+                ww = [{"w": tk, "t0": round(t + max(0, x["t0"] - shift), 3), "t1": round(t + max(0, x["t1"] - shift), 3)}
+                      for tk, x in zip(toks, bw)]
+            else:
+                ww = word_timings(txt, y, t)
+        else:
+            y = tighten(decode(p, tempo))
+            ww = word_timings(txt, y, t)
         segs.append({"i": i, "t0": round(t, 3), "t1": round(t + len(y) / SR, 3)})
-        words.append(word_timings(txt, y, t))
+        words.append(ww)
         track.append(y)
         g = gap[i] if isinstance(gap, list) else gap
         track.append(np.zeros(int(g * SR), np.float32))

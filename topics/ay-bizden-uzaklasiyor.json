@@ -1,0 +1,66 @@
+{
+ "id": "ay-bizden-uzaklasiyor",
+ "title": "Ay Bizden Uzaklaşıyor",
+ "template": "explainer3d",
+ "theme": "earth",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Ay her yıl bizden biraz daha uzaklaşıyor. Hem de tırnak uzaması hızında!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "AY BİZDEN KAÇIYOR",
+  "object": "moon"
+ },
+ "scenes": [
+  {
+   "title": "YILDA 3,8 CM",
+   "object": "moon",
+   "sub": "Tırnaklarımızın uzama hızına yakın",
+   "say": "Ay, Dünya'dan her yıl yaklaşık 3,8 santimetre uzaklaşıyor. Bu, tırnaklarımızın uzama hızına yakın.",
+   "theme": "space"
+  },
+  {
+   "title": "NASIL ÖLÇÜLDÜ?",
+   "object": "rocket",
+   "sub": "Apollo'nun bıraktığı aynalara lazerle",
+   "say": "Bunu, Apollo astronotlarının Ay'a bıraktığı aynalara lazer gönderip ışığın dönüş süresini ölçerek biliyoruz.",
+   "theme": "space"
+  },
+  {
+   "title": "SUÇLU: GELGİTLER",
+   "object": "earth",
+   "sub": "Okyanuslarla çekim etkileşimi",
+   "say": "Sebebi gelgitler. Ay'ın çekimi okyanusları kabartıyor ve bu etkileşim Ay'ı yavaş yavaş dışarı itiyor."
+  },
+  {
+   "title": "HEP AYNI YÜZ",
+   "object": "moon",
+   "sub": "Arka yüzünü Dünya'dan göremeyiz",
+   "say": "Bir de şu var: Ay bize hep aynı yüzünü gösteriyor. Arka yüzünü Dünya'dan asla göremiyoruz.",
+   "theme": "space"
+  }
+ ],
+ "outro": {
+  "say": "Sence Ay olmasaydı ne olurdu? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "AY OLMASAYDI NE OLURDU?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Ay her yıl bizden uzaklaşıyor 🌕 #shorts",
+  "caption": "Ay her yıl 3,8 cm uzaklaşıyor! 🌕",
+  "hashtags": [
+   "#shorts",
+   "#ay",
+   "#uzay",
+   "#nasa",
+   "#bilim",
+   "#keşfet",
+   "#astronomi"
+  ]
+ }
+}
