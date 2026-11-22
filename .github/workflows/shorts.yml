@@ -26,6 +26,11 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+          GOOGLE_TTS_VOICE: ${{ vars.GOOGLE_TTS_VOICE }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TTS_VOICE: ${{ vars.GEMINI_TTS_VOICE }}
+          CHIRP_TEMPO: ${{ vars.SES_HIZI }}
         run: python autopilot.py
       - name: Durumu kaydet
         if: always()
