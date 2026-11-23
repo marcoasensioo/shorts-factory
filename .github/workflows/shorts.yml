@@ -11,6 +11,7 @@ on:
         default: false
 permissions:
   contents: write
+  issues: write
   models: read
 concurrency: shorts
 jobs:
@@ -61,3 +62,8 @@ jobs:
           git add state topics topics_queue.txt
           git commit -m "durum guncellendi" || true
           git push || true
+      - name: Senaryo sayisini kontrol et
+        if: ${{ always() && !inputs.sadece_ses_testi }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python senaryo_uyarisi.py || true
