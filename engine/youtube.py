@@ -57,3 +57,24 @@ def comment(video_id, text, tries=4, wait=45):
         if i < tries - 1:
             time.sleep(wait)
     raise RuntimeError("Yorum yazılamadı: " + str(last))
+
+
+def caption(video_id, srt_path, lang="tr", name="Türkçe"):
+    """Altyazı dosyasını (.srt) videoya ekler (youtube.force-ssl izni gerekir, 400 birim kota)."""
+    import urllib.error
+    tok = access_token()
+    meta = {"snippet": {"videoId": video_id, "language": lang, "name": name, "isDraft": False}}
+    boundary = "kesifkutusu7b3f9a"
+    srt = open(srt_path, "rb").read()
+    body = (f"--{boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"
+            f"{json.dumps(meta)}\r\n--{boundary}\r\nContent-Type: application/octet-stream\r\n\r\n").encode() \
+        + srt + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(
+        "https://www.googleapis.com/upload/youtube/v3/captions?uploadType=multipart&part=snippet",
+        data=body, method="POST",
+        headers={"Authorization": f"Bearer {tok}", "Content-Type": f"multipart/related; boundary={boundary}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)["id"]
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Altyazı yüklenemedi: {e.code} {e.read().decode('utf-8', 'replace')[:400]}")
