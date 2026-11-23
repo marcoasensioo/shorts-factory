@@ -9,6 +9,10 @@ on:
         description: "Sadece ses testi (video yapma, YouTube'a yükleme)"
         type: boolean
         default: false
+      sadece_instagram_testi:
+        description: "Sadece Instagram testi (son videoyu Instagram'a gönder)"
+        type: boolean
+        default: false
 permissions:
   contents: write
   issues: write
@@ -24,6 +28,13 @@ jobs:
         with: { python-version: "3.12" }
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements.txt
+      - name: Sadece Instagram testi
+        if: ${{ inputs.sadece_instagram_testi }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python ig_testi.py
       - name: Sadece ses testi
         if: ${{ inputs.sadece_ses_testi }}
         env:
@@ -40,7 +51,7 @@ jobs:
           name: ses-testi
           path: ses_testi/*.mp3
       - name: Video uret ve yukle
-        if: ${{ !inputs.sadece_ses_testi }}
+        if: ${{ !inputs.sadece_ses_testi && !inputs.sadece_instagram_testi }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,9 +64,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_TTS_VOICE: ${{ vars.GEMINI_TTS_VOICE }}
           CHIRP_TEMPO: ${{ vars.SES_HIZI }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_UPLOAD: ${{ vars.IG_UPLOAD }}
+          IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
         run: python autopilot.py
       - name: Durumu kaydet
-        if: ${{ always() && !inputs.sadece_ses_testi }}
+        if: ${{ always() && !inputs.sadece_ses_testi && !inputs.sadece_instagram_testi }}
         run: |
           git config user.name "shorts-bot"
           git config user.email "bot@users.noreply.github.com"
@@ -63,7 +77,13 @@ jobs:
           git commit -m "durum guncellendi" || true
           git push || true
       - name: Senaryo sayisini kontrol et
-        if: ${{ always() && !inputs.sadece_ses_testi }}
+        if: ${{ always() && !inputs.sadece_ses_testi && !inputs.sadece_instagram_testi }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python senaryo_uyarisi.py || true
+      - name: Instagram anahtarini yenile (gunde bir)
+        if: ${{ github.event.schedule == '41 8 * * *' }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python ig_anahtar_yenile.py || true
