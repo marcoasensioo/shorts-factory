@@ -85,6 +85,11 @@ if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os
     try:
         import instagram
         print("Instagram:", instagram.publish_reel(video, instagram.build_caption(d), d["id"]))
+        if os.environ.get("IG_STORY", "1") != "0":
+            try:
+                print("Instagram hikaye:", instagram.publish_story(video, d["id"]))
+            except Exception as e:  # hikâye hatası Reels'i bozmasın
+                print("UYARI - Instagram hikayesi paylasilamadi:", e)
     except Exception as e:  # Instagram hatası YouTube'u/durumu bozmasın
         print("UYARI - Instagram'a yuklenemedi:", e)
 
