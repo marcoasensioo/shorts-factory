@@ -106,8 +106,13 @@ def _resolve(url):
         return e.headers.get("Location") or url
 
 
-def _try_publish(uid, video_url, caption, wait_s):
-    params = {"media_type": "REELS", "video_url": video_url, "caption": caption[:2200], "share_to_feed": "true"}
+def _try_publish(uid, video_url, caption, wait_s, story=False):
+    if story:
+        params = {"media_type": "STORIES", "video_url": video_url}
+    else:
+        params = {"media_type": "REELS", "video_url": video_url, "caption": caption[:2200], "share_to_feed": "true",
+                  # kapak: videonun ilk karesi siyah; başlığın göründüğü kareyi kullan (milisaniye)
+                  "thumb_offset": os.environ.get("IG_KAPAK_MS") or "1500"}
     if os.environ.get("IG_AI_LABEL", "1") != "0":
         params["is_ai_generated"] = "true"
     cid = _call("POST", f"{API}/{uid}/media", params, data=b"")["id"]
@@ -125,8 +130,9 @@ def _try_publish(uid, video_url, caption, wait_s):
     return _call("POST", f"{API}/{uid}/media_publish", {"creation_id": cid}, data=b"")["id"]
 
 
-def publish_reel(video_path, caption, tag, wait_s=420):
-    """Videoyu Reels olarak yayınlar, yayın kimliğini döndürür. Video önce GitHub Release'e konmuş olmalı."""
+def publish_reel(video_path, caption, tag, wait_s=420, story=False):
+    """Videoyu Reels (story=True ise Hikâye) olarak yayınlar, yayın kimliğini döndürür.
+    Video önce GitHub Release'e konmuş olmalı."""
     safe = _safe_video(video_path) if os.path.exists(video_path) else video_path
     if safe != video_path:  # bit hızı düşürülmüş kopyayı da Release'e ekle
         subprocess.run(["gh", "release", "upload", tag, safe, "--clobber"], check=True)
@@ -135,11 +141,21 @@ def publish_reel(video_path, caption, tag, wait_s=420):
     son_hata = None
     for u in (_resolve(url), url):  # önce doğrudan adres, olmazsa GitHub bağlantısı
         try:
-            return _try_publish(uid, u, caption, wait_s)
+            return _try_publish(uid, u, caption, wait_s, story)
         except RuntimeError as e:
             son_hata = e
+            if "not an Instagram Business" in str(e) or '"code":10' in str(e).replace(" ", ""):
+                break  # hesap türü sorunu: tekrar denemenin anlamı yok
             print("Instagram denemesi basarisiz, tekrar deneniyor:", str(e)[:200])
+    if story and son_hata and "Business" in str(son_hata):
+        raise RuntimeError("Hikaye icin Instagram hesabi 'Isletme' turunde olmali "
+                           "(Ayarlar > Hesap turu > Isletme hesabina gec). " + str(son_hata)[:200])
     raise son_hata
+
+
+def publish_story(video_path, tag, wait_s=420):
+    """Aynı videoyu 24 saatlik Hikâye olarak paylaşır (yalnızca İşletme hesaplarında çalışır)."""
+    return publish_reel(video_path, "", tag, wait_s, story=True)
 
 
 def refresh_token():
