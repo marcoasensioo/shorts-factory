@@ -2,7 +2,8 @@
 Video, GitHub Release'teki herkese açık bağlantısından Instagram tarafından indirilir.
 
 Gerekenler (GitHub Secrets):
-  IG_TOKEN  : uzun ömürlü Instagram kullanıcı erişim anahtarı (60 gün geçerli, refresh_token() ile uzar)
+  IG_TOKEN  : Meta panelindeki "Unified login" yapılandırmasından alınan sistem kullanıcısı anahtarı (süresiz).
+              Eski "Instagram ile giriş" anahtarları (60 gün) da desteklenir.
 İsteğe bağlı (Variables):
   IG_UPLOAD    : "0" yazılırsa Instagram'a yükleme kapanır
   IG_AI_LABEL  : "0" yazılırsa "Yapay zekâ ile üretildi" etiketi eklenmez (varsayılan: ekler)
@@ -15,7 +16,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
+VER = os.environ.get("IG_API_VERSION", "v25.0")
+FB_API = "https://graph.facebook.com/" + VER      # Unified login (yeni uygulamalar, süresiz sistem anahtarı)
+IG_API = "https://graph.instagram.com/" + VER     # eski "Instagram ile giriş" anahtarları
+API = FB_API
+_UID = None
 MAX_BITRATE = 20_000_000   # Instagram Reels sınırı 25 Mbps; güvenlik payı
 
 
@@ -37,7 +42,33 @@ def _call(method, url, params=None, data=None, headers=None, timeout=120):
 
 
 def user_id():
-    return _call("GET", f"{API}/me", {"fields": "user_id,username"})["user_id"]
+    """Instagram hesap kimliğini bulur. Önce Unified login (graph.facebook.com), olmazsa eski yöntem."""
+    global API, _UID
+    if _UID:
+        return _UID
+    if os.environ.get("IG_USER_ID"):
+        _UID = os.environ["IG_USER_ID"]
+        API = IG_API if _token().startswith("IG") else FB_API
+        return _UID
+    try:
+        hesaplar = _call("GET", f"{FB_API}/me/assigned_instagram_accounts", {"fields": "id,username"})["data"]
+        if not hesaplar:
+            raise RuntimeError("Anahtara bağlı Instagram hesabı yok")
+        isim = os.environ.get("IG_USERNAME", "").lstrip("@").lower()
+        sec = next((h for h in hesaplar if h.get("username", "").lower() == isim), hesaplar[0])
+        API, _UID = FB_API, sec["id"]
+        print("Instagram hesabi (Unified login):", sec.get("username"), sec["id"])
+    except RuntimeError as e:
+        try:
+            API, _UID = IG_API, _call("GET", f"{IG_API}/me", {"fields": "user_id,username"})["user_id"]
+        except RuntimeError:
+            raise e
+    return _UID
+
+
+def unified():
+    user_id()
+    return API == FB_API
 
 
 def _safe_video(path):
