@@ -1,0 +1,66 @@
+{
+ "id": "gozundeki-kor-nokta",
+ "title": "Gözündeki Kör Nokta",
+ "template": "explainer3d",
+ "theme": "body",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Her gözünde hiçbir şey görmeyen bir nokta var. Ve beynin bunu senden saklıyor.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "GÖZÜNDEKİ KÖR NOKTA",
+  "object": "eye"
+ },
+ "scenes": [
+  {
+   "title": "IŞIK HÜCRESİ YOK",
+   "object": "eye",
+   "sub": "Görme sinirinin çıktığı yer",
+   "say": "Görme sinirinin gözden çıktığı noktada ışığı algılayan hücre yoktur. Bu yüzden o bölge hiçbir şey görmez."
+  },
+  {
+   "title": "BEYİN BOŞLUĞU DOLDURUR",
+   "object": "brain",
+   "sub": "Çevredeki görüntüyle tamamlar",
+   "say": "Beynin bu boşluğu çevredeki görüntüyle ve diğer gözünden gelen bilgiyle doldurur. Sen de hiç fark etmezsin.",
+   "theme": "mind"
+  },
+  {
+   "title": "NEREDEYSE {n} DOLUNAY",
+   "object": "moon",
+   "sub": "Gökyüzünde kapladığı alan",
+   "say": "Üstelik bu kör nokta küçük değil. Gökyüzünde neredeyse 9 dolunay büyüklüğünde bir alanı kaplar.",
+   "count": 9,
+   "theme": "space"
+  },
+  {
+   "title": "KENDİN DENE",
+   "object": "book",
+   "sub": "Solda bir artı, sağda bir nokta",
+   "say": "Kâğıda solda bir artı, sağda bir nokta çiz. Sol gözünü kapat, sağ gözünle artıya bak ve kâğıdı yavaşça yaklaştır. Nokta bir anda kaybolacak."
+  }
+ ],
+ "outro": {
+  "say": "Denedin mi, nokta kayboldu mu? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "NOKTA KAYBOLDU MU?",
+  "cta": "Yorumlara yaz",
+  "object": "eye"
+ },
+ "meta": {
+  "title": "Gözünde bir delik var 👁️ #shorts",
+  "caption": "Her gözünde hiçbir şey görmeyen bir nokta var! 👁️",
+  "hashtags": [
+   "#shorts",
+   "#göz",
+   "#beyin",
+   "#illüzyon",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

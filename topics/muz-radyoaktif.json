@@ -1,0 +1,66 @@
+{
+ "id": "muz-radyoaktif",
+ "title": "Muz Radyoaktif mi?",
+ "template": "explainer3d",
+ "theme": "warm",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Mutfağındaki muz hafif radyoaktif. Hem de gerçekten.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "MUZ BİLE RADYOAKTİF",
+  "object": "atom"
+ },
+ "scenes": [
+  {
+   "title": "POTASYUM-40",
+   "object": "atom",
+   "sub": "Doğal potasyumun küçük bir kısmı",
+   "say": "Muz potasyum açısından zengindir. Doğadaki potasyumun çok küçük bir kısmı ise radyoaktif potasyum-40'tır."
+  },
+  {
+   "title": "SANİYEDE ~{n} BOZUNMA",
+   "object": "atom",
+   "sub": "Ortalama bir muzda",
+   "say": "Ortalama bir muzda her saniye yaklaşık 15 atom bozunur.",
+   "count": 15,
+   "theme": "lab"
+  },
+  {
+   "title": "MUZ EŞDEĞER DOZ",
+   "object": "book",
+   "sub": "Bilim insanlarının şaka birimi",
+   "say": "Bilim insanları küçük radyasyon dozlarını anlatmak için şaka yollu bir birim bile kullanır: muz eşdeğer doz."
+  },
+  {
+   "title": "SEN DE RADYOAKTİFSİN",
+   "object": "heart",
+   "sub": "Ama endişeye gerek yok",
+   "say": "Endişelenme, vücudun fazla potasyumu hemen dışarı atar. Üstelik senin vücudunda da potasyum-40 var, yani sen de biraz radyoaktifsin.",
+   "theme": "body"
+  }
+ ],
+ "outro": {
+  "say": "Bunu öğrendikten sonra muz yemeye devam edecek misin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "MUZ YEMEYE DEVAM MI?",
+  "cta": "Yorumlara yaz",
+  "object": "atom"
+ },
+ "meta": {
+  "title": "Muz radyoaktif mi? 🍌 #shorts",
+  "caption": "Mutfağındaki muz hafif radyoaktif! 🍌",
+  "hashtags": [
+   "#shorts",
+   "#muz",
+   "#radyasyon",
+   "#kimya",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

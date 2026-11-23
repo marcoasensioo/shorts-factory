@@ -1,0 +1,57 @@
+{
+ "id": "kara-delige-dusersen",
+ "title": "Kara Deliğe Düşersen Ne Olur?",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Bir kara deliğe ayakların önde düşersen başına gelecek şeyin bilimsel adı çok garip: spagettileşme.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "KARA DELİĞE DÜŞERSEN?",
+  "object": "planet"
+ },
+ "scenes": [
+  {
+   "title": "GELGİT KUVVETİ",
+   "object": "moon",
+   "sub": "Denizlerdeki gelgitle aynı etki",
+   "say": "Kara delik ayaklarını başından çok daha güçlü çeker. Bu farka gelgit kuvveti denir, denizlerdeki gelgiti oluşturan da aynı etkidir."
+  },
+  {
+   "title": "SPAGETTİ GİBİ UZARSIN",
+   "object": "planet",
+   "sub": "Boyuna uzar, enine incelirsin",
+   "say": "Bu fark seni boyuna uzatır, yanlardan sıkıştırır. Sonunda ince uzun bir şeride dönüşürsün."
+  },
+  {
+   "title": "KÜÇÜĞÜ DAHA TEHLİKELİ",
+   "object": "sun",
+   "sub": "Dev kara delikte önce hissetmezsin",
+   "say": "İşin ilginci, küçük kara delikler daha tehlikelidir. Dev bir kara deliğin sınırını geçerken ilk anda hiçbir şey hissetmezsin."
+  }
+ ],
+ "outro": {
+  "say": "Sen olsan bir kara deliğe yaklaşmak ister miydin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "YAKLAŞIR MIYDIN?",
+  "cta": "Yorumlara yaz",
+  "object": "planet"
+ },
+ "meta": {
+  "title": "Kara deliğe düşersen ne olur? 🕳️ #shorts",
+  "caption": "Bilim insanları buna resmen spagettileşme diyor! 🕳️",
+  "hashtags": [
+   "#shorts",
+   "#karadelik",
+   "#uzay",
+   "#astronomi",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

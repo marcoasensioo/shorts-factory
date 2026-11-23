@@ -1,0 +1,63 @@
+{
+ "id": "hicbir-seye-dokunmadin",
+ "title": "Hiçbir Şeye Gerçekten Dokunmadın",
+ "template": "explainer3d",
+ "theme": "lab",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Hayatın boyunca hiçbir şeye gerçekten dokunmadın. Ciddiyim.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "HİÇBİR ŞEYE DOKUNMADIN",
+  "object": "atom"
+ },
+ "scenes": [
+  {
+   "title": "ATOMLAR NEREDEYSE BOŞ",
+   "object": "atom",
+   "sub": "Kütle minicik çekirdekte",
+   "say": "Her şey atomlardan oluşur ve atomların neredeyse tamamı boşluktur. Kütlenin hemen hepsi minicik çekirdekte toplanır."
+  },
+  {
+   "title": "ON BİNLERCE KAT",
+   "object": "atom",
+   "sub": "Elektronlar çekirdekten çok uzakta",
+   "say": "Elektronlar ile çekirdek arasındaki mesafe, çekirdeğin kendi boyutundan on binlerce kat büyüktür."
+  },
+  {
+   "title": "ELEKTRONLAR İTİŞİR",
+   "object": "lightning",
+   "sub": "Eksi, eksiyi iter",
+   "say": "Bir masaya dokunduğunda elinin elektronları masanın elektronlarını iter. Bu itme seni, atomlar birbirine değmeden durdurur."
+  },
+  {
+   "title": "DOKUNMAK = İTİLMEK",
+   "object": "question",
+   "sub": "Hissettiğin şey itme kuvveti",
+   "say": "Yani dokunmak dediğin his, aslında atomların birbirini itmesidir."
+  }
+ ],
+ "outro": {
+  "say": "Sence bu dokunmak sayılır mı? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE BU DOKUNMAK MI?",
+  "cta": "Yorumlara yaz",
+  "object": "atom"
+ },
+ "meta": {
+  "title": "Hiçbir şeye gerçekten dokunmadın ⚛️ #shorts",
+  "caption": "Hayatın boyunca hiçbir şeye gerçekten dokunmadın! ⚛️",
+  "hashtags": [
+   "#shorts",
+   "#atom",
+   "#fizik",
+   "#bilim",
+   "#keşfet",
+   "#bilgi",
+   "#ilginçbilgiler"
+  ]
+ }
+}

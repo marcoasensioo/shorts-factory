@@ -1,0 +1,63 @@
+{
+ "id": "kendi-sesini-neden-sevmezsin",
+ "title": "Kendi Sesini Neden Sevmezsin?",
+ "template": "explainer3d",
+ "theme": "mind",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Kayıttaki o garip ses var ya? Herkesin her gün duyduğu ses tam olarak o.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "SESİNİ NEDEN SEVMEZSİN?",
+  "object": "phone"
+ },
+ "scenes": [
+  {
+   "title": "2 FARKLI YOL",
+   "object": "brain",
+   "sub": "Hava ve kemik",
+   "say": "Konuşurken kendi sesini iki yoldan duyarsın: havadan kulağına gelen ses ve kafatası kemiklerinden geçen titreşim."
+  },
+  {
+   "title": "KEMİK SESİ KALINLAŞTIRIR",
+   "object": "question",
+   "sub": "Kalın tonlar güçlenir",
+   "say": "Kemikten gelen titreşim, sesinin kalın tonlarını güçlendirir. Bu yüzden kendi sesin sana daha dolgun gelir."
+  },
+  {
+   "title": "MİKROFON HAVAYI DUYAR",
+   "object": "phone",
+   "sub": "Kemik yolu yok",
+   "say": "Mikrofon ise yalnızca havadaki sesi yakalar. Kemik katkısı gidince sesin daha ince ve yabancı gelir."
+  },
+  {
+   "title": "SESİN BOZUK DEĞİL",
+   "object": "clock",
+   "sub": "Sadece alışık değilsin",
+   "say": "Yani sesin bozuk değil. Sadece onun bu hâline alışık değilsin."
+  }
+ ],
+ "outro": {
+  "say": "Sen kayıtta kendi sesini duyunca ne hissediyorsun? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SESİNİ SEVER MİSİN?",
+  "cta": "Yorumlara yaz",
+  "object": "phone"
+ },
+ "meta": {
+  "title": "Kendi sesinden neden hoşlanmazsın? 🎙️ #shorts",
+  "caption": "Kayıttaki o ses, başkalarının duyduğu gerçek sesin! 🎙️",
+  "hashtags": [
+   "#shorts",
+   "#ses",
+   "#beyin",
+   "#psikoloji",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

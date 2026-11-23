@@ -1,0 +1,66 @@
+{
+ "id": "dunyanin-en-olumcul-hayvani",
+ "title": "Dünyanın En Ölümcül Hayvanı",
+ "template": "explainer3d",
+ "theme": "warm",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Köpekbalığı değil, yılan değil. Dünyanın en ölümcül hayvanı minicik bir böcek: sivrisinek.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "EN ÖLÜMCÜL HAYVAN",
+  "object": "virus"
+ },
+ "scenes": [
+  {
+   "title": "{n} ÖLÜM",
+   "object": "virus",
+   "sub": "2024'te yalnızca sıtmadan",
+   "say": "Dünya Sağlık Örgütü'ne göre 2024'te yalnızca sıtma yüzünden yaklaşık 610000 kişi öldü. Sıtmayı insanlara sivrisinekler bulaştırır.",
+   "count": 610000
+  },
+  {
+   "title": "{n} MİLYON VAKA",
+   "object": "virus",
+   "sub": "Bir yılda sıtmaya yakalananlar",
+   "say": "Aynı yıl 282 milyon kişi sıtmaya yakalandı.",
+   "count": 282
+  },
+  {
+   "title": "DİŞİLER ISIRIR",
+   "object": "drop",
+   "sub": "Erkekler kan emmez",
+   "say": "Seni ısıran her zaman dişi sivrisinektir. Erkek sivrisinekler kan emmez."
+  },
+  {
+   "title": "TEK BİR ISIRIK",
+   "object": "virus",
+   "sub": "Sıtma, dang, zika, sarı humma",
+   "say": "Sivrisinekler sıtmanın yanında dang humması, zika ve sarı humma gibi hastalıkları da taşır.",
+   "theme": "storm"
+  }
+ ],
+ "outro": {
+  "say": "Sen en çok hangi hayvandan korkuyorsun? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "EN ÇOK NEYDEN KORKARSIN?",
+  "cta": "Yorumlara yaz",
+  "object": "virus"
+ },
+ "meta": {
+  "title": "Dünyanın en ölümcül hayvanı 🦟 #shorts",
+  "caption": "Köpekbalığı değil, yılan değil… minicik bir böcek! 🦟",
+  "hashtags": [
+   "#shorts",
+   "#sivrisinek",
+   "#hayvanlar",
+   "#sağlık",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

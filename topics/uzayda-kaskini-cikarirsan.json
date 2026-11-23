@@ -1,0 +1,58 @@
+{
+ "id": "uzayda-kaskini-cikarirsan",
+ "title": "Uzayda Kaskını Çıkarırsan Ne Olur?",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Uzayda kaskını çıkarırsan patlamazsın, anında donmazsın da. Peki ne olur?",
+  "kicker": "UZAYDA…",
+  "headline": "KASKINI ÇIKARIRSAN?",
+  "object": "rocket"
+ },
+ "scenes": [
+  {
+   "title": "15 SANİYEDEN KISA",
+   "object": "brain",
+   "sub": "Beyne oksijen gitmez",
+   "say": "Havasız ortamda kanındaki oksijen hızla tükenir. 15 saniyeden kısa sürede bilincini kaybedersin."
+  },
+  {
+   "title": "TÜKÜRÜĞÜN KAYNAR",
+   "object": "drop",
+   "sub": "Basınç yoksa su kolayca kaynar",
+   "say": "Basınç olmadığı için vücudundaki sıvılar kaynamaya başlar. İlk fark edeceğin şey, dilindeki tükürüğün köpürmesi olur."
+  },
+  {
+   "title": "{n} SANİYE",
+   "object": "rocket",
+   "sub": "NASA'daki 1966 kazası",
+   "say": "1966'da NASA'daki bir testte Jim LeBlanc'ın giysisinin havası boşaldı. Ortam 87 saniyede yeniden basınçlandırıldı ve LeBlanc hayatta kaldı.",
+   "count": 87
+  }
+ ],
+ "outro": {
+  "say": "Uzaya gitmek ister miydin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "UZAYA GİDER MİYDİN?",
+  "cta": "Yorumlara yaz",
+  "object": "rocket"
+ },
+ "meta": {
+  "title": "Uzayda kaskını çıkarırsan ne olur? 🚀 #shorts",
+  "caption": "Patlamazsın, donmazsın da… Peki ne olur? 🚀",
+  "hashtags": [
+   "#shorts",
+   "#uzay",
+   "#nasa",
+   "#astronot",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

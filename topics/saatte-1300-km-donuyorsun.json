@@ -1,0 +1,67 @@
+{
+ "id": "saatte-1300-km-donuyorsun",
+ "title": "Şu An Saatte 1300 km Hızla Dönüyorsun",
+ "template": "explainer3d",
+ "theme": "earth",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Şu an hareketsiz oturduğunu sanıyorsun. Aslında yolcu uçaklarından bile hızlı gidiyorsun.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ÇOK HIZLI GİDİYORSUN",
+  "object": "earth"
+ },
+ "scenes": [
+  {
+   "title": "SAATTE {n} KM",
+   "object": "earth",
+   "sub": "Ekvatorda dönüş hızı",
+   "say": "Dünya kendi etrafında dönerken ekvatordaki bir nokta saatte yaklaşık 1670 kilometre hızla ilerler.",
+   "count": 1670
+  },
+  {
+   "title": "TÜRKİYE'DE ~{n} KM",
+   "object": "earth",
+   "sub": "Kuzeye gittikçe hız düşer",
+   "say": "Kutuplara yaklaştıkça bu hız azalır. Türkiye'de ise sen saatte yaklaşık 1300 kilometre hızla dönüyorsun.",
+   "count": 1300
+  },
+  {
+   "title": "SAATTE {n} KM",
+   "object": "sun",
+   "sub": "Güneş'in etrafında",
+   "say": "Üstelik Dünya, Güneş'in etrafında saatte yaklaşık 107000 kilometre hızla dolanıyor.",
+   "count": 107000,
+   "theme": "space"
+  },
+  {
+   "title": "NEDEN HİSSETMİYORUZ?",
+   "object": "question",
+   "sub": "Hız neredeyse sabit",
+   "say": "Bunu hissetmezsin, çünkü bu hız neredeyse hiç değişmez. Vücudun hızı değil, ani hız değişimlerini hisseder."
+  }
+ ],
+ "outro": {
+  "say": "Bunu biliyor muydun? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "BUNU BİLİYOR MUYDUN?",
+  "cta": "Yorumlara yaz",
+  "object": "earth"
+ },
+ "meta": {
+  "title": "Şu an saatte 1300 km hızla dönüyorsun 🌍 #shorts",
+  "caption": "Hareketsiz oturduğunu mu sanıyorsun? 🌍",
+  "hashtags": [
+   "#shorts",
+   "#dünya",
+   "#uzay",
+   "#fizik",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

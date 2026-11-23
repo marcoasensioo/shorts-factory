@@ -1,0 +1,65 @@
+{
+ "id": "karabasan-aslinda-ne",
+ "title": "Karabasan Aslında Ne?",
+ "template": "explainer3d",
+ "theme": "mind",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Gece uyanıyorsun ama kımıldayamıyorsun, göğsünde bir ağırlık var. Buna karabasan deniyor. Peki bilim ne diyor?",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "KARABASAN ASLINDA NE?",
+  "object": "bed"
+ },
+ "scenes": [
+  {
+   "title": "UYKU FELCİ",
+   "object": "brain",
+   "sub": "Bilimdeki adı bu",
+   "say": "Bilim insanları buna uyku felci diyor. Zihnin uyanıyor ama vücudun hâlâ rüya modunda kalıyor."
+  },
+  {
+   "title": "KASLAR KİLİTLİ",
+   "object": "bed",
+   "sub": "Rüya uykusunun güvenlik kilidi",
+   "say": "Rüya gördüğün REM uykusunda kasların bilerek gevşer ve kilitlenir. Böylece rüyandaki hareketleri gerçekte yapmazsın."
+  },
+  {
+   "title": "100 KİŞİDEN {n}'İ",
+   "object": "brain",
+   "sub": "Öğrencilerde neredeyse 3'te 1",
+   "say": "Araştırmalara göre her 100 kişiden yaklaşık 8'i bunu en az bir kez yaşıyor. Öğrencilerde bu oran neredeyse üçte bire çıkıyor.",
+   "count": 8
+  },
+  {
+   "title": "GÖLGELER RÜYADAN GELİR",
+   "object": "eye",
+   "sub": "Genellikle kısa sürer",
+   "say": "Gördüğün gölgeler ve hissettiğin baskı, yarı rüyada kalan beynin ürettiği halüsinasyonlardır. Korkutucudur ama genellikle kısa sürer."
+  }
+ ],
+ "outro": {
+  "say": "Sen hiç karabasan yaşadın mı? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN HİÇ YAŞADIN MI?",
+  "cta": "Yorumlara yaz",
+  "object": "bed"
+ },
+ "meta": {
+  "title": "Karabasan aslında ne? 😨 #shorts",
+  "caption": "Gece kımıldayamıyorsan sebebi cin değil, beynin! 😨",
+  "hashtags": [
+   "#shorts",
+   "#karabasan",
+   "#uykufelci",
+   "#uyku",
+   "#beyin",
+   "#psikoloji",
+   "#bilim",
+   "#keşfet"
+  ]
+ }
+}

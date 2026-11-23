@@ -1,0 +1,63 @@
+{
+ "id": "olumsuz-denizanasi",
+ "title": "Ölümsüz Denizanası",
+ "template": "explainer3d",
+ "theme": "ocean",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Yaşlanınca ölmek yerine yeniden bebekliğe dönen bir canlı var.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ÖLÜMSÜZ DENİZANASI",
+  "object": "hourglass"
+ },
+ "scenes": [
+  {
+   "title": "4,5 MİLİMETRE",
+   "object": "drop",
+   "sub": "Serçe parmak tırnağından küçük",
+   "say": "Adı Turritopsis dohrnii. Boyu sadece 4,5 milimetre, yani serçe parmağının tırnağı kadar."
+  },
+  {
+   "title": "ZAMANI GERİ SARAR",
+   "object": "hourglass",
+   "sub": "Yetişkinken yeniden polip olur",
+   "say": "Yaralanınca, aç kalınca ya da yaşlanınca ölmek yerine bebeklik evresine, yani polip hâline geri döner."
+  },
+  {
+   "title": "TEKRAR TEKRAR",
+   "object": "dna",
+   "sub": "Hücreleri başka hücreye dönüşür",
+   "say": "Bunu yaparken hücreleri başka tür hücrelere dönüşür ve bu döngüyü defalarca tekrarlayabilir."
+  },
+  {
+   "title": "AMA YENİLMEZ DEĞİL",
+   "object": "fish",
+   "sub": "Avlanabilir, hastalanabilir",
+   "say": "Yine de yenilmez değildir. Bir balığa yem olabilir ya da hastalanıp ölebilir."
+  }
+ ],
+ "outro": {
+  "say": "Sen ölümsüz olmak ister miydin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "ÖLÜMSÜZ OLMAK İSTER MİYDİN?",
+  "cta": "Yorumlara yaz",
+  "object": "hourglass"
+ },
+ "meta": {
+  "title": "Yaşlanınca bebekliğe dönen canlı 🪼 #shorts",
+  "caption": "Bu canlı yaşlanınca yeniden bebekliğe dönüyor! 🪼",
+  "hashtags": [
+   "#shorts",
+   "#denizanası",
+   "#doğa",
+   "#hayvanlar",
+   "#okyanus",
+   "#bilim",
+   "#keşfet"
+  ]
+ }
+}
