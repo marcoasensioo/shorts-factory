@@ -12,7 +12,7 @@ import instagram  # noqa: E402
 
 if not os.environ.get("IG_TOKEN"):
     sys.exit("IG_TOKEN eklenmemis: GitHub Secrets'a IG_TOKEN ekle.")
-print("Instagram hesabi:", instagram._call("GET", f"{instagram.API}/me", {"fields": "user_id,username"}))
+print("Instagram hesap kimligi:", instagram.user_id(), "| Unified login:", instagram.unified())
 done = json.load(open(os.path.join(ROOT, "state", "done.json")))
 specs = {json.load(open(p, encoding="utf-8"))["id"]: p for p in glob.glob(os.path.join(ROOT, "topics", "*.json"))}
 son = next(i for i in reversed(done) if i in specs)

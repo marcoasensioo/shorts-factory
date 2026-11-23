@@ -11,6 +11,11 @@ if not os.environ.get("IG_TOKEN"):
 import instagram  # noqa: E402
 
 try:
+    if instagram.unified():
+        sys.exit(print("Unified login anahtari suresiz, yenileme gerekmiyor.") or 0)
+except Exception as e:  # noqa
+    sys.exit(print("UYARI - Instagram hesabi okunamadi:", e) or 0)
+try:
     yeni, sure = instagram.refresh_token()
 except Exception as e:  # anahtar 24 saatten yeniyse ya da başka bir sorun varsa
     sys.exit(print("UYARI - Instagram anahtari yenilenemedi:", e) or 0)
