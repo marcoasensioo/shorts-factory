@@ -81,6 +81,13 @@ if os.environ.get("YT_UPLOAD") == "1" and os.environ.get("YT_REFRESH_TOKEN"):
         except Exception as e:  # altyazı hatası videoyu/durumu bozmasın
             print("UYARI - altyazi yuklenemedi:", e)
 
+if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os.environ.get("GITHUB_ACTIONS"):
+    try:
+        import instagram
+        print("Instagram:", instagram.publish_reel(video, instagram.build_caption(d), d["id"]))
+    except Exception as e:  # Instagram hatası YouTube'u/durumu bozmasın
+        print("UYARI - Instagram'a yuklenemedi:", e)
+
 done.append(d["id"])
 os.makedirs(os.path.dirname(STATE), exist_ok=True)
 json.dump(done, open(STATE, "w"), indent=1)
