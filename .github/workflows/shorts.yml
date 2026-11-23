@@ -10,7 +10,7 @@ on:
         type: boolean
         default: false
       sadece_instagram_testi:
-        description: "Sadece Instagram testi (son videoyu Instagram'a gönder)"
+        description: "Sadece Instagram testi (son videoyu Instagram hikâyesi olarak gönder)"
         type: boolean
         default: false
 permissions:
@@ -34,6 +34,8 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USERNAME: ${{ vars.IG_USERNAME }}
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
+          IG_KAPAK_MS: ${{ vars.IG_KAPAK_MS }}
+          IG_STORY: ${{ vars.IG_STORY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python ig_testi.py
       - name: Sadece ses testi
@@ -70,7 +72,19 @@ jobs:
           # Instagram'a günde 1 video: sadece akşam (18:11 TR) çalışmasının videosu gider
           IG_UPLOAD: ${{ (github.event.schedule == '11 15 * * *' && vars.IG_UPLOAD != '0') && '1' || '0' }}
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
+          IG_KAPAK_MS: ${{ vars.IG_KAPAK_MS }}
+          IG_STORY: ${{ vars.IG_STORY }}
+          IG_COMMENT: ${{ vars.IG_COMMENT }}
         run: python autopilot.py
+      - name: Instagram yorumlarina cevap ver
+        if: ${{ github.event_name == 'schedule' }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          IG_CEVAP: ${{ vars.IG_CEVAP }}
+          IG_CEVAP_LIMIT: ${{ vars.IG_CEVAP_LIMIT }}
+        run: python cevaplar.py || true
       - name: Durumu kaydet
         if: ${{ always() && !inputs.sadece_ses_testi && !inputs.sadece_instagram_testi }}
         run: |
