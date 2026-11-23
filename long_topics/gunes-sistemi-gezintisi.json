@@ -1,0 +1,137 @@
+{
+ "id": "gunes-sistemi-gezintisi",
+ "title": "Güneş Sistemi'nde Bir Gezinti",
+ "template": "explainer3d",
+ "format": "long",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+4%",
+  "gap": 0.35
+ },
+ "hook": {
+  "say": "Şimdi kemerlerini bağla. Güneş'ten başlayıp Güneş Sistemi'nin en uzak gezegenine kadar uzanan bir yolculuğa çıkıyoruz. Yol boyunca kurşunu eriten bir dünya, Everest'i küçük düşüren bir yanardağ ve yan yatmış bir gezegen göreceğiz. Hazırsan başlıyoruz.",
+  "kicker": "BELGESEL",
+  "headline": "GÜNEŞ SİSTEMİ'NDE BİR GEZİNTİ",
+  "object": "sun"
+ },
+ "scenes": [
+  {
+   "title": "HER ŞEYİN MERKEZİ",
+   "object": "sun",
+   "sub": "Güneş Sistemi'nin tek yıldızı",
+   "say": "Yolculuğumuz her şeyin merkezinde başlıyor: Güneş. Güneş Sistemi'ndeki tek yıldız o ve gezegenlerin hepsi onun çekimiyle yörüngede kalıyor. Bu dev gaz küresi, sistemin bütün kütlesinin yüzde 99,8'ini tek başına taşıyor. Geriye kalan her şey, yani gezegenler, uydular ve kuyruklu yıldızlar, sadece o küçük yüzde 0,2'yi paylaşıyor.",
+   "kicker": "1. DURAK"
+  },
+  {
+   "title": "{n} DÜNYA SIĞAR",
+   "object": "earth",
+   "sub": "Güneş'in hacmini doldurmak için",
+   "say": "Peki Güneş ne kadar büyük? İçi boş olsaydı, onu doldurmak için yaklaşık 1,3 milyon Dünya gerekirdi. Üstelik çekirdeğinde sıcaklık 15 milyon dereceye ulaşıyor. Biz bu ısının sadece küçük bir kısmını, yaklaşık 150 milyon kilometre uzaktan alıyoruz ve bu bile hayat için yetiyor.",
+   "count": 1300000
+  },
+  {
+   "title": "GÜNDÜZ {n}°C",
+   "object": "planet",
+   "sub": "Merkür: Güneş'e en yakın gezegen",
+   "say": "İlk gezegenimiz Merkür. Güneş'e en yakın gezegen o ve gündüz sıcaklığı 430 dereceye kadar çıkıyor. Ama işin garibi şu: Merkür'ün ısıyı tutacak bir atmosferi yok. Bu yüzden gece olduğunda sıcaklık eksi 180 dereceye kadar düşüyor. Aynı gezegende hem fırın hem dondurucu var.",
+   "count": 430,
+   "color": "#9a8f86",
+   "kicker": "2. DURAK",
+   "rings": false
+  },
+  {
+   "title": "88 GÜNDE BİR YIL",
+   "object": "clock",
+   "sub": "Güneş Sistemi'nin en hızlısı",
+   "say": "Merkür aynı zamanda Güneş Sistemi'nin en hızlı gezegeni. Güneş'in etrafındaki turunu sadece 88 günde tamamlıyor. Yani Merkür'de yaşasaydın, her mevsim doğum günü kutlardın.",
+   "color": "#9a8f86"
+  },
+  {
+   "title": "EN SICAK GEZEGEN",
+   "object": "venus",
+   "sub": "Kurşunu eritecek kadar sıcak",
+   "say": "Sıradaki durak Venüs. Merkür Güneş'e daha yakın olmasına rağmen, en sıcak gezegen Venüs. Kalın, karbondioksitli atmosferi dev bir sera gibi ısıyı içeride hapsediyor. Yüzey sıcaklığı ortalama 460 dereceyi aşıyor; bu, kurşunu eritmeye yetecek kadar sıcak.",
+   "theme": "warm",
+   "kicker": "3. DURAK"
+  },
+  {
+   "title": "GÜNEŞ BATIDAN DOĞAR",
+   "object": "venus",
+   "sub": "Ters yönde dönen gezegen",
+   "say": "Venüs'ün bir garipliği daha var: kendi etrafında diğer gezegenlerin çoğuna göre ters yönde dönüyor. Yani Venüs'te dursaydın, Güneş'in batıdan doğup doğudan battığını görürdün.",
+   "theme": "warm"
+  },
+  {
+   "title": "21,9 KİLOMETRE",
+   "object": "mountain",
+   "sub": "Olympus Mons: Mars'ın dev yanardağı",
+   "say": "Dünya'yı geçip Kızıl Gezegen Mars'a geliyoruz. Burada Güneş Sistemi'nin en yüksek dağı var: Olympus Mons adlı dev bir yanardağ. Yüksekliği yaklaşık 21,9 kilometre. Karşılaştırırsak, Everest'in iki katından bile fazla.",
+   "theme": "earth",
+   "kicker": "4. DURAK"
+  },
+  {
+   "title": "10 SAATLİK GÜN",
+   "object": "planet",
+   "sub": "Jüpiter: en hızlı dönen gezegen",
+   "say": "Şimdi devlerin ülkesine giriyoruz. Jüpiter, Güneş Sistemi'nin en büyük gezegeni. Ama o kadar hızlı dönüyor ki, bir günü sadece yaklaşık 10 saat sürüyor. Bu, Güneş Sistemi'ndeki en kısa gün.",
+   "color": "#d9a066",
+   "kicker": "5. DURAK",
+   "rings": false
+  },
+  {
+   "title": "DÜNYA'DAN BÜYÜK FIRTINA",
+   "object": "lightning",
+   "sub": "Büyük Kırmızı Leke",
+   "say": "Jüpiter'in en ünlü özelliği Büyük Kırmızı Leke. Bu bir leke değil, aslında dev bir fırtına. Ve bu fırtına, bütün Dünya'yı içine alabilecek kadar büyük. Gökbilimciler onu yüz yılı aşkın süredir izliyor.",
+   "theme": "storm"
+  },
+  {
+   "title": "SUDA YÜZERDİ",
+   "object": "drop",
+   "sub": "Satürn: en düşük yoğunluklu gezegen",
+   "say": "Sırada halkalarıyla ünlü Satürn var. Satürn, Güneş Sistemi'nin en düşük yoğunluklu gezegeni; sudan bile hafif. Yani onu sığdıracak kadar büyük bir küvet bulabilseydin, Satürn suyun üstünde yüzerdi.",
+   "theme": "ocean",
+   "kicker": "6. DURAK"
+  },
+  {
+   "title": "YAN YATMIŞ GEZEGEN",
+   "object": "planet",
+   "sub": "Uranüs: ekseni yaklaşık 98 derece eğik",
+   "say": "Buzlu devlere geldik. Uranüs, Güneş'in etrafında adeta yan yatmış bir şekilde dönüyor; ekseni yaklaşık 98 derece eğik. Bilim insanları bunun, çok eskiden Dünya büyüklüğünde bir cisimle çarpışmasından kaynaklanmış olabileceğini düşünüyor. Bu eğiklik yüzünden bir kutbu, on yıllar boyunca hiç Güneş görmeyebiliyor.",
+   "color": "#9fd8e0",
+   "kicker": "7. DURAK",
+   "rings": false
+  },
+  {
+   "title": "{n} YILDA BİR TUR",
+   "object": "planet",
+   "sub": "Neptün: en uzak gezegen",
+   "say": "Ve son durak: Neptün. Güneş Sistemi'nin bilinen en uzak gezegeni. O kadar uzakta ki, çıplak gözle görülemeyen tek gezegen. Güneş'in etrafında bir turu 165 yıl sürüyor. 1846'da keşfedildi ve keşfinden sonraki ilk tam turunu ancak 2011'de tamamladı.",
+   "count": 165,
+   "color": "#3f6fd8",
+   "kicker": "8. DURAK",
+   "rings": false
+  }
+ ],
+ "outro": {
+  "say": "Yolculuğumuz burada bitiyor. Sence bu gezegenlerden hangisi en ilginçti? Bir sonraki belgeselde hangi konuyu keşfetmemizi istersin? Yorumlara yaz, abone olmayı unutma!",
+  "headline": "EN İLGİNÇ GEZEGEN HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "rocket"
+ },
+ "meta": {
+  "title": "Güneş Sistemi'nde Bir Gezinti 🪐 | Her Gezegenin En Şaşırtıcı Gerçeği",
+  "caption": "Güneş'ten Neptün'e: kurşunu eriten Venüs, Everest'in iki katı yanardağ, yan yatmış Uranüs ve suda yüzebilecek Satürn. 🪐",
+  "hashtags": [
+   "#uzay",
+   "#güneşsistemi",
+   "#gezegenler",
+   "#belgesel",
+   "#bilim",
+   "#astronomi",
+   "#keşifkutusu"
+  ]
+ }
+}

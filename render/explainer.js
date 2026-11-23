@@ -6,6 +6,7 @@ import * as THREE from "./vendor/three.module.js";
 const TL = await (await fetch(window.TIMELINE_URL || "timeline.json")).json();
 const LAND = await (await fetch("land.json")).json();
 const W = TL.W, H = TL.H;
+const YATAY = !!TL.landscape, DW = 1080, DH = 1920;   // yazı düzeni dikey tasarım alanında çizilir
 
 // ------------------------------------------------------------------ yardımcılar
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
@@ -59,7 +60,8 @@ renderer.setPixelRatio(1); renderer.setSize(W, H, false);
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(40, W / H, 0.1, 400);
+const camera = new THREE.PerspectiveCamera(YATAY ? 34 : 40, W / H, 0.1, 400);
+if (YATAY) camera.setViewOffset(W, H, -W * 0.2, 0, W, H);
 
 const skyMat = new THREE.ShaderMaterial({
   side: THREE.BackSide, depthWrite: false,
@@ -147,16 +149,16 @@ const OBJ = {
     grp.position.y = 0.3;
     return grp;
   },
-  planet(color = "#e8b26a") {
+  planet(color = "#e8b26a", opt = {}) {
     const N = makeNoise(5), tex = canvasTex(512, 256, (g, w, h) => {
       const base = new THREE.Color(color);
       for (let y = 0; y < h; y++) { const v = 0.75 + 0.25 * Math.sin(y * 0.11) + 0.15 * N(0.5, y * 0.05); const c = base.clone().multiplyScalar(v); g.fillStyle = `#${c.getHexString()}`; g.fillRect(0, y, w, 1); }
     });
     const grp = new THREE.Group(); grp.add(mesh(new THREE.SphereGeometry(1, 64, 48), S("#fff", { map: tex, roughness: 0.8 })));
     const rt = canvasTex(512, 8, (g, w) => { for (let x = 0; x < w; x++) { const a = 0.25 + 0.5 * Math.abs(Math.sin(x * 0.09)) * (x > 40 ? 1 : 0); g.fillStyle = `rgba(240,220,190,${a})`; g.fillRect(x, 0, 1, 8); } });
-    const rg = new THREE.RingGeometry(1.35, 2.15, 128); const uv = rg.attributes.uv, pos = rg.attributes.position;
+    const rg = new THREE.RingGeometry(1.35, 2.15, 128); if (opt.rings !== false) { const uv = rg.attributes.uv, pos = rg.attributes.position;
     for (let i = 0; i < uv.count; i++) { const r = Math.hypot(pos.getX(i), pos.getY(i)); uv.setXY(i, (r - 1.35) / 0.8, 0.5); }
-    const ring = mesh(rg, new THREE.MeshBasicMaterial({ map: rt, transparent: true, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -1.25; grp.add(ring);
+    const ring = mesh(rg, new THREE.MeshBasicMaterial({ map: rt, transparent: true, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -1.25; grp.add(ring); }
     grp.rotation.z = 0.35;
     grp.userData.update = (t) => { grp.children[0].rotation.y = t * 0.3; };
     return grp;
@@ -401,9 +403,9 @@ const OBJ = {
 };
 
 // sahne başına nesneler (önceden kurulur, boyut normalize edilir)
-function buildObject(name, color) {
+function buildObject(name, color, opt = {}) {
   const f = OBJ[name] || OBJ.question;
-  const obj = f(color);
+  const obj = f(color, opt);
   const holder = new THREE.Group(); holder.add(obj);
   obj.updateMatrixWorld(true);
   const box = new THREE.Box3(), sz = new THREE.Vector3();
@@ -419,7 +421,7 @@ const scenes = TL.scenes;
 const SC = TL.spec_scenes;
 const objects = scenes.map((s) => {
   const d = s.type === "hook" ? TL.hook : s.type === "outro" ? TL.outro : SC[s.k];
-  return buildObject(d.object || "question", d.color);
+  return buildObject(d.object || "question", d.color, d);
 });
 const themeOf = (s) => THEMES[(s.type === "hook" ? TL.hook.theme : s.type === "outro" ? TL.outro.theme : SC[s.k].theme) || TL.theme] || THEMES.space;
 
@@ -446,13 +448,13 @@ function pill(s, x, y, { size = 40, bg = "#ff7a1a", fg = "#fff", k = 1, ls = 2 }
   txt(s, 0, size * 0.36, { size, align: "center", fill: fg, ls }); ctx.restore();
 }
 
-function drawCaptions(t, yC = 1390) {
+function drawCaptions(t, yC = 1390, cx = W / 2, sc = 1) {
   const c = TL.captions.find((c) => t >= c.t0 && t < c.t1);
   if (!c) return;
   const age = t - c.t0, pop = eOutBack(age / 0.16, 2.2), size = 76, gap = 36;
   const words = c.words.map((w) => UP(w.w)), widths = words.map((w) => measure(w, size));
   const total = widths.reduce((a, b) => a + b, 0) + gap * (words.length - 1), scale = Math.min(1, 960 / total);
-  ctx.save(); ctx.translate(W / 2, yC); ctx.scale(scale * lerp(0.82, 1, pop), scale * lerp(0.82, 1, pop)); ctx.globalAlpha = clamp(age / 0.08);
+  ctx.save(); ctx.translate(cx, yC); ctx.scale(sc * scale * lerp(0.82, 1, pop), sc * scale * lerp(0.82, 1, pop)); ctx.globalAlpha = clamp(age / 0.08);
   let x = -total / 2;
   words.forEach((w, i) => {
     const ww = c.words[i], active = t >= ww.t0 - 0.03 && t < ww.t1 + 0.02;
@@ -511,7 +513,7 @@ function renderScene3D(t) {
 
 // ------------------------------------------------------------------ 2D sahneler
 function progress(si, t, th) {
-  const n = SC.length, x0 = 80, w = W - 160, g = 10, sw = (w - g * (n - 1)) / n, y = 190, k = si - 1;
+  const n = SC.length, x0 = 80, w = DW - 160, g = 10, sw = (w - g * (n - 1)) / n, y = 190, k = si - 1;
   for (let i = 0; i < n; i++) {
     rrect(x0 + i * (sw + g), y, sw, 10, 5); ctx.fillStyle = "rgba(255,255,255,0.22)"; ctx.fill();
     const on = i < k ? 1 : i === k ? eOutCubic((t - scenes[si].t0) / 0.4) : 0;
@@ -526,7 +528,7 @@ function drawTitle(text, t0, t, th, { y = 330, maxSize = 132, maxChars = 13, cou
     const last = i === lines.length - 1; let size = last && lines.length > 1 ? maxSize * 1.15 : maxSize;
     while (measure(ln, size, "Mont", 900, -2) > 960 && size > 50) size -= 4;
     const kk = eOutBack((t - t0 - 0.08 - i * 0.09) / 0.32, 2.2); if (kk <= 0) { y += size; return; }
-    ctx.save(); ctx.translate(W / 2, y + size * 0.4); ctx.scale(lerp(1.7, 1, kk), lerp(1.7, 1, kk)); ctx.globalAlpha *= clamp(kk * 3);
+    ctx.save(); ctx.translate(DW / 2, y + size * 0.4); ctx.scale(lerp(1.7, 1, kk), lerp(1.7, 1, kk)); ctx.globalAlpha *= clamp(kk * 3);
     const col = last ? th.accent : "#fff";
     txt(ln, 0, size * 0.35, { size, align: "center", fill: col, stroke: "rgba(5,8,25,0.9)", sw: 14, glow: last ? th.accent : "rgba(0,0,0,0.5)", glowBlur: 40, ls: -2 });
     ctx.restore(); y += size * 0.98;
@@ -537,7 +539,7 @@ function chip(text, y, t0, t, th) {
   const k = eOutBack((t - t0) / 0.4, 1.4); if (k <= 0) return;
   const lines = wrapLines(text, 34).slice(0, 2), size = 40, h = 64 + (lines.length - 1) * 50;
   const w = Math.max(...lines.map((l) => measure(l, size, "InterSB", 600))) + 64;
-  ctx.save(); ctx.globalAlpha *= clamp(k); ctx.translate(W / 2, y); ctx.scale(lerp(0.85, 1, k), lerp(0.85, 1, k));
+  ctx.save(); ctx.globalAlpha *= clamp(k); ctx.translate(DW / 2, y); ctx.scale(lerp(0.85, 1, k), lerp(0.85, 1, k));
   rrect(-w / 2, 0, w, h + 10, 34); ctx.fillStyle = "rgba(8,10,28,0.62)"; ctx.fill(); ctx.strokeStyle = "rgba(255,255,255,0.18)"; ctx.lineWidth = 2; ctx.stroke();
   ctx.fillStyle = th.accent; rrect(-w / 2, 0, 8, h + 10, 4); ctx.fill();
   lines.forEach((l, i) => txt(l, 0, 50 + i * 50, { size, font: "InterSB", weight: 600, align: "center" }));
@@ -546,20 +548,20 @@ function chip(text, y, t0, t, th) {
 
 function overlay(t, info) {
   const S0 = info.S, th = info.th, age = t - S0.t0, left = S0.t1 - t, exit = eInCubic(1 - left / 0.25);
-  const tg = ctx.createLinearGradient(0, 0, 0, 760); tg.addColorStop(0, "rgba(3,6,20,0.6)"); tg.addColorStop(1, "rgba(3,6,20,0)"); ctx.fillStyle = tg; ctx.fillRect(0, 0, W, 760);
-  const bg = ctx.createLinearGradient(0, 1200, 0, H); bg.addColorStop(0, "rgba(3,6,20,0)"); bg.addColorStop(1, "rgba(3,6,20,0.55)"); ctx.fillStyle = bg; ctx.fillRect(0, 1200, W, H - 1200);
+  const tg = ctx.createLinearGradient(0, 0, 0, 760); tg.addColorStop(0, "rgba(3,6,20,0.6)"); tg.addColorStop(1, "rgba(3,6,20,0)"); ctx.fillStyle = tg; if (!YATAY) ctx.fillRect(0, 0, DW, 760);
+  const bg = ctx.createLinearGradient(0, 1200, 0, DH); bg.addColorStop(0, "rgba(3,6,20,0)"); bg.addColorStop(1, "rgba(3,6,20,0.55)"); ctx.fillStyle = bg; if (!YATAY) ctx.fillRect(0, 1200, DW, DH - 1200);
   ctx.save(); ctx.globalAlpha = 1 - exit; ctx.translate(0, -exit * 60);
   if (S0.type === "hook") {
-    pill(UP(TL.hook.kicker || "BUNU BİLİYOR MUYDUN?"), W / 2, 285, { size: 44, bg: th.accent === "#ffd23f" ? "#ff7a1a" : "#ff7a1a", k: eOutBack(age / 0.35, 2) });
+    pill(UP(TL.hook.kicker || "BUNU BİLİYOR MUYDUN?"), DW / 2, 285, { size: 44, bg: th.accent === "#ffd23f" ? "#ff7a1a" : "#ff7a1a", k: eOutBack(age / 0.35, 2) });
     drawTitle(TL.hook.headline || TL.title, S0.t0 + 0.15, t, th, { y: 380, maxSize: 124, maxChars: 12 });
   } else if (S0.type === "outro") {
     drawTitle(TL.outro.headline || "SENCE?", S0.t0, t, th, { y: 300, maxSize: 112, maxChars: 14 });
     const ck = eOutBack((age - 1.0) / 0.4, 2);
-    if (ck > 0) pill(UP(TL.outro.cta || "Yorumlara yaz"), W / 2, 1210, { size: 46, bg: "#ffffff", fg: "#0b1230", k: ck, ls: 1 });
+    if (ck > 0) pill(UP(TL.outro.cta || "Yorumlara yaz"), DW / 2, YATAY ? 900 : 1210, { size: 46, bg: "#ffffff", fg: "#0b1230", k: ck, ls: 1 });
   } else {
     const d = SC[S0.k];
     progress(info.si, t, th);
-    if (d.kicker) pill(UP(d.kicker), W / 2, 262, { size: 30, bg: "rgba(255,255,255,0.14)", k: eOutBack(age / 0.3, 1.8), ls: 3 });
+    if (d.kicker) pill(UP(d.kicker), DW / 2, 262, { size: 30, bg: "rgba(255,255,255,0.14)", k: eOutBack(age / 0.3, 1.8), ls: 3 });
     const yEnd = drawTitle(d.title || "", S0.t0, t, th, { y: 320, count: d.count ?? null, cntT: [S0.count0 ?? S0.t0 + 0.3, S0.count1 ?? S0.t0 + 1.2] });
     if (d.sub) chip(d.sub, Math.min(yEnd + 14, 640), S0.t0 + 0.45, t, th);
   }
@@ -583,7 +585,16 @@ window.renderFrame = (t) => {
   const contiguous = lastT >= 0 && Math.abs(t - lastT - 1 / TL.fps) < 1e-3;
   ctx.globalAlpha = contiguous && info.blur > 0.05 ? lerp(1, 0.4, info.blur) : 1;
   ctx.drawImage(glc, 0, 0); ctx.globalAlpha = 1;
-  overlay(t, info); drawCaptions(t); post(t);
+  if (YATAY) {
+    // sol panel: okunabilirlik için koyu geçiş; dikey tasarım alanı 0.56 ölçekle sola yerleşir
+    const lg = ctx.createLinearGradient(0, 0, W * 0.55, 0); lg.addColorStop(0, "rgba(3,6,20,0.72)"); lg.addColorStop(1, "rgba(3,6,20,0)");
+    ctx.fillStyle = lg; ctx.fillRect(0, 0, W * 0.55, H);
+    const bgl = ctx.createLinearGradient(0, H - 260, 0, H); bgl.addColorStop(0, "rgba(3,6,20,0)"); bgl.addColorStop(1, "rgba(3,6,20,0.6)");
+    ctx.fillStyle = bgl; ctx.fillRect(0, H - 260, W, 260);
+    ctx.save(); ctx.translate(90, 20); ctx.scale(0.62, 0.62); overlay(t, info); ctx.restore();
+    drawCaptions(t, H - 110, W / 2, 0.82);
+  } else { overlay(t, info); drawCaptions(t); }
+  post(t);
   lastT = t;
   return out.toDataURL("image/jpeg", 0.92);
 };

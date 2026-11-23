@@ -153,7 +153,9 @@ def build_explainer(spec, segs, words, total):
     chunks = []
     for w in words:
         chunks += caption_chunks(w)
-    tl = {"fps": 30, "W": 1080, "H": 1920, "duration": round(end, 3), "title": spec["title"],
+    land = spec.get("format") == "long"   # uzun belgesel: yatay 16:9
+    tl = {"fps": 30, "W": 1920 if land else 1080, "H": 1080 if land else 1920, "landscape": land,
+          "duration": round(end, 3), "title": spec["title"],
           "theme": spec.get("theme", "space"), "hook": spec["hook"], "outro": spec["outro"],
           "spec_scenes": sc, "scenes": scenes, "captions": chunks}
     return tl, events, intensity, end

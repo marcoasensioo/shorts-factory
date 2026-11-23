@@ -313,7 +313,9 @@ def fetch_segments(texts, cache_dir, voice_cfg):
                     for ext in (".words.json", ".chirp"):
                         if os.path.exists(p + ext):
                             os.remove(p + ext)
-                synth_gemini_all(texts, paths, voice_cfg.get("gemini_voice"))
+                # uzun belgesel: istek başına en fazla 6 parça (çok uzun ses tek seferde kesilebilir)
+                for a in range(0, len(texts), 6):
+                    synth_gemini_all(texts[a:a + 6], paths[a:a + 6], voice_cfg.get("gemini_voice"))
                 for p, tg in zip(paths, tags):
                     open(p + ".txt", "w", encoding="utf-8").write(tg)
             except Exception as e:  # noqa — sınır/servis sorunu: Edge'e düş
