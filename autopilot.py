@@ -74,6 +74,12 @@ if os.environ.get("YT_UPLOAD") == "1" and os.environ.get("YT_REFRESH_TOKEN"):
             print("Yorum yazildi:", cid, "\n" + text)
         except Exception as e:  # yorum hatası videoyu/durumu bozmasın
             print("UYARI - yorum yazilamadi:", e)
+    srt = video[:-4] + ".srt"
+    if os.environ.get("YT_CAPTION", "1") != "0" and os.path.exists(srt):
+        try:
+            print("Altyazi yuklendi:", youtube.caption(vid, srt))
+        except Exception as e:  # altyazı hatası videoyu/durumu bozmasın
+            print("UYARI - altyazi yuklenemedi:", e)
 
 done.append(d["id"])
 os.makedirs(os.path.dirname(STATE), exist_ok=True)
