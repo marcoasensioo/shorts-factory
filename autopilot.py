@@ -84,7 +84,13 @@ if os.environ.get("YT_UPLOAD") == "1" and os.environ.get("YT_REFRESH_TOKEN"):
 if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os.environ.get("GITHUB_ACTIONS"):
     try:
         import instagram
-        print("Instagram:", instagram.publish_reel(video, instagram.build_caption(d), d["id"]))
+        ig_id = instagram.publish_reel(video, instagram.build_caption(d), d["id"])
+        print("Instagram:", ig_id)
+        if os.environ.get("IG_COMMENT", "1") != "0":
+            try:
+                print("Instagram yorum:", instagram.comment(ig_id, build_comment(d)))
+            except Exception as e:  # noqa
+                print("UYARI - Instagram yorumu yazilamadi:", e)
         if os.environ.get("IG_STORY", "1") != "0":
             try:
                 print("Instagram hikaye:", instagram.publish_story(video, d["id"]))
