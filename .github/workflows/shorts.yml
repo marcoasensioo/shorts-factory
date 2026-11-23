@@ -32,6 +32,7 @@ jobs:
         if: ${{ inputs.sadece_instagram_testi }}
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python ig_testi.py
@@ -65,6 +66,7 @@ jobs:
           GEMINI_TTS_VOICE: ${{ vars.GEMINI_TTS_VOICE }}
           CHIRP_TEMPO: ${{ vars.SES_HIZI }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
           # Instagram'a günde 1 video: sadece akşam (18:11 TR) çalışmasının videosu gider
           IG_UPLOAD: ${{ (github.event.schedule == '11 15 * * *' && vars.IG_UPLOAD != '0') && '1' || '0' }}
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
@@ -86,5 +88,6 @@ jobs:
         if: ${{ github.event.schedule == '41 8 * * *' }}
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python ig_anahtar_yenile.py || true
