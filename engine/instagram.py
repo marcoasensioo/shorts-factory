@@ -184,3 +184,31 @@ def build_caption(d):
     parts.append("🔔 Her gün yeni bilgiler için takip et.")
     parts.append(" ".join(tags))
     return "\n\n".join(parts)
+
+
+# ---------------------------------------------------------------- yorumlar
+def comment(media_id, text):
+    """Kendi gönderimize yorum yazar."""
+    return _call("POST", f"{API}/{media_id}/comments", {"message": text[:2200]}, data=b"")["id"]
+
+
+def reply(comment_id, text):
+    """Bir yoruma cevap yazar."""
+    return _call("POST", f"{API}/{comment_id}/replies", {"message": text[:2200]}, data=b"")["id"]
+
+
+def username():
+    user_id()
+    if API == FB_API:
+        return _call("GET", f"{API}/{_UID}", {"fields": "username"}).get("username", "")
+    return _call("GET", f"{API}/me", {"fields": "username"}).get("username", "")
+
+
+def recent_media(limit=10):
+    uid = user_id()
+    return _call("GET", f"{API}/{uid}/media", {"fields": "id,caption,timestamp", "limit": limit}).get("data", [])
+
+
+def comments(media_id):
+    return _call("GET", f"{API}/{media_id}/comments",
+                 {"fields": "id,text,username,timestamp,replies{username}", "limit": 50}).get("data", [])
