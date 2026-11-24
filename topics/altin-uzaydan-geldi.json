@@ -1,0 +1,65 @@
+{
+ "id": "altin-uzaydan-geldi",
+ "title": "Altın Uzaydan Geldi",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Parmağındaki altın yüzük, aslında iki ölü yıldızın çarpışmasından gelmiş olabilir!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ALTIN UZAYDAN",
+  "object": "coin"
+ },
+ "scenes": [
+  {
+   "title": "YAPMASI ÇOK ZOR",
+   "object": "coin",
+   "sub": "Yıldızlar bile zorlanıyor",
+   "say": "Altın gibi ağır elementleri yapmak çok zor. Normal yıldızların içindeki süreçler bunun için yetmiyor; çok fazla nötron gerekiyor."
+  },
+  {
+   "title": "NÖTRON YILDIZLARI",
+   "object": "atom",
+   "sub": "Ölü yıldızların kalıntısı",
+   "say": "Nötron yıldızları, büyük yıldızlar öldüğünde geriye kalan inanılmaz yoğun cisimler. Güneş kadar kütle, yaklaşık 16 kilometrelik bir küreye sıkışmış.",
+   "theme": "lab"
+  },
+  {
+   "title": "17 AĞUSTOS 2017",
+   "object": "lightning",
+   "sub": "İlk kez görüldü",
+   "say": "17 Ağustos 2017'de bilim insanları, iki nötron yıldızının çarpışmasını ilk kez hem kütleçekim dalgalarıyla hem de ışıkla gözlemledi. Bu çarpışma 130 milyon ışık yılı uzaktaydı.",
+   "theme": "storm"
+  },
+  {
+   "title": "YÜZLERCE DÜNYA KADAR",
+   "object": "coin",
+   "sub": "Altın ve platin",
+   "say": "NASA'ya göre bu çarpışmanın enkazında, yüzlerce Dünya kütlesi kadar altın ve platin oluştu."
+  }
+ ],
+ "outro": {
+  "say": "Bunu öğrendikten sonra altına bakışın değişti mi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "DEĞİŞTİ Mİ?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Altın aslında uzaydan geliyor ✨ #shorts",
+  "caption": "Altın, ölü yıldızların çarpışmasında oluşuyor! ✨",
+  "hashtags": [
+   "#shorts",
+   "#uzay",
+   "#altın",
+   "#bilim",
+   "#yıldız",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

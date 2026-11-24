@@ -1,0 +1,65 @@
+{
+ "id": "saturn-suda-yuzer",
+ "title": "Satürn Suda Yüzer",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Dev bir küvet bulsan, Satürn gezegeni içinde batmazdı. Yüzerdi!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "SATÜRN YÜZER",
+  "object": "planet"
+ },
+ "scenes": [
+  {
+   "title": "DÜNYA'NIN 9 KATI",
+   "object": "planet",
+   "sub": "Çok büyük ama çok hafif",
+   "say": "Satürn, Dünya'dan yaklaşık 9 kat daha geniş. Ama bu dev gezegen inanılmaz derecede hafif."
+  },
+  {
+   "title": "SUDAN HAFİF",
+   "object": "drop",
+   "sub": "Yoğunluğu sudan az",
+   "say": "Satürn'ün ortalama yoğunluğu, santimetreküp başına sadece 0,69 gram. Suyunki ise 1 gram. Yani Satürn, sudan yaklaşık yüzde 30 daha az yoğun.",
+   "theme": "ocean"
+  },
+  {
+   "title": "GAZ DEVİ",
+   "object": "planet",
+   "sub": "Gerçek bir yüzeyi yok",
+   "say": "Çünkü Satürn çoğunlukla hidrojen ve helyumdan oluşan bir gaz devi. Üzerine inebileceğin gerçek bir yüzeyi bile yok."
+  },
+  {
+   "title": "{n} UYDU",
+   "object": "moon",
+   "sub": "Mart 2025 itibarıyla",
+   "say": "Üstelik Satürn'ün Mart 2025 itibarıyla 274 onaylanmış uydusu var. Bu, Güneş Sistemi'ndeki bütün gezegenlerden fazla!",
+   "count": 274
+  }
+ ],
+ "outro": {
+  "say": "Satürn'ü küvete koysak halka iz bırakır mı sence? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Satürn suda yüzebilir 🪐 #shorts",
+  "caption": "Satürn sudan hafif! Dev bir küvette batmadan yüzerdi 🪐",
+  "hashtags": [
+   "#shorts",
+   "#uzay",
+   "#satürn",
+   "#bilim",
+   "#gezegen",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

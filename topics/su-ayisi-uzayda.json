@@ -1,0 +1,66 @@
+{
+ "id": "su-ayisi-uzayda",
+ "title": "Uzayda Hayatta Kalan Hayvan",
+ "template": "explainer3d",
+ "theme": "nature",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Uzay boşluğunda korumasız hayatta kalan ilk hayvan, bir milimetre boyunda!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "SU AYISI",
+  "object": "drop"
+ },
+ "scenes": [
+  {
+   "title": "SU AYILARI",
+   "object": "drop",
+   "sub": "Tardigradlar",
+   "say": "Bu minik canlıların adı tardigrad, yani su ayısı. En büyük türleri bile bir milimetreden biraz uzun."
+  },
+  {
+   "title": "EYLÜL 2007",
+   "object": "rocket",
+   "sub": "Foton-M3 görevi",
+   "say": "Eylül 2007'de bilim insanları, Avrupa Uzay Ajansı'nın Foton-M3 göreviyle yaklaşık 3 bin su ayısını uzaya gönderdi.",
+   "theme": "space"
+  },
+  {
+   "title": "UZAY BOŞLUĞU",
+   "object": "rocket",
+   "sub": "Vakum sorun olmadı",
+   "say": "Su ayıları, uzay boşluğuna ve kozmik ışınlara doğrudan maruz bırakıldı. Proje liderine göre vakum, onlar için sorun olmadı. Hatta Dünya'ya dönünce yumurtladılar.",
+   "theme": "space"
+  },
+  {
+   "title": "SÜPER DAYANIKLI",
+   "object": "heart",
+   "sub": "Ama zayıf yönleri de var",
+   "say": "Su ayıları eksi 272 dereceden artı 150 dereceye kadar sıcaklıklara dayanabiliyor. Ama ilginç bir zayıflıkları var: Ezilmeye karşı oldukça savunmasızlar.",
+   "theme": "warm"
+  }
+ ],
+ "outro": {
+  "say": "Sence dünyanın en dayanıklı canlısı hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Uzayda hayatta kalan hayvan 🐻 #shorts",
+  "caption": "Uzay boşluğunda hayatta kalan ilk hayvan: su ayısı! 🐻",
+  "hashtags": [
+   "#shorts",
+   "#hayvanlar",
+   "#uzay",
+   "#bilim",
+   "#doğa",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "id": "kopekbaliklari-agaclardan-yasli",
+ "title": "Köpekbalıkları Ağaçlardan Yaşlı",
+ "template": "explainer3d",
+ "theme": "ocean",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Köpekbalıkları, ağaçlardan daha önce vardı!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "AĞAÇLARDAN YAŞLI",
+  "object": "fish"
+ },
+ "scenes": [
+  {
+   "title": "{n} MİLYON YIL",
+   "object": "fish",
+   "sub": "İlk izler",
+   "say": "Köpekbalıklarının ve atalarının izleri, yaklaşık 450 milyon yıl öncesine kadar uzanıyor.",
+   "count": 450
+  },
+  {
+   "title": "İLK AĞAÇLAR",
+   "object": "tree",
+   "sub": "Yaklaşık 385 milyon yıl önce",
+   "say": "İlk ağaçlar ise yaklaşık 385 milyon yıl önce ortaya çıktı. Yani köpekbalıkları, ormanlardan çok önce okyanuslarda yüzüyordu.",
+   "theme": "nature"
+  },
+  {
+   "title": "DİNOZORLARDAN ÖNCE",
+   "object": "clock",
+   "sub": "Kitlesel yok oluşları atlattılar",
+   "say": "Köpekbalıkları dinozorlardan da önce vardı ve bilinen büyük kitlesel yok oluşları atlatmayı başardı."
+  },
+  {
+   "title": "AMA DİKKAT",
+   "object": "question",
+   "sub": "Modern köpekbalıkları daha genç",
+   "say": "Küçük bir not: Bugün gördüğümüz modern köpekbalıkları yaklaşık 195 milyon yıl önce ortaya çıktı. Yani 'ağaçlardan yaşlı' olan, köpekbalıklarının soyu."
+  }
+ ],
+ "outro": {
+  "say": "Sence okyanusun en eski canlısı hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Köpekbalıkları ağaçlardan yaşlı 🦈 #shorts",
+  "caption": "Köpekbalıkları, ağaçlar ortaya çıkmadan önce de vardı! 🦈",
+  "hashtags": [
+   "#shorts",
+   "#köpekbalığı",
+   "#hayvanlar",
+   "#okyanus",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

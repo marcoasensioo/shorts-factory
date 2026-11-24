@@ -1,0 +1,67 @@
+{
+ "id": "marsta-mavi-gun-batimi",
+ "title": "Mars'ta Gün Batımı Mavi",
+ "template": "explainer3d",
+ "theme": "space",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Kızıl Gezegen Mars'ta gün batımı kırmızı değil. Mavi!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "MAVİ GÜN BATIMI",
+  "object": "planet"
+ },
+ "scenes": [
+  {
+   "title": "15 NİSAN 2015",
+   "object": "phone",
+   "sub": "Curiosity'nin fotoğrafı",
+   "say": "15 Nisan 2015'te NASA'nın Curiosity gezicisi, Mars'taki ilk renkli gün batımı fotoğraflarını çekti. Güneş, mavimsi bir ışıkla batıyordu.",
+   "color": "#c1502e",
+   "rings": false
+  },
+  {
+   "title": "SEBEBİ: TOZ",
+   "object": "planet",
+   "sub": "Çok ince toz parçacıkları",
+   "say": "Bunun sebebi Mars atmosferindeki çok ince toz. Bu tozun boyutu, mavi ışığın atmosferden diğer renklere göre biraz daha kolay geçmesini sağlıyor.",
+   "color": "#c1502e",
+   "rings": false
+  },
+  {
+   "title": "DÜNYA'NIN TERSİ",
+   "object": "earth",
+   "sub": "Bizde turuncu, onlarda mavi",
+   "say": "Dünya'da gün batımları turuncu ve kırmızı olur, gökyüzümüz ise mavidir. Mars'ta tam tersi: Gökyüzü çoğunlukla kızıl, gün batımı ise mavi."
+  },
+  {
+   "title": "SADECE UFUKTA",
+   "object": "sun",
+   "sub": "Işık en uzun yolu katediyor",
+   "say": "Mavi parıltı, Güneş ufka yaklaştığında belirginleşiyor. Çünkü o anda ışık, atmosferden ve tozdan en uzun yolu geçiyor."
+  }
+ ],
+ "outro": {
+  "say": "Mars'ta gün batımını izlemek ister miydin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "İZLER MİYDİN?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Mars'ta gün batımı mavi 🔵 #shorts",
+  "caption": "Kızıl Gezegen'de gün batımı mavi! Sebebi şaşırtıcı 🔵",
+  "hashtags": [
+   "#shorts",
+   "#uzay",
+   "#mars",
+   "#nasa",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

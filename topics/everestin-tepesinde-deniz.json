@@ -1,0 +1,64 @@
+{
+ "id": "everestin-tepesinde-deniz",
+ "title": "Everest'in Tepesinde Deniz",
+ "template": "explainer3d",
+ "theme": "earth",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Dünyanın en yüksek noktasında, deniz canlılarının fosilleri var!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ZİRVEDE DENİZ",
+  "object": "mountain"
+ },
+ "scenes": [
+  {
+   "title": "ZİRVEDE KİREÇTAŞI",
+   "object": "mountain",
+   "sub": "Deniz tabanından gelen kaya",
+   "say": "Everest'in zirvesindeki kireçtaşı, bir zamanlar okyanus tabanının bir parçasıydı."
+  },
+  {
+   "title": "{n} MİLYON YIL",
+   "object": "clock",
+   "sub": "Britannica'ya göre",
+   "say": "Britannica'ya göre bu kayalar, yaklaşık 470 milyon yıl önce deniz tabanındaydı. İçlerinde pek çok deniz fosili bulunuyor.",
+   "count": 470
+  },
+  {
+   "title": "KITALAR ÇARPIŞTI",
+   "object": "earth",
+   "sub": "Hindistan ve Asya",
+   "say": "Peki deniz tabanı nasıl dünyanın zirvesine çıktı? Kıta levhaları çarpıştıkça kayalar yukarı itildi ve Himalayalar yükseldi."
+  },
+  {
+   "title": "HÂLÂ YÜKSELİYOR",
+   "object": "mountain",
+   "sub": "Levhalar durmuyor",
+   "say": "Bu levha hareketleri bugün de devam ediyor. Yani Everest, yavaş yavaş da olsa hâlâ değişmeye devam ediyor."
+  }
+ ],
+ "outro": {
+  "say": "Sen bir gün Everest'e tırmanmak ister miydin? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "TIRMANIR MIYDIN?",
+  "cta": "Yorumlara yaz",
+  "object": "question"
+ },
+ "meta": {
+  "title": "Everest'in tepesinde deniz fosilleri 🏔️ #shorts",
+  "caption": "Dünyanın zirvesi bir zamanlar okyanus tabanıydı! 🏔️",
+  "hashtags": [
+   "#shorts",
+   "#everest",
+   "#doğa",
+   "#jeoloji",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}
