@@ -81,11 +81,30 @@ if os.environ.get("YT_UPLOAD") == "1" and os.environ.get("YT_REFRESH_TOKEN"):
         except Exception as e:  # altyazı hatası videoyu/durumu bozmasın
             print("UYARI - altyazi yuklenemedi:", e)
 
-if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os.environ.get("GITHUB_ACTIONS"):
+def ig_sirasi():
+    """Instagram'a günde 1 video: Türkiye saatiyle 15:00'ten sonra biten ilk video."""
+    import datetime
+    simdi = datetime.datetime.utcnow() + datetime.timedelta(hours=3)
+    son = os.path.join(ROOT, "state", "ig_son.txt")
+    bugun = simdi.date().isoformat()
+    if simdi.hour < int(os.environ.get("IG_SAAT") or 15):
+        print("Instagram: saat", simdi.strftime("%H:%M"), "- aksam videosu degil, atlandi.")
+        return False
+    if os.path.exists(son) and open(son).read().strip() == bugun:
+        print("Instagram: bugun zaten paylasildi, atlandi.")
+        return False
+    return True
+
+
+if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os.environ.get("GITHUB_ACTIONS") \
+        and ig_sirasi():
     try:
         import instagram
         ig_id = instagram.publish_reel(video, instagram.build_caption(d), d["id"])
         print("Instagram:", ig_id)
+        import datetime
+        open(os.path.join(ROOT, "state", "ig_son.txt"), "w").write(
+            (datetime.datetime.utcnow() + datetime.timedelta(hours=3)).date().isoformat())
         if os.environ.get("IG_COMMENT", "1") != "0":
             try:
                 print("Instagram yorum:", instagram.comment(ig_id, build_comment(d)))

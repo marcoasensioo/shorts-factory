@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Instagram testi: en son YouTube'a yüklenen videoyu (GitHub Release'teki) Instagram'a HİKÂYE olarak gönderir.
-(Reels testi zaten yapıldı; aynı Reels'i tekrar paylaşmamak için sadece hikâye denenir.)
-IG_TEST_REELS=1 verilirse Reels olarak da gönderir. Yeni video üretmez, YouTube'a dokunmaz, sırayı değiştirmez."""
+"""Elle Instagram paylaşımı: en son YouTube'a yüklenen videoyu Instagram'a Reels + yorum + hikâye olarak gönderir.
+IG_TEST_REELS=0 verilirse sadece hikâye. Yeni video üretmez, YouTube'a dokunmaz, sırayı değiştirmez."""
 import glob
 import json
 import os
@@ -19,6 +18,16 @@ specs = {json.load(open(p, encoding="utf-8"))["id"]: p for p in glob.glob(os.pat
 son = next(i for i in reversed(done) if i in specs)
 d = json.load(open(specs[son], encoding="utf-8"))
 print("Gonderilen video:", d["title"])
-if os.environ.get("IG_TEST_REELS") == "1":
-    print("Instagram yayin kimligi:", instagram.publish_reel(f"{son}.mp4", instagram.build_caption(d), son))
+sys.path.insert(0, ROOT)
+from autopilot_yardim import build_comment  # noqa: E402
+if os.environ.get("IG_TEST_REELS", "1") == "1":
+    ig_id = instagram.publish_reel(f"{son}.mp4", instagram.build_caption(d), son)
+    print("Instagram yayin kimligi:", ig_id)
+    try:
+        print("Instagram yorum:", instagram.comment(ig_id, build_comment(d)))
+    except Exception as e:  # noqa
+        print("UYARI - Instagram yorumu yazilamadi:", e)
+    import datetime
+    open(os.path.join(ROOT, "state", "ig_son.txt"), "w").write(
+        (datetime.datetime.utcnow() + datetime.timedelta(hours=3)).date().isoformat())
 print("Instagram hikaye kimligi:", instagram.publish_story(f"{son}.mp4", son))
