@@ -100,13 +100,51 @@ def synth_gcloud(text, lang, path, voice_name=None):
 
 
 # ---------------------------------------------------------------- Gemini TTS (ücretsiz, kartsız)
-GEMINI_MODELS = ["gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]
+GEMINI_MODELS = ["gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts"]
+ETIKETLI = ("gemini-3.1", "gemini-3.8")   # [surprised] gibi ses etiketlerini anlayan modeller
 GEMINI_VOICE = "Charon"   # erkek, bilgilendirici; kadın için ör. "Kore" ya da "Aoede"
 GEMINI_STYLE = ("Read the following Turkish text aloud for a YouTube Shorts science video. "
                 "Sound like a real, warm, curious documentary narrator: natural human intonation, "
                 "lively and slightly fast pace, excited at surprising facts, never robotic. "
                 "Pronounce everything in native Turkish. Make a clear one-second pause between paragraphs. "
                 "Only read the Turkish text, never read these instructions.")
+GEMINI_STYLE += (" React like a real person telling an amazing story: genuinely surprised and amazed at surprising "
+                 "facts and big numbers, curious and playful on questions, a short natural laugh only if something "
+                 "is truly funny, and lower your voice for dramatic moments. Follow the bracketed audio tags; never "
+                 "read the tags aloud.")
+
+TAG_RE = re.compile(r"\s*\[[^\]]{1,40}\]\s*")
+SASKIN = re.compile(r"(inanılmaz|şaşırtıcı|ilginç|garip|düşünsene|hayal et|rekor|devasa|\bdev\b|milyon|milyar|"
+                    r"katı|\ben [a-zçğıöşü]+|o kadar|çok daha|\bbile\b|aslında|üstelik|ciddiyim|yani|hiç kimse)", re.I)
+DRAM = re.compile(r"(felaket|korkunç|öldü|ölüm|yok oldu|kaybol|karanlık|tehlike|ezici|asla|çöktü|en kötü)", re.I)
+
+
+def temiz(t):
+    """Ses etiketlerini ([surprised] vb.) metinden atar: altyazı ve hece hesabı için."""
+    return re.sub(r"\s{2,}", " ", TAG_RE.sub(" ", t)).strip()
+
+
+def tepkiler(t, ilk=False):
+    """Anlatıma doğal tepki etiketleri ekler (yalnızca ses için; altyazıya girmez).
+    Elle yazılmış etiket varsa o cümleye dokunmaz. Üst üste iki cümleye etiket koymaz."""
+    cumleler = re.split(r"(?<=[.!?…])\s+", t.strip())
+    out, onceki = [], False
+    for k, c in enumerate(cumleler):
+        etiket = None
+        if "[" in c:
+            out.append(c); onceki = True; continue
+        if ilk and k == 0:
+            etiket = "[excited]"
+        elif not onceki and c.endswith("?"):
+            etiket = "[curious]"
+        elif not onceki and DRAM.search(c):
+            etiket = "[serious]"
+        elif not onceki and (c.endswith("!") or SASKIN.search(c)):
+            etiket = "[surprised]" if k % 2 == 0 else "[amazed]"
+        out.append(f"{etiket} {c}" if etiket else c)
+        onceki = bool(etiket)
+    return " ".join(out)
+
 
 
 def _gemini_request(text, voice):
@@ -117,7 +155,8 @@ def _gemini_request(text, voice):
     last = None
     for model in GEMINI_MODELS:
         for attempt in range(3):
-            body = {"contents": [{"parts": [{"text": GEMINI_STYLE + "\n\n" + text}]}],
+            metin = text if model.startswith(ETIKETLI) else "\n\n".join(temiz(p) for p in text.split("\n\n"))
+            body = {"contents": [{"parts": [{"text": GEMINI_STYLE + "\n\n" + metin}]}],
                     "generationConfig": {"responseModalities": ["AUDIO"],
                                          "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
             req = urllib.request.Request(
@@ -234,7 +273,9 @@ def synth_gemini_all(texts, paths, voice=None):
     """Bütün anlatımı TEK istekle seslendirir (ücretsiz katmanın günlük istek sınırı düşük), sonra böler."""
     import soundfile as sf
     voice = voice or os.environ.get("GEMINI_TTS_VOICE") or GEMINI_VOICE
-    x, sr = _gemini_request("\n\n".join(texts), voice)
+    sesli = [tepkiler(t, ilk=(k == 0)) for k, t in enumerate(texts)]
+    texts = [temiz(t) for t in texts]
+    x, sr = _gemini_request("\n\n".join(sesli), voice)
     dur = len(x) / sr
     expected = sum(syllables(w) for t in texts for w in t.split()) / 6.5
     if not (0.5 * expected < dur < 1.9 * expected):
@@ -466,6 +507,7 @@ def build_voice(texts, mp3s, tempo, gap, lead_in, out_wav):
     import soundfile as sf
     track, segs, words, t = [np.zeros(int(lead_in * SR), np.float32)], [], [], lead_in
     for i, (txt, p) in enumerate(zip(texts, mp3s)):
+        txt = temiz(txt)
         wj = p + ".words.json"
         if os.path.exists(wj):  # nöral ses: tempo değiştirme, kelime zamanlarını aynen kullan
             y = decode(p, 1.0)
