@@ -13,24 +13,20 @@
   "say": "Kızıl Gezegen Mars'ta gün batımı kırmızı değil. Mavi!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "MAVİ GÜN BATIMI",
-  "object": "planet"
+  "object": "mars"
  },
  "scenes": [
   {
    "title": "15 NİSAN 2015",
-   "object": "phone",
+   "object": "rover",
    "sub": "Curiosity'nin fotoğrafı",
-   "say": "15 Nisan 2015'te NASA'nın Curiosity gezicisi, Mars'taki ilk renkli gün batımı fotoğraflarını çekti. Güneş, mavimsi bir ışıkla batıyordu.",
-   "color": "#c1502e",
-   "rings": false
+   "say": "15 Nisan 2015'te NASA'nın Curiosity gezicisi, Mars'taki ilk renkli gün batımı fotoğraflarını çekti. Güneş, mavimsi bir ışıkla batıyordu."
   },
   {
    "title": "SEBEBİ: TOZ",
-   "object": "planet",
+   "object": "mars",
    "sub": "Çok ince toz parçacıkları",
-   "say": "Bunun sebebi Mars atmosferindeki çok ince toz. Bu tozun boyutu, mavi ışığın atmosferden diğer renklere göre biraz daha kolay geçmesini sağlıyor.",
-   "color": "#c1502e",
-   "rings": false
+   "say": "Bunun sebebi Mars atmosferindeki çok ince toz. Bu tozun boyutu, mavi ışığın atmosferden diğer renklere göre biraz daha kolay geçmesini sağlıyor."
   },
   {
    "title": "DÜNYA'NIN TERSİ",

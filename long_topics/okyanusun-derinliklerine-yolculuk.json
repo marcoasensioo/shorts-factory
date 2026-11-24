@@ -14,7 +14,7 @@
   "say": "Okyanusun yüzeyinden başlayıp gezegenimizin en derin noktasına kadar inen bir yolculuğa çıkıyoruz. Her metrede biraz daha karanlık, biraz daha soğuk ve biraz daha tuhaf bir dünyaya gireceğiz. Hazırsan dalıyoruz.",
   "kicker": "BELGESEL",
   "headline": "OKYANUSUN DERİNLİKLERİ",
-  "object": "drop"
+  "object": "submarine"
  },
  "scenes": [
   {
@@ -26,7 +26,7 @@
   },
   {
    "title": "ÜÇTE DÖRDÜ KARANLIK",
-   "object": "question",
+   "object": "submarine",
    "sub": "Derin deniz",
    "say": "Yani okyanusun neredeyse tamamı karanlık. Okyanusla kaplı alanın yaklaşık dörtte üçü derin, kalıcı olarak karanlık ve soğuk. Bilim insanları buna derin deniz diyor ve gezegenimizdeki en büyük yaşam alanı aslında burası."
   },
@@ -39,14 +39,14 @@
   },
   {
    "title": "1000 METRE: GECE",
-   "object": "lightbulb",
+   "object": "jellyfish",
    "sub": "Gece yarısı bölgesi",
    "say": "1000 metreden sonra yüzeyden hiç ışık gelmiyor. Burası gece yarısı bölgesi ve 4000 metreye kadar uzanıyor. Bu derinliklerde tek ışık kaynağı, canlıların kendi ürettiği ışık. Sıcaklık ise yıl boyunca 4 derece civarında, neredeyse buzdolabı kadar soğuk.",
    "kicker": "3. DURAK"
   },
   {
    "title": "ISPERMEÇET BALİNASI",
-   "object": "fish",
+   "object": "whale",
    "sub": "Gece yarısına dalan memeli",
    "say": "Ama bu karanlığa inen bir memeli var: ıspermeçet balinası. Bu dev balinalar, yiyecek bulmak için gece yarısı bölgesine kadar dalabiliyor. Nefes almak için yüzeye çıkması gereken bir hayvanın bu derinliklere inmesi, doğanın en etkileyici başarılarından biri."
   },
@@ -86,14 +86,14 @@
   },
   {
    "title": "23 OCAK 1960",
-   "object": "rocket",
+   "object": "submarine",
    "sub": "Trieste: ilk insanlı iniş",
    "say": "Peki insanlar oraya hiç indi mi? Evet. 23 Ocak 1960'ta Don Walsh ve Jacques Piccard, Trieste adlı bir dalış aracıyla Challenger Çukuru'nun dibine ulaştı. İniş yaklaşık beş saat sürdü. Yolda pencerelerden biri çatladı ama devam etmeye karar verdiler. Dipte ise sadece yaklaşık 20 dakika kalabildiler.",
    "kicker": "6. DURAK"
   },
   {
    "title": "PARLAYAN CANLILAR",
-   "object": "lightbulb",
+   "object": "jellyfish",
    "sub": "Karanlıktaki ışık gösterisi",
    "say": "İniş sırasında pencereden dışarı bakan Walsh, karanlığın içinde binlerce parlayan canlı gördüğünü anlattı. Ona göre derinlerde kendi ışığını üreten canlılar her yerdeydi; üstelik oraları okyanusun pek de kalabalık olmayan bir bölgesiydi. Işığın hiç ulaşmadığı bir dünyada, canlılar kendi ışıklarını yakıyordu."
   },
@@ -111,7 +111,7 @@
   },
   {
    "title": "HÂLÂ BİLİNMEYEN",
-   "object": "earth",
+   "object": "submarine",
    "sub": "Deniz tabanının çoğu haritalanmadı",
    "say": "Ve belki de en şaşırtıcı gerçek şu: 2026 itibarıyla deniz tabanının sadece yaklaşık yüzde 29'u modern sonar sistemleriyle yüksek çözünürlükte haritalandı. Yani gezegenimizin büyük bir kısmı, hâlâ hiç kimsenin net olarak görmediği bir dünya.",
    "kicker": "7. DURAK"

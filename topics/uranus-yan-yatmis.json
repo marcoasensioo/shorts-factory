@@ -13,15 +13,14 @@
   "say": "Güneş Sistemi'nde yan yatarak dönen bir gezegen var!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "YAN YATAN GEZEGEN",
-  "object": "planet"
+  "object": "uranus"
  },
  "scenes": [
   {
    "title": "98 DERECE",
-   "object": "planet",
+   "object": "uranus",
    "sub": "Ekseni neredeyse yatay",
-   "say": "Uranüs'ün dönme ekseni 98 derece eğik. Yani bu gezegen, Güneş'in etrafında adeta yan yatmış bir top gibi yuvarlanıyor.",
-   "color": "#7fd6e0"
+   "say": "Uranüs'ün dönme ekseni 98 derece eğik. Yani bu gezegen, Güneş'in etrafında adeta yan yatmış bir top gibi yuvarlanıyor."
   },
   {
    "title": "DÜNYA SADECE 23,5°",
@@ -37,7 +36,7 @@
   },
   {
    "title": "DEV BİR ÇARPIŞMA?",
-   "object": "lightning",
+   "object": "asteroid",
    "sub": "Sebebi hâlâ tam bilinmiyor",
    "say": "Peki neden böyle? Kesin olarak bilmiyoruz. Bir ihtimal, Güneş Sistemi oluşurken büyük bir gök cismiyle çarpışmış olması.",
    "theme": "storm"

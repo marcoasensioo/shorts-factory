@@ -18,7 +18,7 @@
  "scenes": [
   {
    "title": "{n} °C",
-   "object": "lightning",
+   "object": "thermometer",
    "sub": "Bir anlığına havayı bu kadar ısıtır",
    "say": "Bir yıldırım, geçtiği havayı bir anlığına yaklaşık 30000 dereceye kadar ısıtıyor.",
    "count": 30000
@@ -32,7 +32,7 @@
   },
   {
    "title": "GÖK GÜRÜLTÜSÜ NEDİR?",
-   "object": "question",
+   "object": "cloud",
    "sub": "Aniden genleşen havanın sesi",
    "say": "Bu ani sıcaklık havayı patlarcasına genleştiriyor. Duyduğumuz gök gürültüsü işte bu patlamanın sesi."
   },

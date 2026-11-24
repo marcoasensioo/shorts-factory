@@ -26,7 +26,7 @@
   },
   {
    "title": "ANA KAMPTA YARI OKSİJEN",
-   "object": "heart",
+   "object": "lungs",
    "sub": "Yaklaşık 5.500 metre",
    "say": "Tırmanışlar genellikle yaklaşık 5 bin 500 metredeki ana kamptan başlıyor. Daha burada bile havadaki oksijen basıncı, deniz seviyesindekinin yaklaşık yarısı. Yani dağcılar daha zirveye yürümeye başlamadan, vücutları zorlanmaya başlıyor.",
    "theme": "body"
@@ -40,14 +40,14 @@
   },
   {
    "title": "ALIŞMAK İMKÂNSIZ",
-   "object": "heart",
+   "object": "lungs",
    "sub": "Vücut kendini tüketiyor",
    "say": "Ölüm bölgesinde insan vücudu yüksekliğe alışamıyor. Vücut, oksijen depolarını yerine koyabildiğinden daha hızlı tüketiyor. Ek oksijen olmadan uzun süre kalmak; vücut fonksiyonlarının bozulmasına, bilinç kaybına ve sonunda ölüme yol açabiliyor. Bu yüzden dağcıların çoğu tüp oksijen kullanıyor.",
    "theme": "body"
   },
   {
    "title": "1922: İLK TÜPLER",
-   "object": "lightbulb",
+   "object": "flag",
    "sub": "Şişelenmiş oksijen",
    "say": "Everest'e ilk ciddi denemeler 1920'lerde başladı. 1922'deki ikinci İngiliz seferinde bazı dağcılar ilk kez tüplü oksijen kullandı. Zirveye ulaşamadılar ama yaklaşık 8 bin 230 metreye kadar çıkmayı başardılar.",
    "kicker": "3. BÖLÜM"
@@ -60,7 +60,7 @@
   },
   {
    "title": "1953 SEFERİ",
-   "object": "book",
+   "object": "compass",
    "sub": "John Hunt'ın ekibi",
    "say": "1953'te John Hunt liderliğindeki İngiliz seferi Everest'e geldi. İlk zirve denemesini Tom Bourdillon ve Charles Evans yaptı. 26 Mayıs'ta zirveye 100 metre kadar yaklaştılar ama oksijen sistemlerindeki sorunlar yüzünden geri dönmek zorunda kaldılar.",
    "kicker": "4. BÖLÜM"
@@ -73,14 +73,14 @@
   },
   {
    "title": "DONAN OKSİJEN TÜPÜ",
-   "object": "lightning",
+   "object": "snowflake",
    "sub": "Zirveye giden yolda",
    "say": "Tırmanış sırasında Tenzing'in oksijen hortumu dondu. Hillary hortumu açtı, ardından kendi hortumunu da temizledi. Sonra karşılarına yaklaşık 12 metre yüksekliğinde dik bir kaya basamağı çıktı. Bugün bu engel, Hillary Basamağı olarak biliniyor.",
    "theme": "storm"
   },
   {
    "title": "29 MAYIS 1953",
-   "object": "mountain",
+   "object": "flag",
    "sub": "Saat 11.30: Zirve",
    "say": "Ve 29 Mayıs 1953'te, yerel saatle 11.30'da, Hillary ve Tenzing dünyanın en yüksek noktasına ulaşan ilk insanlar oldu. Zirvede sadece yaklaşık 15 dakika kalabildiler, çünkü oksijenleri azalıyordu.",
    "kicker": "5. BÖLÜM"

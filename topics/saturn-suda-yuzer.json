@@ -13,12 +13,12 @@
   "say": "Dev bir küvet bulsan, Satürn gezegeni içinde batmazdı. Yüzerdi!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "SATÜRN YÜZER",
-  "object": "planet"
+  "object": "saturn"
  },
  "scenes": [
   {
    "title": "DÜNYA'NIN 9 KATI",
-   "object": "planet",
+   "object": "saturn",
    "sub": "Çok büyük ama çok hafif",
    "say": "Satürn, Dünya'dan yaklaşık 9 kat daha geniş. Ama bu dev gezegen inanılmaz derecede hafif."
   },
@@ -31,7 +31,7 @@
   },
   {
    "title": "GAZ DEVİ",
-   "object": "planet",
+   "object": "saturn",
    "sub": "Gerçek bir yüzeyi yok",
    "say": "Çünkü Satürn çoğunlukla hidrojen ve helyumdan oluşan bir gaz devi. Üzerine inebileceğin gerçek bir yüzeyi bile yok."
   },

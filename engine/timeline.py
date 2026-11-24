@@ -1,5 +1,20 @@
 """Senaryo + ses zamanlamasından görsel zaman çizelgesi, altyazı öbekleri ve ses efekti olayları üretir."""
+import json
+import os
 import re
+
+NESNELER = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "render", "nesneler.json")
+
+
+def nesne_kontrol(spec):
+    """Senaryodaki her nesne 3D kütüphanede var mı? Yoksa video yapılmadan durdurur (soru işareti çıkmasın)."""
+    if spec.get("template") != "explainer3d":
+        return
+    gecerli = set(json.load(open(NESNELER, encoding="utf-8")))
+    parcalar = [spec.get("hook", {}), spec.get("outro", {})] + spec.get("scenes", [])
+    yanlis = sorted({p.get("object", "question") for p in parcalar} - gecerli)
+    if yanlis:
+        raise ValueError(f"Bilinmeyen 3D nesne: {yanlis}. Geçerliler: render/nesneler.json")
 
 
 def fmt_num(s):
@@ -106,6 +121,7 @@ def build(spec, segs, words, total):
 
 def build_explainer(spec, segs, words, total):
     """explainer3d: kanca + N bilgi sahnesi + kapanış. Her sahne bir anlatım parçasıdır."""
+    nesne_kontrol(spec)
     sc = spec["scenes"]
     n = len(sc)
     LEAD = 0.25

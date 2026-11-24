@@ -26,13 +26,13 @@
   },
   {
    "title": "ÜÇ ASTRONOT, İKİ ARAÇ",
-   "object": "moon",
+   "object": "astronaut",
    "sub": "Columbia ve Eagle",
    "say": "Apollo 11 aslında birbirine bağlı iki araçtan oluşuyordu: Columbia adlı komuta modülü ve Eagle adlı Ay modülü. Plan şuydu: Armstrong ve Aldrin Eagle ile Ay'a inecek, Collins ise Columbia'da Ay'ın etrafında dönerek onları bekleyecekti."
   },
   {
    "title": "20 TEMMUZ",
-   "object": "moon",
+   "object": "lander",
    "sub": "Eagle ayrılıyor",
    "say": "20 Temmuz'da Armstrong ve Aldrin, iki aracı birbirine bağlayan dar bir tünelden geçerek Eagle'a bindi. Ay'ın etrafındaki 12'nci turun sonunda iki araç birbirinden ayrıldı. Collins artık tek başınaydı; Eagle ise inişe başladı.",
    "kicker": "2. BÖLÜM"
@@ -53,27 +53,27 @@
   },
   {
    "title": "YAKIT BİTİYOR",
-   "object": "clock",
+   "object": "lander",
    "sub": "Saniyeler kalmıştı",
    "say": "Armstrong güvenli bir yer ararken yakıt hızla azalıyordu. Yakıt uyarı ışığı yandığında, ellerinde sadece yaklaşık bir buçuk dakikalık havada kalma süresi vardı. Eagle sonunda yere değdiğinde depoda bir dakikadan çok daha az süre yetecek yakıt kalmıştı.",
    "kicker": "3. BÖLÜM"
   },
   {
    "title": "EAGLE İNDİ",
-   "object": "moon",
+   "object": "lander",
    "sub": "Sükûnet Denizi",
    "say": "Ve sonra o ünlü cümle geldi. Armstrong telsizden şunu söyledi: 'Houston, burası Sükûnet Üssü. Kartal indi.' Eagle, Ay'ın Sükûnet Denizi adı verilen bölgesine konmuştu. Houston'daki kontrol odasında herkes rahat bir nefes aldı."
   },
   {
    "title": "KÜÇÜK BİR ADIM",
-   "object": "moon",
+   "object": "footprint",
    "sub": "İnsanlık için dev bir sıçrama",
    "say": "Birkaç saat sonra Armstrong merdivenden indi ve Ay yüzeyine ayak bastı. O anda tarihe geçen sözlerini söyledi: 'Bu, bir insan için küçük bir adım, ama insanlık için dev bir sıçrama.' Yaklaşık yirmi dakika sonra Aldrin de ona katıldı.",
    "kicker": "4. BÖLÜM"
   },
   {
    "title": "2,5 SAATLİK YÜRÜYÜŞ",
-   "object": "rocket",
+   "object": "astronaut",
    "sub": "Taşlar ve deneyler",
    "say": "Armstrong ve Aldrin'in Ay yüzeyindeki yürüyüşü yaklaşık iki buçuk saat sürdü. Bu sürede Ay taşları topladılar, bilimsel deneyler kurdular ve fotoğraflar çektiler. Sonra Eagle'a dönüp geceyi aracın içinde geçirdiler."
   },
@@ -85,7 +85,7 @@
   },
   {
    "title": "21 TEMMUZ: DÖNÜŞ",
-   "object": "rocket",
+   "object": "lander",
    "sub": "Eagle yeniden havalanıyor",
    "say": "21 Temmuz'da Eagle Ay yüzeyinden yeniden havalandı ve Columbia ile buluştu. Üç astronot birlikte Dünya'ya doğru yola çıktı. Görev, fırlatmadan dönüşe kadar toplam 8 gün 3 saat sürdü ve astronotlar 24 Temmuz'da Dünya'ya döndü.",
    "kicker": "5. BÖLÜM"
@@ -101,7 +101,7 @@
   "say": "Ay'a ilk adımın hikâyesini anlattık. Sen o anda Armstrong'un yerinde olsaydın ilk ne söylerdin? Yorumlara yaz, abone olmayı da unutma!",
   "headline": "SEN NE SÖYLERDİN?",
   "cta": "Yorumlara yaz",
-  "object": "moon"
+  "object": "flag"
  },
  "meta": {
   "title": "Ay'a İlk Adım: Apollo 11 🚀 | Alarmlar, Biten Yakıt ve Dev Sıçrama",

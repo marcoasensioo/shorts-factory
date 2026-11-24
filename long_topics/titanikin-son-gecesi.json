@@ -14,12 +14,12 @@
   "say": "14 Nisan 1912 gecesi, Kuzey Atlantik. Dünyanın en büyük yolcu gemilerinden biri, ilk yolculuğunda karanlık ve sakin sulardan ilerliyor. İki saat kırk dakika sonra ise tarihin en ünlü deniz felaketi yaşanmış olacak.",
   "kicker": "BELGESEL",
   "headline": "TİTANİK'İN SON GECESİ",
-  "object": "drop"
+  "object": "ship"
  },
  "scenes": [
   {
    "title": "İLK YOLCULUK",
-   "object": "clock",
+   "object": "ship",
    "sub": "Nisan 1912",
    "say": "RMS Titanik, Nisan 1912'de ilk yolculuğuna çıktı. Zamanının en büyük ve en lüks yolcu gemilerinden biriydi. Gemide yolcular ve mürettebatla birlikte 2 bin 200'den fazla kişi vardı.",
    "kicker": "1. BÖLÜM"
@@ -32,7 +32,7 @@
   },
   {
    "title": "BUZ UYARILARI",
-   "object": "lightning",
+   "object": "iceberg",
    "sub": "Gün boyunca gelen mesajlar",
    "say": "14 Nisan günü gemiye başka gemilerden buzdağı uyarıları geldi. İlk uyarı sabah saatlerinde ulaştı. Gece olduğunda deniz alışılmadık derecede sakindi; bu da dalgaların buzdağının dibinde oluşturduğu köpüğü görmeyi zorlaştırıyordu.",
    "theme": "storm"
@@ -46,7 +46,7 @@
   },
   {
    "title": "SAAT 23.40",
-   "object": "mountain",
+   "object": "iceberg",
    "sub": "Tam önümüzde buzdağı!",
    "say": "Saat 23.40'ta gözcü Frederick Fleet o ünlü uyarıyı yaptı: 'Tam önümüzde buzdağı!' Gemi dönmeye çalıştı ama çok geçti. Buzdağı, geminin sağ tarafını yaklaşık 90 metrelik bir bölüm boyunca sıyırdı ve gövdeye su dolmaya başladı.",
    "kicker": "2. BÖLÜM",
@@ -54,13 +54,13 @@
   },
   {
    "title": "TASARIM KUSURU",
-   "object": "drop",
+   "object": "ship",
    "sub": "Bölmeler yeterince yüksek değildi",
    "say": "Titanik, su geçirmez bölmelerle tasarlanmıştı. Ama bir kusur vardı: Bölmeleri ayıran duvarlar, su hattının sadece birkaç metre üstüne kadar uzanıyordu. Ön bölmeler dolup gemi öne doğru eğildikçe, su duvarların üstünden bir sonraki bölmeye taştı."
   },
   {
    "title": "1.178 KİŞİLİK YER",
-   "object": "heart",
+   "object": "ship",
    "sub": "Herkese yetmeyen filikalar",
    "say": "Asıl trajedi filikalardaydı. Gemide 20 filika vardı ve toplam kapasiteleri 1.178 kişiydi. Bu, gemidekilerin sadece yaklaşık yarısına yetecek kadardı. Üstelik panik ve hazırlıksızlık yüzünden pek çok filika tam dolmadan suya indirildi.",
    "kicker": "3. BÖLÜM",
@@ -81,14 +81,14 @@
   },
   {
    "title": "GEMİ İKİYE BÖLÜNDÜ",
-   "object": "drop",
+   "object": "ship",
    "sub": "Saat 02.20",
    "say": "Saatler ilerledikçe geminin ön kısmı iyice battı, kıç tarafı havaya kalktı. Bu muazzam yük, gövdenin ortasında büyük bir baskı oluşturdu ve gemi ikiye bölündü. Saat 02.20'de Titanik, Kuzey Atlantik'in karanlık sularında tamamen kayboldu.",
    "kicker": "4. BÖLÜM"
   },
   {
    "title": "SU EKSİ 2 DERECE",
-   "object": "drop",
+   "object": "thermometer",
    "sub": "Ölümcül soğuk",
    "say": "Ölümlerin çoğunun sebebi boğulma değil, soğuktu. Deniz suyunun sıcaklığı yaklaşık eksi 2 dereceydi. Suya düşen insanların neredeyse tamamı, soğuk şoku ve donma yüzünden birkaç dakika içinde hayatını kaybetti."
   },
@@ -101,7 +101,7 @@
   },
   {
    "title": "CARPATHIA YETİŞİYOR",
-   "object": "clock",
+   "object": "ship",
    "sub": "Bir buçuk saat sonra",
    "say": "Titanik battıktan yaklaşık bir buçuk saat sonra Carpathia adlı yolcu gemisi bölgeye ulaştı. Filikalardaki hayatta kalanları gemiye aldı. Sudan ise yalnızca birkaç kişi kurtarılabildi.",
    "kicker": "5. BÖLÜM"
@@ -117,7 +117,7 @@
   "say": "Titanik'in son gecesini anlattık. Sence bu felaket önlenebilir miydi? Yorumlara yaz, abone olmayı da unutma!",
   "headline": "ÖNLENEBİLİR MİYDİ?",
   "cta": "Yorumlara yaz",
-  "object": "drop"
+  "object": "anchor"
  },
  "meta": {
   "title": "Titanik'in Son Gecesi 🚢 | 2 Saat 40 Dakikada Yaşananlar",

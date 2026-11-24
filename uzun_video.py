@@ -21,6 +21,8 @@ if not spec:
     sys.exit(print("Sirada uzun video senaryosu yok (long_topics/ bos).") or 0)
 
 d = json.load(open(spec, encoding="utf-8"))
+from engine.timeline import nesne_kontrol
+nesne_kontrol(d)  # ses üretilmeden önce: yanlış nesne varsa kota harcanmasın
 video = make_video.make(spec, workers=int(os.environ.get("RENDER_WORKERS") or 2))
 meta = d.get("meta", {})
 title = meta.get("title") or d["title"]

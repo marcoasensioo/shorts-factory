@@ -13,12 +13,12 @@
   "say": "Yaşlanınca ölmek yerine yeniden bebekliğe dönen bir canlı var.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "ÖLÜMSÜZ DENİZANASI",
-  "object": "hourglass"
+  "object": "jellyfish"
  },
  "scenes": [
   {
    "title": "4,5 MİLİMETRE",
-   "object": "drop",
+   "object": "jellyfish",
    "sub": "Serçe parmak tırnağından küçük",
    "say": "Adı Turritopsis dohrnii. Boyu sadece 4,5 milimetre, yani serçe parmağının tırnağı kadar."
   },
@@ -36,7 +36,7 @@
   },
   {
    "title": "AMA YENİLMEZ DEĞİL",
-   "object": "fish",
+   "object": "jellyfish",
    "sub": "Avlanabilir, hastalanabilir",
    "say": "Yine de yenilmez değildir. Bir balığa yem olabilir ya da hastalanıp ölebilir."
   }

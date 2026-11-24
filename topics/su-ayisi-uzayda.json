@@ -24,7 +24,7 @@
   },
   {
    "title": "EYLÜL 2007",
-   "object": "rocket",
+   "object": "satellite",
    "sub": "Foton-M3 görevi",
    "say": "Eylül 2007'de bilim insanları, Avrupa Uzay Ajansı'nın Foton-M3 göreviyle yaklaşık 3 bin su ayısını uzaya gönderdi.",
    "theme": "space"
@@ -38,7 +38,7 @@
   },
   {
    "title": "SÜPER DAYANIKLI",
-   "object": "heart",
+   "object": "thermometer",
    "sub": "Ama zayıf yönleri de var",
    "say": "Su ayıları eksi 272 dereceden artı 150 dereceye kadar sıcaklıklara dayanabiliyor. Ama ilginç bir zayıflıkları var: Ezilmeye karşı oldukça savunmasızlar.",
    "theme": "warm"

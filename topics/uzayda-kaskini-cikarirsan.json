@@ -13,7 +13,7 @@
   "say": "Uzayda kaskını çıkarırsan patlamazsın, anında donmazsın da. Peki ne olur?",
   "kicker": "UZAYDA…",
   "headline": "KASKINI ÇIKARIRSAN?",
-  "object": "rocket"
+  "object": "astronaut"
  },
  "scenes": [
   {
@@ -40,7 +40,7 @@
   "say": "Uzaya gitmek ister miydin? Yorumlara yaz, takip etmeyi unutma!",
   "headline": "UZAYA GİDER MİYDİN?",
   "cta": "Yorumlara yaz",
-  "object": "rocket"
+  "object": "astronaut"
  },
  "meta": {
   "title": "Uzayda kaskını çıkarırsan ne olur? 🚀 #shorts",

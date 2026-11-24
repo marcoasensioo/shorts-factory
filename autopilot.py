@@ -54,6 +54,8 @@ if not spec:
         sys.exit("Yeni senaryo yok: topics_queue.txt boş olabilir.")
 
 d = json.load(open(spec, encoding="utf-8"))
+from engine.timeline import nesne_kontrol
+nesne_kontrol(d)  # ses üretilmeden önce: yanlış nesne varsa kota harcanmasın
 video = make_video.make(spec)
 meta = d.get("meta", {})
 title = meta.get("title") or f"{d['title']} #shorts"
