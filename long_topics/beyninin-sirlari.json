@@ -1,0 +1,121 @@
+{
+ "id": "beyninin-sirlari",
+ "title": "Beyninin Sırları",
+ "template": "explainer3d",
+ "format": "long",
+ "theme": "mind",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+4%",
+  "gap": 0.35
+ },
+ "hook": {
+  "say": "Şu an bu cümleyi duymanı, anlamanı ve hatırlamanı sağlayan şey, yaklaşık bir buçuk kilo ağırlığındaki bir organ. Ama beynin hakkında bildiğini sandığın pek çok şey yanlış olabilir. Bugün beyninin en şaşırtıcı sırlarını keşfediyoruz.",
+  "kicker": "BELGESEL",
+  "headline": "BEYNİNİN SIRLARI",
+  "object": "brain"
+ },
+ "scenes": [
+  {
+   "title": "1,4 KİLOGRAM",
+   "object": "brain",
+   "sub": "Kıvrımlı bir organ",
+   "say": "İnsan beyni yaklaşık 1,4 kilogram ağırlığında. Dışı kıvrım kıvrım, kıvamı ise neredeyse kesilmiş süt gibi yumuşak. Ama bu yumuşak dokunun içinde, bildiğimiz en karmaşık yapılardan biri saklı.",
+   "kicker": "1. SIR"
+  },
+  {
+   "title": "86 MİLYAR NÖRON",
+   "object": "atom",
+   "sub": "Sinir hücreleri",
+   "say": "Beynin temel yapı taşı nöron adı verilen sinir hücreleri. Uzun süre beyinde 100 milyar nöron olduğu söylendi; daha yeni ve hassas sayımlar ise sayının yaklaşık 86 milyar olduğunu gösteriyor. Her nöron, binlerce başka nöronla bağlantı kurabiliyor. Bu bağlantı ağı, düşündüğün, hissettiğin ve hatırladığın her şeyin temeli.",
+   "theme": "lab"
+  },
+  {
+   "title": "BEYİN ACIYI HİSSETMEZ",
+   "object": "brain",
+   "sub": "Beyin dokusunda ağrı alıcısı yok",
+   "say": "İşte şaşırtıcı bir gerçek: Beyin dokusunun kendisinde ağrı alıcısı yok. Acıyı vücudunun başka yerlerinden gelen sinyallerle hissediyorsun ama beynin kendisi acı hissetmiyor. Bu yüzden bazı beyin ameliyatları, hasta tamamen uyanıkken yapılabiliyor. Cerrahlar ameliyat sırasında hastayla konuşarak konuşma gibi önemli bölgelere zarar vermediklerinden emin oluyor.",
+   "kicker": "2. SIR"
+  },
+  {
+   "title": "ANILAR DEĞİŞİR",
+   "object": "book",
+   "sub": "Hafıza bir kayıt cihazı değil",
+   "say": "Hafızanın bir video kaydı gibi çalıştığını mı düşünüyorsun? Öyle değil. Psikologlara göre beyin bir anıyı hatırlarken onu farklı parçaları bir araya getirerek yeniden kuruyor. Bu yüzden anılarımız zamanla değişebiliyor, hatta hiç yaşanmamış şeyleri bile hatırlayabiliyoruz. Buna sahte anı deniyor.",
+   "kicker": "3. SIR"
+  },
+  {
+   "title": "1974: KIRIK CAM",
+   "object": "eye",
+   "sub": "Loftus'un ünlü deneyi",
+   "say": "Psikolog Elizabeth Loftus 1974'te bunu gösteren ünlü bir deney yaptı. Katılımcılara bir araba kazası videosu izletti, sonra arabaların ne kadar hızlı gittiğini sordu. Bazılarına arabaların birbirine 'çarptığını', bazılarına ise 'paramparça ettiğini' söyledi. Bir hafta sonra 'paramparça' kelimesini duyanlar, videoda hiç olmayan kırık camları gördüklerini daha sık hatırladı. Tek bir kelime, bir anıyı değiştirmeye yetmişti."
+  },
+  {
+   "title": "KONTROL GRUBU %6",
+   "object": "eye",
+   "sub": "Hiç soru sorulmayanlar",
+   "say": "Deneyin bir de kontrol grubu vardı. Onlara arabaların hızı hiç sorulmadı. Bir hafta sonra bu grupta kırık cam gördüğünü söyleyenlerin oranı yalnızca yüzde 6'ydı. Yani fark, sadece sorulan sorudaki kelimeden geliyordu."
+  },
+  {
+   "title": "ANI EKMEK MÜMKÜN",
+   "object": "brain",
+   "sub": "Yerleştirilen sahte anılar",
+   "say": "Araştırmacılar daha da ileri gitti. Loftus ve Julia Shaw gibi bilim insanları, sağlıklı insanların zihnine hiç yaşamadıkları olayları anı olarak yerleştirmeyi başardı. Loftus'a göre bir insanın, gördüğü şeyin ayrıntılarını telkinle değiştirmek oldukça kolay."
+  },
+  {
+   "title": "HER ANI BİRAZ SAHTE",
+   "object": "book",
+   "sub": "Bilimin şaşırtıcı sonucu",
+   "say": "Bu araştırmalardan çıkan sonuç oldukça çarpıcı: Bazı bilim insanlarına göre, bütün anılar bir dereceye kadar yanlış. Bu bir arıza değil; beynin, eksik parçaları tamamlayarak dünyayı anlamlı kılma biçimi."
+  },
+  {
+   "title": "UYKU HAFIZAYI KAYDEDER",
+   "object": "bed",
+   "sub": "Uyurken öğrenmeye devam",
+   "say": "Beynin sen uyurken de çalışıyor. Araştırmalar, gün içinde öğrendiğin bilgilerin uyku sırasında güçlendirilip kalıcı hâle getirildiğini gösteriyor. Bilim insanları bu sürece hafıza pekiştirmesi diyor. Yani sınavdan önceki gece uykusuz kalmak, öğrendiğini unutmanın en kolay yollarından biri olabilir.",
+   "kicker": "4. SIR",
+   "theme": "space"
+  },
+  {
+   "title": "25 BİN SOKAK",
+   "object": "clock",
+   "sub": "Londra taksicilerinin beyni",
+   "say": "Beynin kullandıkça değişebiliyor. Bunun en ünlü örneği Londra taksicileri. Lisans alabilmek için yaklaşık 25 bin sokağı ve binlerce önemli yeri ezberlemeleri gerekiyor. Bilim insanları beyin taramalarında, taksicilerin yön bulmayla ilgili hipokampüs bölgesinin arka kısmının normalden daha büyük olduğunu buldu.",
+   "kicker": "5. SIR"
+  },
+  {
+   "title": "BEYİN ESNEKTİR",
+   "object": "lightbulb",
+   "sub": "Nöroplastisite",
+   "say": "Aynı karşılaştırma otobüs şoförleriyle de yapıldı. Her gün aynı güzergâhı süren otobüs şoförlerinde bu fark görülmedi. Yani farkı yaratan araba kullanmak değil, sürekli yeni yollar öğrenmekti. Beynin yeni şeyler öğrendikçe kendini yeniden şekillendirme yeteneğine nöroplastisite deniyor."
+  },
+  {
+   "title": "HER YAŞTA ÖĞRENEBİLİRSİN",
+   "object": "heart",
+   "sub": "Beyin değişmeye devam ediyor",
+   "say": "Nöroplastisite yaşla birlikte azalıyor, bu doğru. Ama yeni araştırmalar, ileri yaşlardaki beynin bile sanıldığından daha fazla değişebildiğini gösteriyor. Yani yeni bir dil, yeni bir enstrüman ya da yeni bir beceri öğrenmek için hiçbir zaman geç değil.",
+   "kicker": "6. SIR",
+   "theme": "warm"
+  }
+ ],
+ "outro": {
+  "say": "Beyninin sırlarını keşfettik. Sence bunlardan hangisi en şaşırtıcıydı? Bir sonraki belgeselde hangi konuyu keşfetmemizi istersin? Yorumlara yaz, abone olmayı da unutma!",
+  "headline": "EN ŞAŞIRTICI HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "brain"
+ },
+ "meta": {
+  "title": "Beyninin Sırları 🧠 | Hafıza, Uyku ve Değişen Beyin",
+  "caption": "Acı hissetmeyen bir organ, kendini yeniden yazan anılar, uyurken çalışan hafıza ve taksicilerin değişen beyni. 🧠",
+  "hashtags": [
+   "#beyin",
+   "#psikoloji",
+   "#hafıza",
+   "#belgesel",
+   "#bilim",
+   "#kişiselgelişim",
+   "#keşifkutusu"
+  ]
+ }
+}

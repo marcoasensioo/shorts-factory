@@ -1,0 +1,138 @@
+{
+ "id": "dinozorlarin-son-gunu",
+ "title": "Dinozorların Son Günü",
+ "template": "explainer3d",
+ "format": "long",
+ "theme": "earth",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+4%",
+  "gap": 0.35
+ },
+ "hook": {
+  "say": "66 milyon yıl önce, sıradan bir bahar günüydü. Dinozorlar her zamanki gibi beslenip dolaşıyordu. Birkaç saat sonra ise dünya tarihinin en kötü günü yaşanacaktı. Bugün o günü baştan sona anlatıyoruz.",
+  "kicker": "BELGESEL",
+  "headline": "DİNOZORLARIN SON GÜNÜ",
+  "object": "planet"
+ },
+ "scenes": [
+  {
+   "title": "66 MİLYON YIL ÖNCE",
+   "object": "earth",
+   "sub": "Kretase döneminin sonu",
+   "say": "Zaman: 66 milyon yıl önce, Kretase döneminin sonu. Dinozorlar on milyonlarca yıldır karada hâkim canlılar. Okyanuslarda dev sürüngenler yüzüyor, gökyüzünde uçan sürüngenler süzülüyor. Kimse bilmiyor ama uzaydan bir şey yaklaşıyor.",
+   "kicker": "1. BÖLÜM"
+  },
+  {
+   "title": "YAKLAŞIK 10 KM",
+   "object": "planet",
+   "sub": "Bir dağ büyüklüğünde gök taşı",
+   "say": "Gelen şey, yaklaşık 10 kilometre genişliğinde bir asteroit. Yani aşağı yukarı bir dağ büyüklüğünde. Bu dev kaya, bugünkü Meksika'daki Yukatan Yarımadası açıklarına çarptı.",
+   "color": "#8a8178",
+   "rings": false
+  },
+  {
+   "title": "150 KM'DEN GENİŞ",
+   "object": "mountain",
+   "sub": "Chicxulub kraterinin izi",
+   "say": "Çarpışmanın hızı o kadar yüksekti ki, asteroitten çok daha büyük bir krater oluştu. Bugün Chicxulub Krateri olarak bilinen bu iz, 150 kilometreden geniş. Krater şu an yerin altında gömülü ve merkezi denizin altında kalıyor.",
+   "theme": "earth"
+  },
+  {
+   "title": "BİR BAHAR GÜNÜ",
+   "object": "fish",
+   "sub": "Tanis'teki fosil balıklar",
+   "say": "Peki bu felaket yılın hangi zamanında oldu? 2022'de Nature dergisinde yayımlanan bir araştırma bunu ortaya çıkardı. Bilim insanları, ABD'nin Kuzey Dakota eyaletindeki Tanis adlı fosil alanında, çarpışmadan kısa süre sonra ölüp gömülen balıkları inceledi. Kemiklerindeki büyüme izleri, kuzey yarım kürede baharın yaşandığını gösterdi.",
+   "kicker": "2. BÖLÜM"
+  },
+  {
+   "title": "GÖKYÜZÜ KARARDI",
+   "object": "sun",
+   "sub": "Çarpma kışı",
+   "say": "Çarpışmanın ardından havaya savrulan kül, duman ve toz bütün gezegeni sardı. Gün ışığı aylarca sürebilen kalıcı bir alacakaranlığa döndü. Sıcaklıklar düştü, bitkiler fotosentez yapamaz hâle geldi ve besin zinciri çöktü. Bilim insanları bu çarpma kışının aylarca mı yoksa on yıldan fazla mı sürdüğünü hâlâ tartışıyor.",
+   "kicker": "3. BÖLÜM",
+   "theme": "storm"
+  },
+  {
+   "title": "TÜRLERİN %75'İ",
+   "object": "question",
+   "sub": "Kitlesel yok oluş",
+   "say": "Sonuç korkunçtu: Dünya'daki bitki ve hayvan türlerinin yaklaşık yüzde 75'i yok oldu. Kuş olmayan dinozorların hepsi bu yok oluşta tarihe karıştı. Bilim insanları bu olaya Kretase-Paleojen yok oluşu diyor."
+  },
+  {
+   "title": "DENİZLER DE BOŞALDI",
+   "object": "octopus",
+   "sub": "Amonitlerin sonu",
+   "say": "Felaket sadece karada yaşanmadı. Yüz milyonlarca yıldır denizlerde yaşayan, sarmal kabuklu amonitler de bu yok oluşta tamamen ortadan kalktı. Bugün onları sadece fosillerinden tanıyoruz.",
+   "theme": "ocean"
+  },
+  {
+   "title": "1980: İRİDYUM İZİ",
+   "object": "atom",
+   "sub": "Alvarez'in ipucu",
+   "say": "Peki bütün bunları nereden biliyoruz? Hikâye 1980'de başlıyor. Nobel ödüllü fizikçi Luis Alvarez ve jeolog oğlu Walter, dünyanın dört bir yanında aynı döneme ait kil katmanlarında olağanüstü yüksek miktarda iridyum buldu. İridyum Dünya'da çok nadir, ama gök taşlarında bol bulunan bir element.",
+   "kicker": "4. BÖLÜM",
+   "theme": "lab"
+  },
+  {
+   "title": "PETROL ARARKEN",
+   "object": "mountain",
+   "sub": "Kraterin keşfi",
+   "say": "Geriye bir soru kalmıştı: Çarpışmanın kraterinin nerede olduğu. Cevap şaşırtıcı bir yerden geldi. 1970'lerin sonunda Yukatan'da petrol arayan jeofizikçiler Antonio Camargo ve Glen Penfield, yerin altında dev bir yapı fark etti. Sonraki yıllarda bunun aranan krater olduğu kanıtlandı."
+  },
+  {
+   "title": "İZ MERKEZE GÖTÜRÜYOR",
+   "object": "atom",
+   "sub": "İridyum azalıyor",
+   "say": "Sonraki araştırmalar, iridyum miktarının Chicxulub kraterinden uzaklaştıkça azaldığını gösterdi. Yani ipuçları gerçekten tek bir noktayı işaret ediyordu: Yukatan.",
+   "theme": "lab"
+  },
+  {
+   "title": "ASTEROİT Mİ?",
+   "object": "question",
+   "sub": "Bilim hâlâ tartışıyor",
+   "say": "Peki Dünya'ya çarpan şey tam olarak neydi? Bilim insanlarının genel görüşü bunun bir asteroit olduğu. Ama bazı araştırmacılar, kraterin bir kuyruklu yıldız tarafından açılmış olabileceğini düşünüyor. Bilimde bazı sorular, 66 milyon yıl sonra bile hâlâ açık."
+  },
+  {
+   "title": "KİM KURTULDU?",
+   "object": "question",
+   "sub": "Yuvalar ve su altı",
+   "say": "Peki herkes ölmedi mi? Hayır. Araştırmacılara göre yüzeyde dolaşan hayvanların çoğu büyük ihtimalle öldü, ama yuvalarda saklananlar ya da su altında yaşayanlar ilk yıkımdan korunmuş olabilir. Timsahlar, kaplumbağalar, küçük memeliler ve bazı kuşlar hayatta kaldı.",
+   "kicker": "5. BÖLÜM"
+  },
+  {
+   "title": "DİNOZORLAR BİTMEDİ",
+   "object": "tree",
+   "sub": "Kuşlar onların torunu",
+   "say": "Ve işte en şaşırtıcı kısım: Dinozorlar aslında tamamen yok olmadı. Bilim insanları kuşları, o felaketten sağ çıkan dinozorların soyundan geldikleri için dinozor ailesinin bir parçası sayıyor. Yani bir dahaki sefere bir serçe gördüğünde, aslında küçük bir dinozora bakıyorsun.",
+   "theme": "nature"
+  },
+  {
+   "title": "MEMELİLERİN ZAMANI",
+   "object": "heart",
+   "sub": "Yeni bir çağ başladı",
+   "say": "Dinozorların boşalttığı dünyada küçük memeliler yayılma fırsatı buldu. Milyonlarca yıl içinde çeşitlenip büyüdüler. Yani bir bakıma, bugün burada olmamızın sebeplerinden biri, 66 milyon yıl önce düşen o asteroit.",
+   "theme": "warm"
+  }
+ ],
+ "outro": {
+  "say": "Dinozorların son gününü baştan sona anlattık. Sence o asteroit hiç düşmeseydi bugün dünya nasıl olurdu? Yorumlara yaz, abone olmayı da unutma!",
+  "headline": "ASTEROİT DÜŞMESEYDİ?",
+  "cta": "Yorumlara yaz",
+  "object": "planet"
+ },
+ "meta": {
+  "title": "Dinozorların Son Günü 🦖 | 66 Milyon Yıl Önce Ne Oldu?",
+  "caption": "Bir bahar günü düşen asteroit, iridyum ipucu, petrol ararken bulunan krater ve hâlâ aramızda yaşayan dinozorlar. 🦖",
+  "hashtags": [
+   "#dinozor",
+   "#asteroit",
+   "#tarih",
+   "#belgesel",
+   "#bilim",
+   "#doğa",
+   "#keşifkutusu"
+  ]
+ }
+}

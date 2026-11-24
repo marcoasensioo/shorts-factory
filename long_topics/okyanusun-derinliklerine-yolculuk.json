@@ -1,0 +1,139 @@
+{
+ "id": "okyanusun-derinliklerine-yolculuk",
+ "title": "Okyanusun Derinliklerine Yolculuk",
+ "template": "explainer3d",
+ "format": "long",
+ "theme": "ocean",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+4%",
+  "gap": 0.35
+ },
+ "hook": {
+  "say": "Okyanusun yüzeyinden başlayıp gezegenimizin en derin noktasına kadar inen bir yolculuğa çıkıyoruz. Her metrede biraz daha karanlık, biraz daha soğuk ve biraz daha tuhaf bir dünyaya gireceğiz. Hazırsan dalıyoruz.",
+  "kicker": "BELGESEL",
+  "headline": "OKYANUSUN DERİNLİKLERİ",
+  "object": "drop"
+ },
+ "scenes": [
+  {
+   "title": "0-200 METRE",
+   "object": "fish",
+   "sub": "Güneş ışığı bölgesi",
+   "say": "İlk durağımız güneş ışığı bölgesi. Yüzeyden 200 metre derinliğe kadar uzanan bu katman, güneş ışığının yeterince ulaştığı tek yer. Bitki planktonları burada fotosentez yapıyor ve okyanustaki besin zincirinin temelini oluşturuyor. Ama şaşırtıcı bir şey söyleyelim: bu ışıklı katman, bütün okyanusun sadece yaklaşık yüzde 3'ü.",
+   "kicker": "1. DURAK"
+  },
+  {
+   "title": "ÜÇTE DÖRDÜ KARANLIK",
+   "object": "question",
+   "sub": "Derin deniz",
+   "say": "Yani okyanusun neredeyse tamamı karanlık. Okyanusla kaplı alanın yaklaşık dörtte üçü derin, kalıcı olarak karanlık ve soğuk. Bilim insanları buna derin deniz diyor ve gezegenimizdeki en büyük yaşam alanı aslında burası."
+  },
+  {
+   "title": "200-1000 METRE",
+   "object": "eye",
+   "sub": "Alacakaranlık bölgesi",
+   "say": "200 metreyi geçtiğimizde alacakaranlık bölgesine giriyoruz. Burada ışık hızla azalıyor; görmek için yetecek kadar ışık olabilir ama fotosentez için yetmez. Bu bölgedeki pek çok canlının dev gözleri var, çünkü yukarıdan süzülen o son ışık kırıntılarını yakalamaya çalışıyorlar.",
+   "kicker": "2. DURAK"
+  },
+  {
+   "title": "1000 METRE: GECE",
+   "object": "lightbulb",
+   "sub": "Gece yarısı bölgesi",
+   "say": "1000 metreden sonra yüzeyden hiç ışık gelmiyor. Burası gece yarısı bölgesi ve 4000 metreye kadar uzanıyor. Bu derinliklerde tek ışık kaynağı, canlıların kendi ürettiği ışık. Sıcaklık ise yıl boyunca 4 derece civarında, neredeyse buzdolabı kadar soğuk.",
+   "kicker": "3. DURAK"
+  },
+  {
+   "title": "ISPERMEÇET BALİNASI",
+   "object": "fish",
+   "sub": "Gece yarısına dalan memeli",
+   "say": "Ama bu karanlığa inen bir memeli var: ıspermeçet balinası. Bu dev balinalar, yiyecek bulmak için gece yarısı bölgesine kadar dalabiliyor. Nefes almak için yüzeye çıkması gereken bir hayvanın bu derinliklere inmesi, doğanın en etkileyici başarılarından biri."
+  },
+  {
+   "title": "HER 10 METREDE",
+   "object": "dumbbell",
+   "sub": "Basınç bir atmosfer artar",
+   "say": "Aşağı indikçe asıl düşman karanlık değil, basınç. Her 10 metrede su basıncı bir atmosfer artıyor. Yani 4000 metrede, üzerinde yüzeydekinin yaklaşık 400 katı basınç var. İnsan vücudu korumasız olarak buna asla dayanamaz.",
+   "theme": "lab"
+  },
+  {
+   "title": "4000-6000 METRE",
+   "object": "octopus",
+   "sub": "Abis bölgesi",
+   "say": "4000 metreden sonra abis bölgesine geliyoruz. Burası çoğu yerde okyanus tabanının kendisi: dümdüz, karanlık ve buz gibi bir çöl. Ama boş değil; tuhaf görünüşlü balıklar, denizanaları ve deniz hıyarları bu zorlu ortamda yaşamayı başarıyor.",
+   "kicker": "4. DURAK"
+  },
+  {
+   "title": "6000+ METRE",
+   "object": "mountain",
+   "sub": "Hadal bölgesi: okyanus çukurları",
+   "say": "6000 metrenin altı hadal bölgesi. Adını antik Yunan'ın yeraltı dünyasından alıyor ve sadece derin okyanus çukurlarında bulunuyor. Bunların en derini Pasifik'teki Mariana Çukuru.",
+   "kicker": "5. DURAK"
+  },
+  {
+   "title": "YAKLAŞIK 11 KM",
+   "object": "mountain",
+   "sub": "Challenger Çukuru",
+   "say": "Mariana Çukuru'nun en derin noktasının adı Challenger Çukuru ve derinliği yaklaşık 11 kilometre. Bir karşılaştırma yapalım: Everest Dağı'nı buraya bıraksaydın, zirvesi suyun altında kaybolmakla kalmaz, yüzeyin bir buçuk kilometreden fazla altında kalırdı."
+  },
+  {
+   "title": "1000 KATTAN FAZLA",
+   "object": "dumbbell",
+   "sub": "Dipteki basınç",
+   "say": "Bu derinlikte basınç, yüzeydekinin bin katından fazla. Yani her santimetrekarenin üstünde yüzlerce kilogramlık bir ağırlık var. Buna rağmen bilim insanları 2005'te bu çukurun dibinde bile tek hücreli canlılar buldu. Hayat, en imkânsız görünen yerde bile bir yol buluyor.",
+   "theme": "lab"
+  },
+  {
+   "title": "23 OCAK 1960",
+   "object": "rocket",
+   "sub": "Trieste: ilk insanlı iniş",
+   "say": "Peki insanlar oraya hiç indi mi? Evet. 23 Ocak 1960'ta Don Walsh ve Jacques Piccard, Trieste adlı bir dalış aracıyla Challenger Çukuru'nun dibine ulaştı. İniş yaklaşık beş saat sürdü. Yolda pencerelerden biri çatladı ama devam etmeye karar verdiler. Dipte ise sadece yaklaşık 20 dakika kalabildiler.",
+   "kicker": "6. DURAK"
+  },
+  {
+   "title": "PARLAYAN CANLILAR",
+   "object": "lightbulb",
+   "sub": "Karanlıktaki ışık gösterisi",
+   "say": "İniş sırasında pencereden dışarı bakan Walsh, karanlığın içinde binlerce parlayan canlı gördüğünü anlattı. Ona göre derinlerde kendi ışığını üreten canlılar her yerdeydi; üstelik oraları okyanusun pek de kalabalık olmayan bir bölgesiydi. Işığın hiç ulaşmadığı bir dünyada, canlılar kendi ışıklarını yakıyordu."
+  },
+  {
+   "title": "DİPTE BİR BALIK MI?",
+   "object": "question",
+   "sub": "Yarım asırlık tartışma",
+   "say": "Dibe ulaştıklarında Walsh ve Piccard, yassı bir balık gördüklerini bildirdi. Bu gözlem yıllarca tartışıldı. Bugün bilim insanları, o derinlikte balık yaşayamayacağını düşündükleri için bu gözlemin büyük ihtimalle bir yanılgı olduğunu kabul ediyor."
+  },
+  {
+   "title": "EN DERİN BALIK",
+   "object": "fish",
+   "sub": "Salyangoz balığı",
+   "say": "Bugüne kadar görülen en derin balık, salyangoz balığı adı verilen küçük, yarı saydam bir tür. 8 bin 300 metreyi aşan derinlikte görüntülendi. Bilim insanları bu derinliğin, balıkların basınca dayanabileceği sınıra çok yakın olduğunu düşünüyor."
+  },
+  {
+   "title": "HÂLÂ BİLİNMEYEN",
+   "object": "earth",
+   "sub": "Deniz tabanının çoğu haritalanmadı",
+   "say": "Ve belki de en şaşırtıcı gerçek şu: 2026 itibarıyla deniz tabanının sadece yaklaşık yüzde 29'u modern sonar sistemleriyle yüksek çözünürlükte haritalandı. Yani gezegenimizin büyük bir kısmı, hâlâ hiç kimsenin net olarak görmediği bir dünya.",
+   "kicker": "7. DURAK"
+  }
+ ],
+ "outro": {
+  "say": "Okyanusun dibine kadar indik. Sence o karanlıkta henüz keşfedilmemiş neler yaşıyor? Bir sonraki belgeselde hangi konuyu keşfetmemizi istersin? Yorumlara yaz, abone olmayı da unutma!",
+  "headline": "SENCE ORADA NE VAR?",
+  "cta": "Yorumlara yaz",
+  "object": "fish"
+ },
+ "meta": {
+  "title": "Okyanusun Derinliklerine Yolculuk 🌊 | Yüzeyden 11 Kilometreye",
+  "caption": "Yüzeyden Mariana Çukuru'nun dibine: ışığın bittiği yer, ezici basınç ve karanlıkta yaşayan canlılar. 🌊",
+  "hashtags": [
+   "#okyanus",
+   "#derindeniz",
+   "#marianaçukuru",
+   "#belgesel",
+   "#bilim",
+   "#doğa",
+   "#keşifkutusu"
+  ]
+ }
+}
