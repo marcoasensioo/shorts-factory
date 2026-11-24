@@ -135,8 +135,8 @@ def _gemini_request(text, voice):
                 return pcm, rate
             except urllib.error.HTTPError as e:
                 last = f"{model}: {e.code} {e.read().decode('utf-8', 'replace')[:300]}"
-                if e.code == 429 and attempt < 2:
-                    time.sleep(40)
+                if e.code in (429, 500, 503) and attempt < 2:
+                    time.sleep(60)
                     continue
                 break  # bu model olmadı, sıradakini dene
             except Exception as e:  # noqa
@@ -302,6 +302,8 @@ def fetch_segments(texts, cache_dir, voice_cfg):
             and not voice_cfg.get("force_gtts"):
         engine = "gemini"
     print("Ses motoru:", engine)
+    if engine != "gemini" and engine != "gcloud" and os.environ.get("SES_YEDEK", "yok") != "edge":
+        raise RuntimeError("GEMINI_API_KEY yok ya da kullanilamiyor; Ahmet sesi kapali (SES_YEDEK).")
     if engine == "gemini":
         paths = [os.path.join(cache_dir, f"seg{i:02d}.mp3") for i in range(len(texts))]
         tags = [f"gemini|{t}" for t in texts]
@@ -318,7 +320,10 @@ def fetch_segments(texts, cache_dir, voice_cfg):
                     synth_gemini_all(texts[a:a + 6], paths[a:a + 6], voice_cfg.get("gemini_voice"))
                 for p, tg in zip(paths, tags):
                     open(p + ".txt", "w", encoding="utf-8").write(tg)
-            except Exception as e:  # noqa — sınır/servis sorunu: Edge'e düş
+            except Exception as e:  # noqa — sınır/servis sorunu
+                if os.environ.get("SES_YEDEK", "yok") != "edge":
+                    raise RuntimeError("Gemini TTS basarisiz; Ahmet sesi kapali (SES_YEDEK). "
+                                       "Bu video sonraki calismada yeniden denenecek. Hata: " + str(e)[:300])
                 print("Gemini TTS başarısız, Edge sesine geçiliyor:", e)
                 return fetch_segments(texts, cache_dir, {**voice_cfg, "engine": "edge-only"})
         return paths
