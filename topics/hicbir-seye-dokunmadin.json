@@ -13,7 +13,11 @@
   "say": "Hayatın boyunca hiçbir şeye gerçekten dokunmadın. Ciddiyim.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "HİÇBİR ŞEYE DOKUNMADIN",
-  "object": "atom"
+  "object": "atom",
+  "extras": [
+   "hand",
+   "lightning"
+  ]
  },
  "scenes": [
   {
@@ -32,13 +36,21 @@
    "title": "ELEKTRONLAR İTİŞİR",
    "object": "lightning",
    "sub": "Eksi, eksiyi iter",
-   "say": "Bir masaya dokunduğunda elinin elektronları masanın elektronlarını iter. Bu itme seni, atomlar birbirine değmeden durdurur."
+   "say": "Bir masaya dokunduğunda elinin elektronları masanın elektronlarını iter. Bu itme seni, atomlar birbirine değmeden durdurur.",
+   "extras": [
+    "atom",
+    "magnet"
+   ]
   },
   {
    "title": "DOKUNMAK = İTİLMEK",
    "object": "question",
    "sub": "Hissettiğin şey itme kuvveti",
-   "say": "Yani dokunmak dediğin his, aslında atomların birbirini itmesidir."
+   "say": "Yani dokunmak dediğin his, aslında atomların birbirini itmesidir.",
+   "extras": [
+    "hand",
+    "atom"
+   ]
   }
  ],
  "outro": {

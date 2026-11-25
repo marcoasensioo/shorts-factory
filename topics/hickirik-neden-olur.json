@@ -1,0 +1,87 @@
+{
+ "id": "hickirik-neden-olur",
+ "title": "Hıçkırık Neden Olur?",
+ "template": "explainer3d",
+ "theme": "body",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Hık! O ses aslında ses tellerinin aniden kapanma sesi.",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "HIÇKIRIK",
+  "object": "lungs",
+  "extras": [
+   "lightning",
+   "question"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "DİYAFRAM KASILIR",
+   "object": "lungs",
+   "sub": "Nefes kasının sıçraması",
+   "say": "Diyafram, göğüs ile karın arasındaki büyük nefes kası. Hıçkırıkta bu kas, sen istemeden aniden kasılıyor.",
+   "extras": [
+    "heart",
+    "lightning"
+   ]
+  },
+  {
+   "title": "HIK SESİ",
+   "object": "lungs",
+   "sub": "Ses telleri kapanır",
+   "say": "Bu kasılma ani bir nefes çekmeye yol açıyor. Ses tellerin hızla kapanınca o meşhur 'hık' sesi çıkıyor.",
+   "extras": [
+    "lightning",
+    "question"
+   ]
+  },
+  {
+   "title": "NEDEN BAŞLAR?",
+   "object": "drop",
+   "sub": "Sık görülen tetikleyiciler",
+   "say": "Mayo Clinic'e göre çok yemek, gazlı içecekler ve ani heyecan hıçkırığı başlatabiliyor.",
+   "extras": [
+    "clock",
+    "heart"
+   ]
+  },
+  {
+   "title": "48 SAAT KURALI",
+   "object": "clock",
+   "sub": "Ne zaman doktora?",
+   "say": "Hıçkırık genelde birkaç dakikada kendiliğinden geçer. Ama 48 saatten uzun sürerse doktora görünmek gerekiyor.",
+   "extras": [
+    "pill",
+    "heart"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Senin bildiğin en tuhaf hıçkırık yöntemi ne? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENİN YÖNTEMİN?",
+  "cta": "Yorumlara yaz",
+  "object": "lungs",
+  "extras": [
+   "drop",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Hıçkırık neden olur? 🫁 #shorts",
+  "caption": "O 'hık' sesi aslında ses tellerinin kapanma sesi! 🫁",
+  "hashtags": [
+   "#shorts",
+   "#sağlık",
+   "#insanvücudu",
+   "#bilim",
+   "#ilginçbilgiler",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

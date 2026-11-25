@@ -13,7 +13,11 @@
   "say": "Bu gezegende bir gün, bir yıldan daha uzun sürüyor!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "VENÜS'TE GÜN YILDAN UZUN",
-  "object": "venus"
+  "object": "venus",
+  "extras": [
+   "sun",
+   "clock"
+  ]
  },
  "scenes": [
   {
@@ -21,20 +25,32 @@
    "object": "clock",
    "sub": "Kendi etrafındaki tek tur",
    "say": "Venüs kendi ekseni etrafındaki tek bir turu 243 Dünya gününde tamamlıyor.",
-   "count": 243
+   "count": 243,
+   "extras": [
+    "venus",
+    "sun"
+   ]
   },
   {
    "title": "BİR YIL: {n} GÜN",
    "object": "sun",
    "sub": "Güneş etrafındaki tur daha kısa",
    "say": "Ama Güneş'in etrafındaki turu sadece 225 gün. Yani orada bir gün, bir yıldan uzun.",
-   "count": 225
+   "count": 225,
+   "extras": [
+    "venus",
+    "clock"
+   ]
   },
   {
    "title": "GÜNEŞ BATIDAN DOĞAR",
    "object": "venus",
    "sub": "Çünkü ters yönde dönüyor",
-   "say": "Üstelik Venüs ters yönde dönüyor. Bu yüzden orada Güneş batıdan doğup doğudan batıyor."
+   "say": "Üstelik Venüs ters yönde dönüyor. Bu yüzden orada Güneş batıdan doğup doğudan batıyor.",
+   "extras": [
+    "sun",
+    "compass"
+   ]
   },
   {
    "title": "{n} °C",
@@ -42,7 +58,11 @@
    "sub": "Merkür'den bile daha sıcak",
    "say": "Kalın atmosferi ısıyı hapsettiği için yüzeyi yaklaşık 465 derece. Güneş'e daha yakın olan Merkür'den bile sıcak.",
    "count": 465,
-   "theme": "warm"
+   "theme": "warm",
+   "extras": [
+    "thermometer",
+    "flame"
+   ]
   }
  ],
  "outro": {

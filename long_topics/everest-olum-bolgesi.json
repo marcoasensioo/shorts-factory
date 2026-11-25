@@ -14,7 +14,11 @@
   "say": "Dünyanın en yüksek noktasında hava o kadar ince ki, vücudun zamanla kendi kendini tüketmeye başlıyor. Dağcılar bu yüksekliğe ölüm bölgesi diyor. Bugün Everest'in zirvesine ve oraya ilk çıkanların hikâyesine yolculuk ediyoruz.",
   "kicker": "BELGESEL",
   "headline": "EVEREST: ÖLÜM BÖLGESİ",
-  "object": "mountain"
+  "object": "mountain",
+  "extras": [
+   "snowflake",
+   "flag"
+  ]
  },
  "scenes": [
   {
@@ -22,82 +26,130 @@
    "object": "mountain",
    "sub": "Himalayalar",
    "say": "Everest, deniz seviyesinden ölçüldüğünde dünyanın en yüksek dağı. Himalayalar'da, Nepal ile Çin sınırında yükseliyor ve zirvesi yaklaşık 8 bin 849 metrede. Yerel dillerde ona Sagarmatha ve Chomolungma da deniyor.",
-   "kicker": "1. BÖLÜM"
+   "kicker": "1. BÖLÜM",
+   "extras": [
+    "cloud",
+    "flag"
+   ]
   },
   {
    "title": "ANA KAMPTA YARI OKSİJEN",
    "object": "lungs",
    "sub": "Yaklaşık 5.500 metre",
    "say": "Tırmanışlar genellikle yaklaşık 5 bin 500 metredeki ana kamptan başlıyor. Daha burada bile havadaki oksijen basıncı, deniz seviyesindekinin yaklaşık yarısı. Yani dağcılar daha zirveye yürümeye başlamadan, vücutları zorlanmaya başlıyor.",
-   "theme": "body"
+   "theme": "body",
+   "extras": [
+    "mountain",
+    "heart"
+   ]
   },
   {
    "title": "8.000 METRE",
    "object": "mountain",
    "sub": "Ölüm bölgesi başlıyor",
    "say": "8 bin metrenin üstüne dağcılar ölüm bölgesi diyor. Bu yükseklikte oksijen, insan hayatını uzun süre devam ettirmeye yetmiyor. Zirvede ise havadaki oksijen, deniz seviyesindekinin üçte birinden bile az.",
-   "kicker": "2. BÖLÜM"
+   "kicker": "2. BÖLÜM",
+   "extras": [
+    "lungs",
+    "snowflake"
+   ]
   },
   {
    "title": "ALIŞMAK İMKÂNSIZ",
    "object": "lungs",
    "sub": "Vücut kendini tüketiyor",
    "say": "Ölüm bölgesinde insan vücudu yüksekliğe alışamıyor. Vücut, oksijen depolarını yerine koyabildiğinden daha hızlı tüketiyor. Ek oksijen olmadan uzun süre kalmak; vücut fonksiyonlarının bozulmasına, bilinç kaybına ve sonunda ölüme yol açabiliyor. Bu yüzden dağcıların çoğu tüp oksijen kullanıyor.",
-   "theme": "body"
+   "theme": "body",
+   "extras": [
+    "heart",
+    "brain"
+   ]
   },
   {
    "title": "1922: İLK TÜPLER",
    "object": "flag",
    "sub": "Şişelenmiş oksijen",
    "say": "Everest'e ilk ciddi denemeler 1920'lerde başladı. 1922'deki ikinci İngiliz seferinde bazı dağcılar ilk kez tüplü oksijen kullandı. Zirveye ulaşamadılar ama yaklaşık 8 bin 230 metreye kadar çıkmayı başardılar.",
-   "kicker": "3. BÖLÜM"
+   "kicker": "3. BÖLÜM",
+   "extras": [
+    "lungs",
+    "mountain"
+   ]
   },
   {
    "title": "1924: KAYIP İKİLİ",
    "object": "question",
    "sub": "Mallory ve Irvine",
-   "say": "Everest'in en büyük gizemlerinden biri 1924'te yaşandı. İngiliz dağcılar George Mallory ve Andrew Irvine zirveye doğru tırmanırken gözden kayboldu. Zirveye ulaşıp ulaşmadıkları bugün bile bilinmiyor. Mallory'nin cesedi ancak 1999'da, yaklaşık 8 bin 155 metrede bulundu."
+   "say": "Everest'in en büyük gizemlerinden biri 1924'te yaşandı. İngiliz dağcılar George Mallory ve Andrew Irvine zirveye doğru tırmanırken gözden kayboldu. Zirveye ulaşıp ulaşmadıkları bugün bile bilinmiyor. Mallory'nin cesedi ancak 1999'da, yaklaşık 8 bin 155 metrede bulundu.",
+   "extras": [
+    "mountain",
+    "snowflake"
+   ]
   },
   {
    "title": "1953 SEFERİ",
    "object": "compass",
    "sub": "John Hunt'ın ekibi",
    "say": "1953'te John Hunt liderliğindeki İngiliz seferi Everest'e geldi. İlk zirve denemesini Tom Bourdillon ve Charles Evans yaptı. 26 Mayıs'ta zirveye 100 metre kadar yaklaştılar ama oksijen sistemlerindeki sorunlar yüzünden geri dönmek zorunda kaldılar.",
-   "kicker": "4. BÖLÜM"
+   "kicker": "4. BÖLÜM",
+   "extras": [
+    "flag",
+    "mountain"
+   ]
   },
   {
    "title": "HILLARY VE TENZING",
    "object": "mountain",
    "sub": "İkinci ikili yola çıkıyor",
-   "say": "Sıra ikinci ikilideydi: Yeni Zelandalı Edmund Hillary ve Nepalli Şerpa Tenzing Norgay. Tenzing, bir yıl önceki İsviçre seferinde zaten 8 bin 595 metreye kadar çıkmıştı. Yani Everest'i iyi tanıyordu."
+   "say": "Sıra ikinci ikilideydi: Yeni Zelandalı Edmund Hillary ve Nepalli Şerpa Tenzing Norgay. Tenzing, bir yıl önceki İsviçre seferinde zaten 8 bin 595 metreye kadar çıkmıştı. Yani Everest'i iyi tanıyordu.",
+   "extras": [
+    "flag",
+    "compass"
+   ]
   },
   {
    "title": "DONAN OKSİJEN TÜPÜ",
    "object": "snowflake",
    "sub": "Zirveye giden yolda",
    "say": "Tırmanış sırasında Tenzing'in oksijen hortumu dondu. Hillary hortumu açtı, ardından kendi hortumunu da temizledi. Sonra karşılarına yaklaşık 12 metre yüksekliğinde dik bir kaya basamağı çıktı. Bugün bu engel, Hillary Basamağı olarak biliniyor.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "lungs",
+    "thermometer"
+   ]
   },
   {
    "title": "29 MAYIS 1953",
    "object": "flag",
    "sub": "Saat 11.30: Zirve",
    "say": "Ve 29 Mayıs 1953'te, yerel saatle 11.30'da, Hillary ve Tenzing dünyanın en yüksek noktasına ulaşan ilk insanlar oldu. Zirvede sadece yaklaşık 15 dakika kalabildiler, çünkü oksijenleri azalıyordu.",
-   "kicker": "5. BÖLÜM"
+   "kicker": "5. BÖLÜM",
+   "extras": [
+    "mountain",
+    "clock"
+   ]
   },
   {
    "title": "DAĞ HÂLÂ YÜKSELİYOR",
    "object": "earth",
    "sub": "Levhaların hareketi",
    "say": "İlginç bir gerçekle bitirelim: Everest'in bulunduğu bölgedeki kıta levhalarının hareketi, dağın yüksekliğini artırmaya ve zirveyi yavaşça kuzeydoğuya kaydırmaya devam ediyor. Yani dünyanın en yüksek dağı, hâlâ büyüyor.",
-   "theme": "earth"
+   "theme": "earth",
+   "extras": [
+    "mountain",
+    "fish"
+   ]
   },
   {
    "title": "DENİZ 700 KM UZAKTA",
    "object": "drop",
    "sub": "Ölçüm nereden yapılıyor?",
    "say": "Bir de şunu düşünün: Everest'in yüksekliği deniz seviyesinden ölçülüyor ama zirveye en yakın deniz olan Bengal Körfezi, neredeyse 700 kilometre uzakta. Dağcılar da tırmanışa deniz kıyısından değil, ana kamptan başlıyor.",
-   "theme": "ocean"
+   "theme": "ocean",
+   "extras": [
+    "mountain",
+    "compass"
+   ]
   }
  ],
  "outro": {

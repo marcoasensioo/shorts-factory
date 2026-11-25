@@ -20,14 +20,22 @@
    "title": "IŞIK HÜCRESİ YOK",
    "object": "eye",
    "sub": "Görme sinirinin çıktığı yer",
-   "say": "Görme sinirinin gözden çıktığı noktada ışığı algılayan hücre yoktur. Bu yüzden o bölge hiçbir şey görmez."
+   "say": "Görme sinirinin gözden çıktığı noktada ışığı algılayan hücre yoktur. Bu yüzden o bölge hiçbir şey görmez.",
+   "extras": [
+    "brain",
+    "lightbulb"
+   ]
   },
   {
    "title": "BEYİN BOŞLUĞU DOLDURUR",
    "object": "brain",
    "sub": "Çevredeki görüntüyle tamamlar",
    "say": "Beynin bu boşluğu çevredeki görüntüyle ve diğer gözünden gelen bilgiyle doldurur. Sen de hiç fark etmezsin.",
-   "theme": "mind"
+   "theme": "mind",
+   "extras": [
+    "eye",
+    "lightbulb"
+   ]
   },
   {
    "title": "NEREDEYSE {n} DOLUNAY",
@@ -35,7 +43,11 @@
    "sub": "Gökyüzünde kapladığı alan",
    "say": "Üstelik bu kör nokta küçük değil. Gökyüzünde neredeyse 9 dolunay büyüklüğünde bir alanı kaplar.",
    "count": 9,
-   "theme": "space"
+   "theme": "space",
+   "extras": [
+    "eye",
+    "star"
+   ]
   },
   {
    "title": "KENDİN DENE",

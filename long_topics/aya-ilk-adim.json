@@ -14,7 +14,11 @@
   "say": "20 Temmuz 1969. Ay yüzeyine inmeye çalışan küçük bir aracın içinde iki astronot var. Daha önce hiç görmedikleri bir alarm çalıyor, yakıt hızla azalıyor ve bütün dünya nefesini tutmuş bekliyor. Bu, insanlığın Ay'a ilk adımının hikâyesi.",
   "kicker": "BELGESEL",
   "headline": "AY'A İLK ADIM",
-  "object": "moon"
+  "object": "moon",
+  "extras": [
+   "rocket",
+   "earth"
+  ]
  },
  "scenes": [
   {
@@ -22,86 +26,138 @@
    "object": "rocket",
    "sub": "Saturn V fırlatılıyor",
    "say": "Hikâye 16 Temmuz 1969'da, Florida'daki Kennedy Uzay Merkezi'nde başlıyor. Dev Saturn V roketi, üç astronotu taşıyarak gökyüzüne yükseliyor: komutan Neil Armstrong, Ay modülü pilotu Buzz Aldrin ve komuta modülü pilotu Michael Collins.",
-   "kicker": "1. BÖLÜM"
+   "kicker": "1. BÖLÜM",
+   "extras": [
+    "earth",
+    "moon"
+   ]
   },
   {
    "title": "ÜÇ ASTRONOT, İKİ ARAÇ",
    "object": "astronaut",
    "sub": "Columbia ve Eagle",
-   "say": "Apollo 11 aslında birbirine bağlı iki araçtan oluşuyordu: Columbia adlı komuta modülü ve Eagle adlı Ay modülü. Plan şuydu: Armstrong ve Aldrin Eagle ile Ay'a inecek, Collins ise Columbia'da Ay'ın etrafında dönerek onları bekleyecekti."
+   "say": "Apollo 11 aslında birbirine bağlı iki araçtan oluşuyordu: Columbia adlı komuta modülü ve Eagle adlı Ay modülü. Plan şuydu: Armstrong ve Aldrin Eagle ile Ay'a inecek, Collins ise Columbia'da Ay'ın etrafında dönerek onları bekleyecekti.",
+   "extras": [
+    "lander",
+    "rocket"
+   ]
   },
   {
    "title": "20 TEMMUZ",
    "object": "lander",
    "sub": "Eagle ayrılıyor",
    "say": "20 Temmuz'da Armstrong ve Aldrin, iki aracı birbirine bağlayan dar bir tünelden geçerek Eagle'a bindi. Ay'ın etrafındaki 12'nci turun sonunda iki araç birbirinden ayrıldı. Collins artık tek başınaydı; Eagle ise inişe başladı.",
-   "kicker": "2. BÖLÜM"
+   "kicker": "2. BÖLÜM",
+   "extras": [
+    "moon",
+    "astronaut"
+   ]
   },
   {
    "title": "ALARM: 1202",
    "object": "lightning",
    "sub": "Simülasyonlarda hiç görülmemişti",
    "say": "İniş sırasında beklenmedik bir şey oldu. Bilgisayar 1202 kodlu bir alarm verdi. Armstrong ve Aldrin bu alarmı eğitimdeki simülasyonlarda hiç görmemişti. Houston'daki uçuş kontrol ekibi birkaç saniye içinde durumu inceledi ve devam edebileceklerini söyledi.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "computer",
+    "lander"
+   ]
   },
   {
    "title": "İKİNCİ ALARM",
    "object": "lightning",
    "sub": "Bir dakika bile geçmeden",
    "say": "Bir dakika bile geçmeden ikinci bir 1202 alarmı çaldı. Kontrol merkezi yine devam kararı verdi. Ama asıl sorun alarmlar değildi. Eagle'ın otomatik olarak gittiği bölge kayalarla doluydu ve Armstrong, güvenli bir iniş yeri bulmak için aracı elle yönetmeye başladı.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "computer",
+    "clock"
+   ]
   },
   {
    "title": "YAKIT BİTİYOR",
    "object": "lander",
    "sub": "Saniyeler kalmıştı",
    "say": "Armstrong güvenli bir yer ararken yakıt hızla azalıyordu. Yakıt uyarı ışığı yandığında, ellerinde sadece yaklaşık bir buçuk dakikalık havada kalma süresi vardı. Eagle sonunda yere değdiğinde depoda bir dakikadan çok daha az süre yetecek yakıt kalmıştı.",
-   "kicker": "3. BÖLÜM"
+   "kicker": "3. BÖLÜM",
+   "extras": [
+    "clock",
+    "flame"
+   ]
   },
   {
    "title": "EAGLE İNDİ",
    "object": "lander",
    "sub": "Sükûnet Denizi",
-   "say": "Ve sonra o ünlü cümle geldi. Armstrong telsizden şunu söyledi: 'Houston, burası Sükûnet Üssü. Kartal indi.' Eagle, Ay'ın Sükûnet Denizi adı verilen bölgesine konmuştu. Houston'daki kontrol odasında herkes rahat bir nefes aldı."
+   "say": "Ve sonra o ünlü cümle geldi. Armstrong telsizden şunu söyledi: 'Houston, burası Sükûnet Üssü. Kartal indi.' Eagle, Ay'ın Sükûnet Denizi adı verilen bölgesine konmuştu. Houston'daki kontrol odasında herkes rahat bir nefes aldı.",
+   "extras": [
+    "moon",
+    "flag"
+   ]
   },
   {
    "title": "KÜÇÜK BİR ADIM",
    "object": "footprint",
    "sub": "İnsanlık için dev bir sıçrama",
    "say": "Birkaç saat sonra Armstrong merdivenden indi ve Ay yüzeyine ayak bastı. O anda tarihe geçen sözlerini söyledi: 'Bu, bir insan için küçük bir adım, ama insanlık için dev bir sıçrama.' Yaklaşık yirmi dakika sonra Aldrin de ona katıldı.",
-   "kicker": "4. BÖLÜM"
+   "kicker": "4. BÖLÜM",
+   "extras": [
+    "astronaut",
+    "moon"
+   ]
   },
   {
    "title": "2,5 SAATLİK YÜRÜYÜŞ",
    "object": "astronaut",
    "sub": "Taşlar ve deneyler",
-   "say": "Armstrong ve Aldrin'in Ay yüzeyindeki yürüyüşü yaklaşık iki buçuk saat sürdü. Bu sürede Ay taşları topladılar, bilimsel deneyler kurdular ve fotoğraflar çektiler. Sonra Eagle'a dönüp geceyi aracın içinde geçirdiler."
+   "say": "Armstrong ve Aldrin'in Ay yüzeyindeki yürüyüşü yaklaşık iki buçuk saat sürdü. Bu sürede Ay taşları topladılar, bilimsel deneyler kurdular ve fotoğraflar çektiler. Sonra Eagle'a dönüp geceyi aracın içinde geçirdiler.",
+   "extras": [
+    "flag",
+    "footprint"
+   ]
   },
   {
    "title": "YALNIZ ADAM",
    "object": "moon",
    "sub": "Michael Collins",
-   "say": "Bu sırada Michael Collins, Columbia'da Ay'ın etrafında tek başına dönüyordu. Ay'ın arka tarafına geçtiğinde, Dünya ile bütün iletişimi kesiliyordu. O anlarda Collins, gerçek anlamda evrendeki en yalnız insanlardan biriydi."
+   "say": "Bu sırada Michael Collins, Columbia'da Ay'ın etrafında tek başına dönüyordu. Ay'ın arka tarafına geçtiğinde, Dünya ile bütün iletişimi kesiliyordu. O anlarda Collins, gerçek anlamda evrendeki en yalnız insanlardan biriydi.",
+   "extras": [
+    "rocket",
+    "astronaut"
+   ]
   },
   {
    "title": "21 TEMMUZ: DÖNÜŞ",
    "object": "lander",
    "sub": "Eagle yeniden havalanıyor",
    "say": "21 Temmuz'da Eagle Ay yüzeyinden yeniden havalandı ve Columbia ile buluştu. Üç astronot birlikte Dünya'ya doğru yola çıktı. Görev, fırlatmadan dönüşe kadar toplam 8 gün 3 saat sürdü ve astronotlar 24 Temmuz'da Dünya'ya döndü.",
-   "kicker": "5. BÖLÜM"
+   "kicker": "5. BÖLÜM",
+   "extras": [
+    "rocket",
+    "earth"
+   ]
   },
   {
    "title": "BİR DAHA UÇMADILAR",
    "object": "earth",
    "sub": "Üç astronotun son görevi",
-   "say": "İlginç bir ayrıntı: Apollo 11'in üç astronotu da bu görevden sonra bir daha uzaya gitmedi. Üçü de daha önce Gemini programında uzaya çıkmıştı ama Apollo 11, hepsinin son uzay yolculuğu oldu."
+   "say": "İlginç bir ayrıntı: Apollo 11'in üç astronotu da bu görevden sonra bir daha uzaya gitmedi. Üçü de daha önce Gemini programında uzaya çıkmıştı ama Apollo 11, hepsinin son uzay yolculuğu oldu.",
+   "extras": [
+    "astronaut",
+    "rocket"
+   ]
   }
  ],
  "outro": {
   "say": "Ay'a ilk adımın hikâyesini anlattık. Sen o anda Armstrong'un yerinde olsaydın ilk ne söylerdin? Yorumlara yaz, abone olmayı da unutma!",
   "headline": "SEN NE SÖYLERDİN?",
   "cta": "Yorumlara yaz",
-  "object": "flag"
+  "object": "flag",
+  "extras": [
+   "astronaut",
+   "moon"
+  ]
  },
  "meta": {
   "title": "Ay'a İlk Adım: Apollo 11 🚀 | Alarmlar, Biten Yakıt ve Dev Sıçrama",

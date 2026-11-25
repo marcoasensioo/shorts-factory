@@ -1,0 +1,88 @@
+{
+ "id": "kutup-ayisi-beyaz-degil",
+ "title": "Kutup Ayısı Beyaz Değil",
+ "template": "explainer3d",
+ "theme": "earth",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Kutup ayıları aslında beyaz değil!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "BEYAZ DEĞİL",
+  "object": "bear",
+  "extras": [
+   "snowflake",
+   "question"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "DERİSİ SİYAH",
+   "object": "bear",
+   "sub": "Kürkün altında",
+   "say": "Kutup ayısının kalın kürkünün altında, simsiyah bir deri var. Burnunda ve ayak tabanlarında bunu görebilirsin.",
+   "extras": [
+    "paw",
+    "snowflake"
+   ]
+  },
+  {
+   "title": "KILLAR ŞEFFAF",
+   "object": "snowflake",
+   "sub": "Renk pigmenti yok",
+   "say": "Kürkündeki kılların hiçbirinde beyaz renk yok. Kıllar şeffaf, uzun dış kılların içi ise boş.",
+   "extras": [
+    "bear",
+    "drop"
+   ]
+  },
+  {
+   "title": "IŞIĞI SAÇIYOR",
+   "object": "sun",
+   "sub": "Kar gibi",
+   "say": "Kıllardaki hava boşlukları ışığı her yöne saçıyor. Bu yüzden kürk bize beyaz görünüyor. Tıpkı şeffaf buz kristallerinden oluşan karın beyaz görünmesi gibi.",
+   "extras": [
+    "bear",
+    "snowflake"
+   ]
+  },
+  {
+   "title": "SİYAH DERİ ISINIR",
+   "object": "thermometer",
+   "sub": "Güneşin sıcaklığı",
+   "say": "National Geographic'e göre güneş ışığı şeffaf kürkten geçip siyah deriye ulaşabiliyor. Siyah deri de bu ısıyı emerek ayıyı sıcak tutmaya yardım ediyor.",
+   "theme": "warm",
+   "extras": [
+    "bear",
+    "sun"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Bunu biliyor muydun? Doğadaki en şaşırtıcı hayvan sence hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "bear",
+  "extras": [
+   "paw",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Kutup ayıları aslında beyaz değil! 🐻‍❄️ #shorts",
+  "caption": "Kürk şeffaf, deri simsiyah. Peki neden beyaz görünüyor? 🐻‍❄️",
+  "hashtags": [
+   "#shorts",
+   "#hayvanlar",
+   "#kutupayısı",
+   "#doğa",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

@@ -13,33 +13,53 @@
   "say": "Güneş Sistemi'nde yan yatarak dönen bir gezegen var!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "YAN YATAN GEZEGEN",
-  "object": "uranus"
+  "object": "uranus",
+  "extras": [
+   "sun",
+   "telescope"
+  ]
  },
  "scenes": [
   {
    "title": "98 DERECE",
    "object": "uranus",
    "sub": "Ekseni neredeyse yatay",
-   "say": "Uranüs'ün dönme ekseni 98 derece eğik. Yani bu gezegen, Güneş'in etrafında adeta yan yatmış bir top gibi yuvarlanıyor."
+   "say": "Uranüs'ün dönme ekseni 98 derece eğik. Yani bu gezegen, Güneş'in etrafında adeta yan yatmış bir top gibi yuvarlanıyor.",
+   "extras": [
+    "earth",
+    "compass"
+   ]
   },
   {
    "title": "DÜNYA SADECE 23,5°",
    "object": "earth",
    "sub": "Karşılaştıralım",
-   "say": "Karşılaştıralım: Dünya'nın ekseni yaklaşık 23,5 derece eğik. Mevsimlerimiz bu eğimden kaynaklanıyor."
+   "say": "Karşılaştıralım: Dünya'nın ekseni yaklaşık 23,5 derece eğik. Mevsimlerimiz bu eğimden kaynaklanıyor.",
+   "extras": [
+    "uranus",
+    "sun"
+   ]
   },
   {
    "title": "EN TUHAF MEVSİMLER",
    "object": "sun",
    "sub": "Uzun süre aydınlık, uzun süre karanlık",
-   "say": "Bu büyük eğim yüzünden Uranüs, Güneş Sistemi'ndeki en tuhaf mevsimleri yaşıyor. Kutupları çok uzun süre Güneş görüyor, sonra çok uzun süre karanlıkta kalıyor."
+   "say": "Bu büyük eğim yüzünden Uranüs, Güneş Sistemi'ndeki en tuhaf mevsimleri yaşıyor. Kutupları çok uzun süre Güneş görüyor, sonra çok uzun süre karanlıkta kalıyor.",
+   "extras": [
+    "uranus",
+    "snowflake"
+   ]
   },
   {
    "title": "DEV BİR ÇARPIŞMA?",
    "object": "asteroid",
    "sub": "Sebebi hâlâ tam bilinmiyor",
    "say": "Peki neden böyle? Kesin olarak bilmiyoruz. Bir ihtimal, Güneş Sistemi oluşurken büyük bir gök cismiyle çarpışmış olması.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "uranus",
+    "comet"
+   ]
   }
  ],
  "outro": {

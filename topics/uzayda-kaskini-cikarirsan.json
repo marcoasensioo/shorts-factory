@@ -20,20 +20,32 @@
    "title": "15 SANİYEDEN KISA",
    "object": "brain",
    "sub": "Beyne oksijen gitmez",
-   "say": "Havasız ortamda kanındaki oksijen hızla tükenir. 15 saniyeden kısa sürede bilincini kaybedersin."
+   "say": "Havasız ortamda kanındaki oksijen hızla tükenir. 15 saniyeden kısa sürede bilincini kaybedersin.",
+   "extras": [
+    "astronaut",
+    "lungs"
+   ]
   },
   {
    "title": "TÜKÜRÜĞÜN KAYNAR",
    "object": "drop",
    "sub": "Basınç yoksa su kolayca kaynar",
-   "say": "Basınç olmadığı için vücudundaki sıvılar kaynamaya başlar. İlk fark edeceğin şey, dilindeki tükürüğün köpürmesi olur."
+   "say": "Basınç olmadığı için vücudundaki sıvılar kaynamaya başlar. İlk fark edeceğin şey, dilindeki tükürüğün köpürmesi olur.",
+   "extras": [
+    "astronaut",
+    "thermometer"
+   ]
   },
   {
    "title": "{n} SANİYE",
    "object": "rocket",
    "sub": "NASA'daki 1966 kazası",
    "say": "1966'da NASA'daki bir testte Jim LeBlanc'ın giysisinin havası boşaldı. Ortam 87 saniyede yeniden basınçlandırıldı ve LeBlanc hayatta kaldı.",
-   "count": 87
+   "count": 87,
+   "extras": [
+    "astronaut",
+    "clock"
+   ]
   }
  ],
  "outro": {

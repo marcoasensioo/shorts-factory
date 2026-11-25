@@ -13,34 +13,54 @@
   "say": "Parmağındaki altın yüzük, aslında iki ölü yıldızın çarpışmasından gelmiş olabilir!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "ALTIN UZAYDAN",
-  "object": "coin"
+  "object": "coin",
+  "extras": [
+   "star",
+   "crown"
+  ]
  },
  "scenes": [
   {
    "title": "YAPMASI ÇOK ZOR",
    "object": "coin",
    "sub": "Yıldızlar bile zorlanıyor",
-   "say": "Altın gibi ağır elementleri yapmak çok zor. Normal yıldızların içindeki süreçler bunun için yetmiyor; çok fazla nötron gerekiyor."
+   "say": "Altın gibi ağır elementleri yapmak çok zor. Normal yıldızların içindeki süreçler bunun için yetmiyor; çok fazla nötron gerekiyor.",
+   "extras": [
+    "sun",
+    "atom"
+   ]
   },
   {
    "title": "NÖTRON YILDIZLARI",
    "object": "star",
    "sub": "Ölü yıldızların kalıntısı",
    "say": "Nötron yıldızları, büyük yıldızlar öldüğünde geriye kalan inanılmaz yoğun cisimler. Güneş kadar kütle, yaklaşık 16 kilometrelik bir küreye sıkışmış.",
-   "theme": "lab"
+   "theme": "lab",
+   "extras": [
+    "atom",
+    "blackhole"
+   ]
   },
   {
    "title": "17 AĞUSTOS 2017",
    "object": "star",
    "sub": "İlk kez görüldü",
    "say": "17 Ağustos 2017'de bilim insanları, iki nötron yıldızının çarpışmasını ilk kez hem kütleçekim dalgalarıyla hem de ışıkla gözlemledi. Bu çarpışma 130 milyon ışık yılı uzaktaydı.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "telescope",
+    "galaxy"
+   ]
   },
   {
    "title": "YÜZLERCE DÜNYA KADAR",
    "object": "coin",
    "sub": "Altın ve platin",
-   "say": "NASA'ya göre bu çarpışmanın enkazında, yüzlerce Dünya kütlesi kadar altın ve platin oluştu."
+   "say": "NASA'ya göre bu çarpışmanın enkazında, yüzlerce Dünya kütlesi kadar altın ve platin oluştu.",
+   "extras": [
+    "earth",
+    "crown"
+   ]
   }
  ],
  "outro": {

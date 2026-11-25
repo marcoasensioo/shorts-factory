@@ -13,26 +13,42 @@
   "say": "Bir kara deliğe ayakların önde düşersen başına gelecek şeyin bilimsel adı çok garip: spagettileşme.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "KARA DELİĞE DÜŞERSEN?",
-  "object": "blackhole"
+  "object": "blackhole",
+  "extras": [
+   "astronaut",
+   "star"
+  ]
  },
  "scenes": [
   {
    "title": "GELGİT KUVVETİ",
    "object": "moon",
    "sub": "Denizlerdeki gelgitle aynı etki",
-   "say": "Kara delik ayaklarını başından çok daha güçlü çeker. Bu farka gelgit kuvveti denir, denizlerdeki gelgiti oluşturan da aynı etkidir."
+   "say": "Kara delik ayaklarını başından çok daha güçlü çeker. Bu farka gelgit kuvveti denir, denizlerdeki gelgiti oluşturan da aynı etkidir.",
+   "extras": [
+    "earth",
+    "drop"
+   ]
   },
   {
    "title": "SPAGETTİ GİBİ UZARSIN",
    "object": "blackhole",
    "sub": "Boyuna uzar, enine incelirsin",
-   "say": "Bu fark seni boyuna uzatır, yanlardan sıkıştırır. Sonunda ince uzun bir şeride dönüşürsün."
+   "say": "Bu fark seni boyuna uzatır, yanlardan sıkıştırır. Sonunda ince uzun bir şeride dönüşürsün.",
+   "extras": [
+    "astronaut",
+    "star"
+   ]
   },
   {
    "title": "KÜÇÜĞÜ DAHA TEHLİKELİ",
    "object": "blackhole",
    "sub": "Dev kara delikte önce hissetmezsin",
-   "say": "İşin ilginci, küçük kara delikler daha tehlikelidir. Dev bir kara deliğin sınırını geçerken ilk anda hiçbir şey hissetmezsin."
+   "say": "İşin ilginci, küçük kara delikler daha tehlikelidir. Dev bir kara deliğin sınırını geçerken ilk anda hiçbir şey hissetmezsin.",
+   "extras": [
+    "galaxy",
+    "astronaut"
+   ]
   }
  ],
  "outro": {

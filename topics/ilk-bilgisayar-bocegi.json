@@ -1,0 +1,94 @@
+{
+ "id": "ilk-bilgisayar-bocegi",
+ "title": "İlk Bilgisayar Böceği",
+ "template": "explainer3d",
+ "theme": "lab",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Dünyanın ilk bilgisayar 'böceği', gerçek bir böcekti!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "GERÇEK BÖCEK",
+  "object": "computer",
+  "extras": [
+   {
+    "object": "butterfly",
+    "color": "#a8916a"
+   },
+   "lightning"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "9 EYLÜL 1947",
+   "object": "computer",
+   "sub": "Harvard, Mark II",
+   "say": "9 Eylül 1947'de Harvard Üniversitesi'ndeki Mark II bilgisayarı sürekli hata veriyordu.",
+   "extras": [
+    "clock",
+    "lightning"
+   ]
+  },
+  {
+   "title": "RÖLEDE BİR GÜVE",
+   "object": "butterfly",
+   "sub": "70 numaralı röle",
+   "say": "Mühendisler makineyi açınca sebebi buldu: 70 numaralı rölenin arasına sıkışmış bir güve!",
+   "color": "#a8916a",
+   "extras": [
+    "computer",
+    "lightning"
+   ]
+  },
+  {
+   "title": "DEFTERE YAPIŞTIRDILAR",
+   "object": "book",
+   "sub": "İlk gerçek böcek vakası",
+   "say": "Güveyi çıkarıp kayıt defterine yapıştırdılar ve altına 'ilk gerçek böcek vakası' yazdılar.",
+   "extras": [
+    {
+     "object": "butterfly",
+     "color": "#a8916a"
+    },
+    "computer"
+   ]
+  },
+  {
+   "title": "AMA BİR ŞAKAYDI",
+   "object": "question",
+   "sub": "Kelime zaten vardı",
+   "say": "İşin ilginç yanı, mühendisler makine hatalarına zaten 'bug' yani böcek diyordu. Notun esprisi buydu. Defter bugün Smithsonian müzesinde duruyor.",
+   "extras": [
+    "computer",
+    "book"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Senin bilgisayarında yaşadığın en tuhaf hata neydi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "EN TUHAF HATAN?",
+  "cta": "Yorumlara yaz",
+  "object": "computer",
+  "extras": [
+   "question",
+   "lightning"
+  ]
+ },
+ "meta": {
+  "title": "İlk bilgisayar böceği gerçek bir böcekti! 🐛 #shorts",
+  "caption": "1947'de bir bilgisayarın içinden gerçek bir güve çıktı 🐛",
+  "hashtags": [
+   "#shorts",
+   "#teknoloji",
+   "#bilgisayar",
+   "#tarih",
+   "#yazılım",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

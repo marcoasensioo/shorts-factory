@@ -13,20 +13,32 @@
   "say": "Gece uyanıyorsun ama kımıldayamıyorsun, göğsünde bir ağırlık var. Buna karabasan deniyor. Peki bilim ne diyor?",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "KARABASAN ASLINDA NE?",
-  "object": "bed"
+  "object": "bed",
+  "extras": [
+   "brain",
+   "moon"
+  ]
  },
  "scenes": [
   {
    "title": "UYKU FELCİ",
    "object": "brain",
    "sub": "Bilimdeki adı bu",
-   "say": "Bilim insanları buna uyku felci diyor. Zihnin uyanıyor ama vücudun hâlâ rüya modunda kalıyor."
+   "say": "Bilim insanları buna uyku felci diyor. Zihnin uyanıyor ama vücudun hâlâ rüya modunda kalıyor.",
+   "extras": [
+    "bed",
+    "eye"
+   ]
   },
   {
    "title": "KASLAR KİLİTLİ",
    "object": "bed",
    "sub": "Rüya uykusunun güvenlik kilidi",
-   "say": "Rüya gördüğün REM uykusunda kasların bilerek gevşer ve kilitlenir. Böylece rüyandaki hareketleri gerçekte yapmazsın."
+   "say": "Rüya gördüğün REM uykusunda kasların bilerek gevşer ve kilitlenir. Böylece rüyandaki hareketleri gerçekte yapmazsın.",
+   "extras": [
+    "brain",
+    "dumbbell"
+   ]
   },
   {
    "title": "100 KİŞİDEN {n}'İ",
@@ -39,7 +51,11 @@
    "title": "GÖLGELER RÜYADAN GELİR",
    "object": "eye",
    "sub": "Genellikle kısa sürer",
-   "say": "Gördüğün gölgeler ve hissettiğin baskı, yarı rüyada kalan beynin ürettiği halüsinasyonlardır. Korkutucudur ama genellikle kısa sürer."
+   "say": "Gördüğün gölgeler ve hissettiğin baskı, yarı rüyada kalan beynin ürettiği halüsinasyonlardır. Korkutucudur ama genellikle kısa sürer.",
+   "extras": [
+    "bed",
+    "moon"
+   ]
   }
  ],
  "outro": {

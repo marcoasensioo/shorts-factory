@@ -663,9 +663,9 @@ Object.assign(OBJ, {
       const c = new THREE.CatmullRomCurve3(pts), t = mesh(new THREE.TubeGeometry(c, 40, 0.025, 6), m); grp.add(t); tent.push([t, i]); }
     grp.add(glow("#ff7ad9", 3, 0.35)); grp.userData.update = (t) => { bell.scale.set(1 + 0.06 * Math.sin(t * 2.5), 0.75 - 0.06 * Math.sin(t * 2.5), 1 + 0.06 * Math.sin(t * 2.5)); for (const [tt, i] of tent) tt.rotation.y = 0.15 * Math.sin(t * 1.5 + i); grp.position.y = 0.4 + 0.1 * Math.sin(t * 2.5); }; return grp;
   },
-  butterfly() {
+  butterfly(color = "#f28c1c") {
     const grp = new THREE.Group();
-    const wt = canvasTex(512, 512, (g, w, h) => { g.fillStyle = "#121212"; g.fillRect(0, 0, w, h); g.fillStyle = "#f28c1c"; g.beginPath(); g.ellipse(w * 0.5, h * 0.5, w * 0.38, h * 0.36, 0, 0, 7); g.fill();
+    const wt = canvasTex(512, 512, (g, w, h) => { g.fillStyle = "#121212"; g.fillRect(0, 0, w, h); g.fillStyle = color; g.beginPath(); g.ellipse(w * 0.5, h * 0.5, w * 0.38, h * 0.36, 0, 0, 7); g.fill();
       g.strokeStyle = "#121212"; g.lineWidth = 14; for (let i = 0; i < 6; i++) { g.beginPath(); g.moveTo(0, h * 0.5); g.lineTo(w, h * (0.1 + i * 0.16)); g.stroke(); }
       g.fillStyle = "#fff"; for (let i = 0; i < 14; i++) { g.beginPath(); g.arc(w * (0.06 + 0.88 * (i / 13)), (i % 2) ? h * 0.06 : h * 0.94, 9, 0, 7); g.fill(); } });
     const wm = new THREE.MeshStandardMaterial({ map: wt, side: THREE.DoubleSide, roughness: 0.6, alphaTest: 0.5 });
@@ -822,6 +822,34 @@ Object.assign(OBJ, {
     for (let i = 0; i < 7; i++) { const l = ellip(0.12, 3, 0.3, 1, S("#3a9a3a")); const a = i / 7 * 6.283; l.position.set(Math.cos(a) * 0.3, 0.64, Math.sin(a) * 0.3); l.rotation.y = -a; l.rotation.z = 0.3; grp.add(l); }
     grp.userData.update = (t) => { grp.rotation.y = t * 0.5; }; return grp;
   },
+  bear(color = "#f3efe6") { // kutup ayısı
+    const grp = new THREE.Group(), fur = S(color, { roughness: 0.95 }), dark = S("#151515");
+    grp.add(ellip(0.6, 1.9, 1.05, 1.0, fur));
+    const head = new THREE.Group(); head.position.set(1.15, 0.35, 0); grp.add(head);
+    head.add(ellip(0.32, 1.15, 0.95, 0.95, fur)); const snout = ellip(0.17, 1.4, 0.85, 0.9, fur); snout.position.set(0.33, -0.06, 0); head.add(snout);
+    const nose = mesh(new THREE.SphereGeometry(0.06, 16, 12), dark); nose.position.set(0.56, -0.02, 0); head.add(nose);
+    for (const z of [0.13, -0.13]) { const e = mesh(new THREE.SphereGeometry(0.035, 12, 8), dark); e.position.set(0.24, 0.1, z); head.add(e); const ear = mesh(new THREE.SphereGeometry(0.08, 16, 12), fur); ear.position.set(-0.08, 0.27, z * 1.5); head.add(ear); }
+    const legs = []; for (const [x, z] of [[0.65, 0.33], [0.65, -0.33], [-0.65, 0.33], [-0.65, -0.33]]) { const l = mesh(new THREE.CapsuleGeometry(0.17, 0.5, 6, 16), fur); l.position.set(x, -0.6, z); grp.add(l); legs.push(l); const pw = ellip(0.13, 1.4, 0.5, 1.1, fur); pw.position.set(x + 0.06, -0.97, z); grp.add(pw); }
+    grp.rotation.y = -0.45; grp.userData.update = (t) => { legs.forEach((l, i) => { l.rotation.z = 0.25 * Math.sin(t * 3 + (i % 3 ? Math.PI : 0)); }); head.rotation.z = 0.08 * Math.sin(t * 1.5); grp.rotation.y = -0.45 + 0.15 * Math.sin(t * 0.5); }; return grp;
+  },
+  computer() { // eski tip bilgisayar
+    const grp = new THREE.Group(), beige = S("#d9d2bf", { roughness: 0.6 });
+    const scrT = canvasTex(256, 192, (g, w, h) => { g.fillStyle = "#06210f"; g.fillRect(0, 0, w, h); g.fillStyle = "#3dff7a"; g.font = "bold 20px monospace"; ["> RUN", "ERROR 70", "> DEBUG_", "OK"].forEach((l, i) => g.fillText(l, 16, 40 + i * 36)); });
+    const mon = mesh(new THREE.BoxGeometry(1.5, 1.15, 1.1), beige); mon.position.y = 0.35; grp.add(mon);
+    const scr = mesh(new THREE.PlaneGeometry(1.15, 0.85), new THREE.MeshBasicMaterial({ map: scrT })); scr.position.set(0, 0.38, 0.56); grp.add(scr);
+    const kb = mesh(new THREE.BoxGeometry(1.6, 0.1, 0.55), beige); kb.position.set(0, -0.45, 0.75); kb.rotation.x = 0.08; grp.add(kb);
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 10; j++) { const k = mesh(new THREE.BoxGeometry(0.1, 0.05, 0.1), S("#bfb7a2")); k.position.set(-0.65 + j * 0.145, -0.37, 0.6 + i * 0.14); grp.add(k); }
+    grp.add(glow("#3dff7a", 1.6, 0.15)); grp.rotation.set(0.15, -0.35, 0); grp.userData.update = (t) => { scr.material.color.setScalar(0.85 + 0.15 * Math.sin(t * 20)); grp.rotation.y = -0.35 + 0.2 * Math.sin(t * 0.6); }; return grp;
+  },
+  hand() {
+    const grp = new THREE.Group(), skin = P("#e8b48f", { roughness: 0.55, clearcoat: 0.1, sheen: 0.6, sheenColor: new THREE.Color("#ffd2b8") });
+    const palm = mesh(new THREE.BoxGeometry(1.0, 1.05, 0.32), skin); palm.geometry = new THREE.CapsuleGeometry(0.42, 0.45, 8, 24); palm.scale.set(1.18, 1, 0.42); grp.add(palm);
+    const fingers = [];
+    for (const [x, len, rz] of [[-0.36, 0.62, 0.06], [-0.12, 0.72, 0.02], [0.12, 0.68, -0.02], [0.35, 0.55, -0.07]]) { const f = new THREE.Group(); f.position.set(x, 0.62, 0); f.rotation.z = rz; const c = mesh(new THREE.CapsuleGeometry(0.11, len, 8, 16), skin); c.position.y = len / 2; f.add(c); grp.add(f); fingers.push(f); }
+    const th = new THREE.Group(); th.position.set(-0.52, -0.05, 0.05); th.rotation.z = 0.85; const tc = mesh(new THREE.CapsuleGeometry(0.12, 0.5, 8, 16), skin); tc.position.y = 0.3; th.add(tc); grp.add(th);
+    const arm = mesh(new THREE.CylinderGeometry(0.36, 0.4, 0.8, 32), skin); arm.position.y = -0.95; grp.add(arm);
+    grp.userData.update = (t) => { fingers.forEach((f, i) => { f.rotation.x = -0.12 * (0.5 + 0.5 * Math.sin(t * 1.5 + i * 0.4)); }); grp.rotation.y = 0.35 * Math.sin(t * 0.6); }; return grp;
+  },
   battery() {
     const grp = new THREE.Group(); grp.add(mesh(new THREE.CylinderGeometry(0.45, 0.45, 1.6, 48, 1, true), new THREE.MeshStandardMaterial({ color: "#1d1f26", transparent: true, opacity: 0.35, side: THREE.DoubleSide })));
     const tip = mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.15, 24), S("#c9ccd3", { metalness: 0.9 })); tip.position.y = 0.88; grp.add(tip);
@@ -851,8 +879,23 @@ const scenes = TL.scenes;
 const SC = TL.spec_scenes;
 const objects = scenes.map((s) => {
   const d = s.type === "hook" ? TL.hook : s.type === "outro" ? TL.outro : SC[s.k];
-  return buildObject(d.object || "question", d.color, d);
+  const o = buildObject(d.object || "question", d.color, d);
+  o.extras = (d.extras || []).slice(0, 3).map((e) => typeof e === "string" ? buildObject(e) : buildObject(e.object, e.color, e));
+  return o;
 });
+// ---- sahne süsleri: giriş halkası, parıltı patlaması, yörünge halkası, gölge
+const FX = new THREE.Group(); scene.add(FX);
+const shock = mesh(new THREE.RingGeometry(0.92, 1.0, 96), new THREE.MeshBasicMaterial({ color: "#fff", transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide })); FX.add(shock);
+const shock2 = shock.clone(); shock2.material = shock.material.clone(); FX.add(shock2);
+const halo = new THREE.Group(); FX.add(halo);
+const haloA = mesh(new THREE.TorusGeometry(1.55, 0.012, 8, 200), new THREE.MeshBasicMaterial({ color: "#fff", transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending, depthWrite: false })); halo.add(haloA);
+const haloB = mesh(new THREE.TorusGeometry(1.75, 0.006, 8, 200), haloA.material.clone()); haloB.rotation.x = 0.5; halo.add(haloB);
+const haloDots = []; for (let i = 0; i < 3; i++) { const g = glow("#fff", 0.35, 0.9); halo.add(g); haloDots.push(g); }
+const shadow = mesh(new THREE.CircleGeometry(1.3, 48), new THREE.MeshBasicMaterial({ map: glowTex, color: "#000", transparent: true, opacity: 0.5, depthWrite: false })); shadow.rotation.x = -Math.PI / 2; shadow.position.y = -1.25; FX.add(shadow);
+const BN = 70, bPos = new Float32Array(BN * 3), bDir = []; { const r = mulberry32(77); for (let i = 0; i < BN; i++) { const u = r() * 2 - 1, a = r() * 6.283, q = Math.sqrt(1 - u * u); bDir.push([q * Math.cos(a), u, q * Math.sin(a) * 0.5, 0.6 + r() * 0.8]); } }
+const bGeo = new THREE.BufferGeometry(); bGeo.setAttribute("position", new THREE.BufferAttribute(bPos, 3));
+const burst = new THREE.Points(bGeo, new THREE.PointsMaterial({ size: 0.12, map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: "#fff" })); FX.add(burst);
+const EXP = YATAY ? [[-1.32, 1.12, -0.9], [1.35, -0.95, -0.7], [1.3, 1.25, -1.4]] : [[-0.95, -1.0, 0.3], [1.0, -0.8, -0.3], [-1.05, 0.55, -1.8]], EXS = YATAY ? 0.4 : 0.34;
 const themeOf = (s) => THEMES[(s.type === "hook" ? TL.hook.theme : s.type === "outro" ? TL.outro.theme : SC[s.k].theme) || TL.theme] || THEMES.space;
 
 // ------------------------------------------------------------------ 2D katman
@@ -922,7 +965,7 @@ function applyTheme(th, t, k) {
 
 function renderScene3D(t) {
   const si = sceneAt(t), S0 = scenes[si], next = scenes[si + 1];
-  objects.forEach((o) => (o.holder.visible = false));
+  objects.forEach((o) => { o.holder.visible = false; o.extras.forEach((e) => (e.holder.visible = false)); });
   const outK = next ? eInCubic((t - (next.t0 - 0.22)) / 0.22) : 0;
   const inK = si > 0 ? 1 - eOutCubic((t - S0.t0) / WHIP) : 0;
   const whip = outK * 1.1 - inK * 1.1;
@@ -934,9 +977,26 @@ function renderScene3D(t) {
   o.holder.rotation.y = -1.4 * (1 - eOutCubic(age / 0.9)) + 0.35 * Math.sin(age * 0.6);
   o.holder.position.y = -0.05 + 0.06 * Math.sin(age * 1.6);
   if (o.obj.userData.update) o.obj.userData.update(age);
-  const p = age / dur, az = whip + 0.25 * Math.sin(p * 2.5 + si), D = lerp(7.6, 7.0, eInOut(p));
-  camera.position.set(Math.sin(az) * D, 0.45 + 0.15 * Math.sin(p * 3), Math.cos(az) * D);
-  camera.lookAt(0, 0.12, 0);
+  const acc = new THREE.Color(th.accent);
+  // yan nesneler: sırayla gelir, ana nesnenin çevresinde süzülür
+  o.extras.forEach((e, i) => {
+    e.holder.visible = true; const k = eOutBack((age - 0.35 - i * 0.18) / 0.6, 1.8), ang = age * 0.5 + i * 2.1;
+    const [x, y, z] = EXP[i]; e.holder.position.set(x + 0.12 * Math.sin(ang), y + 0.1 * Math.cos(ang * 1.3), z);
+    e.holder.scale.setScalar(Math.max(0.001, EXS * k * (1 - outK))); e.holder.rotation.y = 0.5 * Math.sin(age * 0.6 + i);
+    if (e.obj.userData.update) e.obj.userData.update(age + i);
+  });
+  // giriş halkaları
+  for (const [r, d0] of [[shock, 0], [shock2, 0.12]]) { const q = clamp((age - d0) / 0.75); r.scale.setScalar(0.7 + 1.5 * eOutCubic(q)); r.material.opacity = 0.55 * (1 - q) * (q > 0 ? 1 : 0); r.material.color.copy(acc); r.lookAt(camera.position); }
+  // parıltı patlaması
+  { const q = clamp(age / 1.1), P3 = bGeo.attributes.position; for (let i = 0; i < BN; i++) { const [dx, dy, dz, sp] = bDir[i], rr = 0.4 + eOutCubic(q) * 2.6 * sp; P3.setXYZ(i, dx * rr, dy * rr, dz * rr); } P3.needsUpdate = true; burst.material.opacity = 0.9 * (1 - q); burst.material.color.copy(acc).lerp(new THREE.Color("#fff"), 0.4); }
+  // yörünge halkası ve gölge
+  halo.rotation.set(1.15 + 0.1 * Math.sin(age * 0.4), age * 0.15, 0.25 + si * 0.4); const hk = eOutCubic((age - 0.3) / 0.8) * (1 - outK);
+  haloA.material.opacity = 0.22 * hk; haloB.material.opacity = 0.14 * hk; haloA.material.color.copy(acc); haloB.material.color.copy(acc);
+  haloDots.forEach((g, i) => { const a = age * (0.9 + i * 0.25) + i * 2.1, R = i === 2 ? 1.75 : 1.55; g.position.set(Math.cos(a) * R, Math.sin(a) * R, 0); g.material.color.copy(acc); g.material.opacity = 0.9 * hk; });
+  shadow.material.opacity = 0.45 * ent * (1 - outK);
+  const dir = si % 2 ? 1 : -1, p = age / dur, az = whip + dir * (0.32 * eInOut(p) - 0.16) + 0.05 * Math.sin(age * 0.9), D = lerp(8.0, 6.8, eInOut(p));
+  camera.position.set(Math.sin(az) * D, 0.45 + 0.25 * Math.sin(p * 3 + si), Math.cos(az) * D);
+  camera.lookAt(0, 0.12, 0); camera.rotateZ(0.025 * Math.sin(age * 0.7 + si));
   renderer.render(scene, camera);
   return { si, S: S0, th, blur: Math.max(outK, inK) };
 }

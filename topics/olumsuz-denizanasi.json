@@ -13,32 +13,52 @@
   "say": "Yaşlanınca ölmek yerine yeniden bebekliğe dönen bir canlı var.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "ÖLÜMSÜZ DENİZANASI",
-  "object": "jellyfish"
+  "object": "jellyfish",
+  "extras": [
+   "hourglass",
+   "dna"
+  ]
  },
  "scenes": [
   {
    "title": "4,5 MİLİMETRE",
    "object": "jellyfish",
    "sub": "Serçe parmak tırnağından küçük",
-   "say": "Adı Turritopsis dohrnii. Boyu sadece 4,5 milimetre, yani serçe parmağının tırnağı kadar."
+   "say": "Adı Turritopsis dohrnii. Boyu sadece 4,5 milimetre, yani serçe parmağının tırnağı kadar.",
+   "extras": [
+    "fish",
+    "drop"
+   ]
   },
   {
    "title": "ZAMANI GERİ SARAR",
    "object": "hourglass",
    "sub": "Yetişkinken yeniden polip olur",
-   "say": "Yaralanınca, aç kalınca ya da yaşlanınca ölmek yerine bebeklik evresine, yani polip hâline geri döner."
+   "say": "Yaralanınca, aç kalınca ya da yaşlanınca ölmek yerine bebeklik evresine, yani polip hâline geri döner.",
+   "extras": [
+    "jellyfish",
+    "dna"
+   ]
   },
   {
    "title": "TEKRAR TEKRAR",
    "object": "dna",
    "sub": "Hücreleri başka hücreye dönüşür",
-   "say": "Bunu yaparken hücreleri başka tür hücrelere dönüşür ve bu döngüyü defalarca tekrarlayabilir."
+   "say": "Bunu yaparken hücreleri başka tür hücrelere dönüşür ve bu döngüyü defalarca tekrarlayabilir.",
+   "extras": [
+    "jellyfish",
+    "hourglass"
+   ]
   },
   {
    "title": "AMA YENİLMEZ DEĞİL",
    "object": "jellyfish",
    "sub": "Avlanabilir, hastalanabilir",
-   "say": "Yine de yenilmez değildir. Bir balığa yem olabilir ya da hastalanıp ölebilir."
+   "say": "Yine de yenilmez değildir. Bir balığa yem olabilir ya da hastalanıp ölebilir.",
+   "extras": [
+    "fish",
+    "turtle"
+   ]
   }
  ],
  "outro": {

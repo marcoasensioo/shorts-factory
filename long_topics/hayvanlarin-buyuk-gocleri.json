@@ -14,7 +14,11 @@
   "say": "Her yıl milyonlarca hayvan, binlerce kilometre süren yolculuklara çıkıyor. Bazıları kutuptan kutba uçuyor, bazıları ise yolculuğu bitirecek kadar uzun yaşamıyor ama torunları onların yerine devam ediyor. Bugün doğanın en büyük göçlerini anlatıyoruz.",
   "kicker": "BELGESEL",
   "headline": "HAYVANLARIN BÜYÜK GÖÇLERİ",
-  "object": "bird"
+  "object": "bird",
+  "extras": [
+   "butterfly",
+   "whale"
+  ]
  },
  "scenes": [
   {
@@ -22,40 +26,64 @@
    "object": "earth",
    "sub": "Besin, su ve üreme",
    "say": "Hayvanlar göç eder, çünkü mevsimler değişir. Besin azalır, su kaynakları kurur ya da yavrulamak için daha güvenli bir yere ihtiyaç duyulur. Bu yolculuklar; kuşlardan kelebeklere, balinalardan antiloplara kadar pek çok canlının hayatta kalma stratejisi.",
-   "kicker": "GİRİŞ"
+   "kicker": "GİRİŞ",
+   "extras": [
+    "bird",
+    "paw"
+   ]
   },
   {
    "title": "100 GRAMDAN HAFİF",
    "object": "bird",
    "sub": "Kutup sumrusu",
    "say": "İlk kahramanımız kutup sumrusu adlı küçük bir deniz kuşu. Ağırlığı 100 gramdan bile az. Ama hayvanlar âleminin en uzun yıllık göçünü o yapıyor: Kuzey Kutbu'ndaki üreme alanlarından Antarktika'ya ve geri.",
-   "kicker": "1. YOLCULUK"
+   "kicker": "1. YOLCULUK",
+   "extras": [
+    "compass",
+    "snowflake"
+   ]
   },
   {
    "title": "YILDA İKİ YAZ",
    "object": "sun",
    "sub": "Kutuptan kutba",
-   "say": "Kutup sumrusu, Kuzey'de yaz bittiğinde güneye uçar ve oraya vardığında Güney Yarım Küre'de yaz başlamış olur. Yani bu küçük kuş, her yıl iki yaz yaşıyor. Hayatı boyunca kat ettiği toplam mesafe, Ay'a gidip gelmeyi defalarca aşabilecek kadar uzun."
+   "say": "Kutup sumrusu, Kuzey'de yaz bittiğinde güneye uçar ve oraya vardığında Güney Yarım Küre'de yaz başlamış olur. Yani bu küçük kuş, her yıl iki yaz yaşıyor. Hayatı boyunca kat ettiği toplam mesafe, Ay'a gidip gelmeyi defalarca aşabilecek kadar uzun.",
+   "extras": [
+    "bird",
+    "earth"
+   ]
   },
   {
    "title": "MONARK KELEBEĞİ",
    "object": "butterfly",
    "sub": "Birkaç kuşaklık yolculuk",
    "say": "İkinci kahramanımız, turuncu-siyah kanatlı monark kelebeği. Kuzey Amerika'dan Meksika'daki ormanlara kadar uzanan bu göç, binlerce kilometre sürüyor. Ama işin şaşırtıcı yanı şu: Hiçbir kelebek bu yolculuğun tamamını tek başına yapamıyor.",
-   "kicker": "2. YOLCULUK"
+   "kicker": "2. YOLCULUK",
+   "extras": [
+    "tree",
+    "flower"
+   ]
   },
   {
    "title": "TORUNLAR DEVAM EDİYOR",
    "object": "butterfly",
    "sub": "Yolda doğan nesiller",
-   "say": "Monark kelebekleri yolculuk sırasında çiftleşip yumurtluyor ve yeni kuşaklar göçe kaldığı yerden devam ediyor. Gidiş dönüş turu tamamlamak birden fazla kuşak alıyor. Monark, bu kadar uzun bir çift yönlü göç yaptığı bilinen tek kelebek türü."
+   "say": "Monark kelebekleri yolculuk sırasında çiftleşip yumurtluyor ve yeni kuşaklar göçe kaldığı yerden devam ediyor. Gidiş dönüş turu tamamlamak birden fazla kuşak alıyor. Monark, bu kadar uzun bir çift yönlü göç yaptığı bilinen tek kelebek türü.",
+   "extras": [
+    "flower",
+    "dna"
+   ]
   },
   {
    "title": "ÖZEL BİR KUŞAK",
    "object": "heart",
    "sub": "Uzun yaşayan göçmenler",
    "say": "Bu döngüde bir kuşak diğerlerinden farklı: Sonbaharda güneye uçan kelebekler, kardeşlerinden çok daha uzun yaşıyor. Kışı Meksika'nın yüksek dağlarındaki köknar ormanlarında, ağaçların dallarını kaplayan dev kümeler hâlinde geçiriyorlar.",
-   "theme": "warm"
+   "theme": "warm",
+   "extras": [
+    "butterfly",
+    "tree"
+   ]
   },
   {
    "title": "1 MİLYONU AŞKIN",
@@ -63,20 +91,32 @@
    "sub": "Serengeti'nin büyük göçü",
    "say": "Üçüncü yolculuk Afrika'da. Her yıl bir milyonu aşkın yaban öküzü, yüz binlerce zebra ve ceylanla birlikte Tanzanya'daki Serengeti ile Kenya'daki Masai Mara arasında büyük bir döngü çiziyor. Bu, karadaki en kalabalık göçlerden biri.",
    "kicker": "3. YOLCULUK",
-   "theme": "earth"
+   "theme": "earth",
+   "extras": [
+    "cloud",
+    "drop"
+   ]
   },
   {
    "title": "AYNI AYDA DOĞUM",
    "object": "heart",
    "sub": "Yavrular aynı anda",
    "say": "Yılın başında sürüler Serengeti'nin kenarında toplanıyor ve dişiler yavrularını aşağı yukarı aynı ay içinde doğuruyor. Binlerce yavrunun aynı anda doğması, onların hayatta kalma şansını artırıyor.",
-   "theme": "warm"
+   "theme": "warm",
+   "extras": [
+    "paw",
+    "clock"
+   ]
   },
   {
    "title": "YAĞMURUN PEŞİNDE",
    "object": "cloud",
    "sub": "Taze otlak arayışı",
-   "say": "Bu sürüler aslında yağmuru takip ediyor. Yağmurlar nereye düşerse orada taze otlar biter ve sürüler de oraya yönelir. Yol boyunca nehirleri geçmek zorunda kalıyorlar ve bu geçişler, göçün en tehlikeli anlarından biri."
+   "say": "Bu sürüler aslında yağmuru takip ediyor. Yağmurlar nereye düşerse orada taze otlar biter ve sürüler de oraya yönelir. Yol boyunca nehirleri geçmek zorunda kalıyorlar ve bu geçişler, göçün en tehlikeli anlarından biri.",
+   "extras": [
+    "paw",
+    "drop"
+   ]
   },
   {
    "title": "DENİZDEKİ DEVLER",
@@ -84,28 +124,44 @@
    "sub": "Kambur balinalar",
    "say": "Okyanuslarda da büyük göçler yaşanıyor. Kambur balinalar, beslendikleri soğuk sular ile yavruladıkları sıcak sular arasında binlerce kilometre yol kat ediyor. Memeliler arasında en uzun göçlerden birini onlar yapıyor.",
    "kicker": "4. YOLCULUK",
-   "theme": "ocean"
+   "theme": "ocean",
+   "extras": [
+    "fish",
+    "compass"
+   ]
   },
   {
    "title": "647 GÜNLÜK YOLCULUK",
    "object": "turtle",
    "sub": "Deri sırtlı deniz kaplumbağası",
    "say": "Sudaki kayıtlı en uzun yolculuklardan biri ise deri sırtlı deniz kaplumbağasına ait. İzlenen bir kaplumbağa, Endonezya'dan ABD'nin Oregon kıyılarına kadar 647 günde 20 bin kilometreden fazla yüzdü.",
-   "theme": "ocean"
+   "theme": "ocean",
+   "extras": [
+    "compass",
+    "fish"
+   ]
   },
   {
    "title": "YOLU NASIL BULUYORLAR?",
    "object": "compass",
    "sub": "Bilimin hâlâ çözmeye çalıştığı soru",
    "say": "Peki bu hayvanlar yollarını nasıl buluyor? Bilim insanları; Güneş'in konumu, yıldızlar, Dünya'nın manyetik alanı ve kokular gibi pek çok ipucunu kullandıklarını düşünüyor. Ama bu sistemin nasıl bu kadar kusursuz çalıştığı, doğanın hâlâ tam çözülemeyen sırlarından biri.",
-   "kicker": "FİNAL"
+   "kicker": "FİNAL",
+   "extras": [
+    "sun",
+    "star"
+   ]
   }
  ],
  "outro": {
   "say": "Doğanın en büyük göçlerini anlattık. Sence bunlardan hangisi en etkileyiciydi? Yorumlara yaz, abone olmayı da unutma!",
   "headline": "EN ETKİLEYİCİ HANGİSİ?",
   "cta": "Yorumlara yaz",
-  "object": "earth"
+  "object": "earth",
+  "extras": [
+   "bird",
+   "butterfly"
+  ]
  },
  "meta": {
   "title": "Hayvanların Büyük Göçleri 🦋 | Kutuptan Kutba Yolculuklar",

@@ -21,20 +21,32 @@
    "object": "heart",
    "sub": "Dakikada ortalama 72 atış",
    "say": "Kalbin her gün yaklaşık 100000 kez atıyor.",
-   "count": 100000
+   "count": 100000,
+   "extras": [
+    "clock",
+    "lungs"
+   ]
   },
   {
    "title": "GÜNDE {n} LİTRE",
    "object": "drop",
    "sub": "Vücudundaki kan günde defalarca döner",
    "say": "Ve her gün yaklaşık 7500 litre kan pompalıyor.",
-   "count": 7500
+   "count": 7500,
+   "extras": [
+    "heart",
+    "thermometer"
+   ]
   },
   {
    "title": "2,5 MİLYAR ATIŞ",
    "object": "clock",
    "sub": "Ortalama bir ömür boyunca",
-   "say": "Ortalama bir ömür boyunca bu sayı 2,5 milyar atışı geçiyor."
+   "say": "Ortalama bir ömür boyunca bu sayı 2,5 milyar atışı geçiyor.",
+   "extras": [
+    "heart",
+    "hourglass"
+   ]
   },
   {
    "title": "{n} KM DAMAR",
@@ -42,7 +54,11 @@
    "sub": "Dünya'nın çevresini 2 kez dolaşır",
    "say": "Pompaladığı kan yaklaşık 96000 kilometrelik damar ağında dolaşıyor. Bu, Dünya'nın çevresini iki kez dolaşmaya yetiyor.",
    "count": 96000,
-   "theme": "earth"
+   "theme": "earth",
+   "extras": [
+    "heart",
+    "drop"
+   ]
   }
  ],
  "outro": {

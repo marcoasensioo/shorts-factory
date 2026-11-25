@@ -13,7 +13,11 @@
   "say": "Köpekbalıkları, ağaçlardan daha önce vardı!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "AĞAÇLARDAN YAŞLI",
-  "object": "shark"
+  "object": "shark",
+  "extras": [
+   "tree",
+   "fish"
+  ]
  },
  "scenes": [
   {
@@ -21,26 +25,42 @@
    "object": "shark",
    "sub": "İlk izler",
    "say": "Köpekbalıklarının ve atalarının izleri, yaklaşık 450 milyon yıl öncesine kadar uzanıyor.",
-   "count": 450
+   "count": 450,
+   "extras": [
+    "clock",
+    "fish"
+   ]
   },
   {
    "title": "İLK AĞAÇLAR",
    "object": "tree",
    "sub": "Yaklaşık 385 milyon yıl önce",
    "say": "İlk ağaçlar ise yaklaşık 385 milyon yıl önce ortaya çıktı. Yani köpekbalıkları, ormanlardan çok önce okyanuslarda yüzüyordu.",
-   "theme": "nature"
+   "theme": "nature",
+   "extras": [
+    "shark",
+    "flower"
+   ]
   },
   {
    "title": "DİNOZORLARDAN ÖNCE",
    "object": "dinosaur",
    "sub": "Kitlesel yok oluşları atlattılar",
-   "say": "Köpekbalıkları dinozorlardan da önce vardı ve bilinen büyük kitlesel yok oluşları atlatmayı başardı."
+   "say": "Köpekbalıkları dinozorlardan da önce vardı ve bilinen büyük kitlesel yok oluşları atlatmayı başardı.",
+   "extras": [
+    "shark",
+    "asteroid"
+   ]
   },
   {
    "title": "AMA DİKKAT",
    "object": "shark",
    "sub": "Modern köpekbalıkları daha genç",
-   "say": "Küçük bir not: Bugün gördüğümüz modern köpekbalıkları yaklaşık 195 milyon yıl önce ortaya çıktı. Yani 'ağaçlardan yaşlı' olan, köpekbalıklarının soyu."
+   "say": "Küçük bir not: Bugün gördüğümüz modern köpekbalıkları yaklaşık 195 milyon yıl önce ortaya çıktı. Yani 'ağaçlardan yaşlı' olan, köpekbalıklarının soyu.",
+   "extras": [
+    "dinosaur",
+    "clock"
+   ]
   }
  ],
  "outro": {

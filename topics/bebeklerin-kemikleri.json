@@ -1,0 +1,88 @@
+{
+ "id": "bebeklerin-kemikleri",
+ "title": "Bebeklerin Kemikleri",
+ "template": "explainer3d",
+ "theme": "body",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Bir bebek, senden neredeyse 100 kemik fazlasıyla doğar!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "BEBEK KEMİKLERİ",
+  "object": "bone",
+  "extras": [
+   "hand",
+   "heart"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "300'E YAKIN",
+   "object": "bone",
+   "sub": "Yeni doğanda",
+   "say": "Cleveland Clinic'e göre yeni doğan bir bebekte 275 ile 300 arasında kemik var.",
+   "extras": [
+    "hand",
+    "hourglass"
+   ]
+  },
+  {
+   "title": "YETİŞKİNDE {n}",
+   "object": "bone",
+   "sub": "Çoğu insanda",
+   "say": "Yetişkinlerin çoğunda ise 206 kemik bulunuyor.",
+   "count": 206,
+   "extras": [
+    "hand",
+    "dumbbell"
+   ]
+  },
+  {
+   "title": "KAYBOLMUYORLAR",
+   "object": "hourglass",
+   "sub": "Kaynaşıyorlar",
+   "say": "Peki aradaki kemikler nereye gidiyor? Kaybolmuyorlar. Çocuk büyüdükçe küçük kemikler birleşip daha büyük kemiklere dönüşüyor.",
+   "extras": [
+    "bone",
+    "dna"
+   ]
+  },
+  {
+   "title": "ESNEK KAFATASI",
+   "object": "brain",
+   "sub": "Doğum için tasarım",
+   "say": "Bebeğin kafatası kemikleri doğumda ayrı duruyor. Böylece kafa doğum sırasında şekil alabiliyor.",
+   "extras": [
+    "bone",
+    "heart"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Vücudunla ilgili seni en çok şaşırtan bilgi ne? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENİ NE ŞAŞIRTTI?",
+  "cta": "Yorumlara yaz",
+  "object": "bone",
+  "extras": [
+   "hand",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Bebekler senden 100 kemik fazlasıyla doğar! 🦴 #shorts",
+  "caption": "Bebeklerde 300'e yakın kemik var, yetişkinlerde 206. Peki diğerleri nereye gidiyor? 🦴",
+  "hashtags": [
+   "#shorts",
+   "#insanvücudu",
+   "#bebek",
+   "#bilim",
+   "#sağlık",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

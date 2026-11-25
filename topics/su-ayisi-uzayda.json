@@ -13,35 +13,55 @@
   "say": "Uzay boşluğunda korumasız hayatta kalan ilk hayvan, bir milimetre boyunda!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "SU AYISI",
-  "object": "drop"
+  "object": "drop",
+  "extras": [
+   "rocket",
+   "star"
+  ]
  },
  "scenes": [
   {
    "title": "SU AYILARI",
    "object": "drop",
    "sub": "Tardigradlar",
-   "say": "Bu minik canlıların adı tardigrad, yani su ayısı. En büyük türleri bile bir milimetreden biraz uzun."
+   "say": "Bu minik canlıların adı tardigrad, yani su ayısı. En büyük türleri bile bir milimetreden biraz uzun.",
+   "extras": [
+    "paw",
+    "flower"
+   ]
   },
   {
    "title": "EYLÜL 2007",
    "object": "satellite",
    "sub": "Foton-M3 görevi",
    "say": "Eylül 2007'de bilim insanları, Avrupa Uzay Ajansı'nın Foton-M3 göreviyle yaklaşık 3 bin su ayısını uzaya gönderdi.",
-   "theme": "space"
+   "theme": "space",
+   "extras": [
+    "rocket",
+    "earth"
+   ]
   },
   {
    "title": "UZAY BOŞLUĞU",
    "object": "rocket",
    "sub": "Vakum sorun olmadı",
    "say": "Su ayıları, uzay boşluğuna ve kozmik ışınlara doğrudan maruz bırakıldı. Proje liderine göre vakum, onlar için sorun olmadı. Hatta Dünya'ya dönünce yumurtladılar.",
-   "theme": "space"
+   "theme": "space",
+   "extras": [
+    "satellite",
+    "star"
+   ]
   },
   {
    "title": "SÜPER DAYANIKLI",
    "object": "thermometer",
    "sub": "Ama zayıf yönleri de var",
    "say": "Su ayıları eksi 272 dereceden artı 150 dereceye kadar sıcaklıklara dayanabiliyor. Ama ilginç bir zayıflıkları var: Ezilmeye karşı oldukça savunmasızlar.",
-   "theme": "warm"
+   "theme": "warm",
+   "extras": [
+    "snowflake",
+    "flame"
+   ]
   }
  ],
  "outro": {

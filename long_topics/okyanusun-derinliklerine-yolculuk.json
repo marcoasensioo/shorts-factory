@@ -14,7 +14,11 @@
   "say": "Okyanusun yüzeyinden başlayıp gezegenimizin en derin noktasına kadar inen bir yolculuğa çıkıyoruz. Her metrede biraz daha karanlık, biraz daha soğuk ve biraz daha tuhaf bir dünyaya gireceğiz. Hazırsan dalıyoruz.",
   "kicker": "BELGESEL",
   "headline": "OKYANUSUN DERİNLİKLERİ",
-  "object": "submarine"
+  "object": "submarine",
+  "extras": [
+   "whale",
+   "jellyfish"
+  ]
  },
  "scenes": [
   {
@@ -22,80 +26,128 @@
    "object": "fish",
    "sub": "Güneş ışığı bölgesi",
    "say": "İlk durağımız güneş ışığı bölgesi. Yüzeyden 200 metre derinliğe kadar uzanan bu katman, güneş ışığının yeterince ulaştığı tek yer. Bitki planktonları burada fotosentez yapıyor ve okyanustaki besin zincirinin temelini oluşturuyor. Ama şaşırtıcı bir şey söyleyelim: bu ışıklı katman, bütün okyanusun sadece yaklaşık yüzde 3'ü.",
-   "kicker": "1. DURAK"
+   "kicker": "1. DURAK",
+   "extras": [
+    "sun",
+    "turtle"
+   ]
   },
   {
    "title": "ÜÇTE DÖRDÜ KARANLIK",
    "object": "submarine",
    "sub": "Derin deniz",
-   "say": "Yani okyanusun neredeyse tamamı karanlık. Okyanusla kaplı alanın yaklaşık dörtte üçü derin, kalıcı olarak karanlık ve soğuk. Bilim insanları buna derin deniz diyor ve gezegenimizdeki en büyük yaşam alanı aslında burası."
+   "say": "Yani okyanusun neredeyse tamamı karanlık. Okyanusla kaplı alanın yaklaşık dörtte üçü derin, kalıcı olarak karanlık ve soğuk. Bilim insanları buna derin deniz diyor ve gezegenimizdeki en büyük yaşam alanı aslında burası.",
+   "extras": [
+    "earth",
+    "jellyfish"
+   ]
   },
   {
    "title": "200-1000 METRE",
    "object": "eye",
    "sub": "Alacakaranlık bölgesi",
    "say": "200 metreyi geçtiğimizde alacakaranlık bölgesine giriyoruz. Burada ışık hızla azalıyor; görmek için yetecek kadar ışık olabilir ama fotosentez için yetmez. Bu bölgedeki pek çok canlının dev gözleri var, çünkü yukarıdan süzülen o son ışık kırıntılarını yakalamaya çalışıyorlar.",
-   "kicker": "2. DURAK"
+   "kicker": "2. DURAK",
+   "extras": [
+    "fish",
+    "shark"
+   ]
   },
   {
    "title": "1000 METRE: GECE",
    "object": "jellyfish",
    "sub": "Gece yarısı bölgesi",
    "say": "1000 metreden sonra yüzeyden hiç ışık gelmiyor. Burası gece yarısı bölgesi ve 4000 metreye kadar uzanıyor. Bu derinliklerde tek ışık kaynağı, canlıların kendi ürettiği ışık. Sıcaklık ise yıl boyunca 4 derece civarında, neredeyse buzdolabı kadar soğuk.",
-   "kicker": "3. DURAK"
+   "kicker": "3. DURAK",
+   "extras": [
+    "fish",
+    "lightbulb"
+   ]
   },
   {
    "title": "ISPERMEÇET BALİNASI",
    "object": "whale",
    "sub": "Gece yarısına dalan memeli",
-   "say": "Ama bu karanlığa inen bir memeli var: ıspermeçet balinası. Bu dev balinalar, yiyecek bulmak için gece yarısı bölgesine kadar dalabiliyor. Nefes almak için yüzeye çıkması gereken bir hayvanın bu derinliklere inmesi, doğanın en etkileyici başarılarından biri."
+   "say": "Ama bu karanlığa inen bir memeli var: ıspermeçet balinası. Bu dev balinalar, yiyecek bulmak için gece yarısı bölgesine kadar dalabiliyor. Nefes almak için yüzeye çıkması gereken bir hayvanın bu derinliklere inmesi, doğanın en etkileyici başarılarından biri.",
+   "extras": [
+    "submarine",
+    "clock"
+   ]
   },
   {
    "title": "HER 10 METREDE",
    "object": "dumbbell",
    "sub": "Basınç bir atmosfer artar",
    "say": "Aşağı indikçe asıl düşman karanlık değil, basınç. Her 10 metrede su basıncı bir atmosfer artıyor. Yani 4000 metrede, üzerinde yüzeydekinin yaklaşık 400 katı basınç var. İnsan vücudu korumasız olarak buna asla dayanamaz.",
-   "theme": "lab"
+   "theme": "lab",
+   "extras": [
+    "submarine",
+    "drop"
+   ]
   },
   {
    "title": "4000-6000 METRE",
    "object": "octopus",
    "sub": "Abis bölgesi",
    "say": "4000 metreden sonra abis bölgesine geliyoruz. Burası çoğu yerde okyanus tabanının kendisi: dümdüz, karanlık ve buz gibi bir çöl. Ama boş değil; tuhaf görünüşlü balıklar, denizanaları ve deniz hıyarları bu zorlu ortamda yaşamayı başarıyor.",
-   "kicker": "4. DURAK"
+   "kicker": "4. DURAK",
+   "extras": [
+    "fish",
+    "jellyfish"
+   ]
   },
   {
    "title": "6000+ METRE",
    "object": "mountain",
    "sub": "Hadal bölgesi: okyanus çukurları",
    "say": "6000 metrenin altı hadal bölgesi. Adını antik Yunan'ın yeraltı dünyasından alıyor ve sadece derin okyanus çukurlarında bulunuyor. Bunların en derini Pasifik'teki Mariana Çukuru.",
-   "kicker": "5. DURAK"
+   "kicker": "5. DURAK",
+   "extras": [
+    "submarine",
+    "fish"
+   ]
   },
   {
    "title": "YAKLAŞIK 11 KM",
    "object": "mountain",
    "sub": "Challenger Çukuru",
-   "say": "Mariana Çukuru'nun en derin noktasının adı Challenger Çukuru ve derinliği yaklaşık 11 kilometre. Bir karşılaştırma yapalım: Everest Dağı'nı buraya bıraksaydın, zirvesi suyun altında kaybolmakla kalmaz, yüzeyin bir buçuk kilometreden fazla altında kalırdı."
+   "say": "Mariana Çukuru'nun en derin noktasının adı Challenger Çukuru ve derinliği yaklaşık 11 kilometre. Bir karşılaştırma yapalım: Everest Dağı'nı buraya bıraksaydın, zirvesi suyun altında kaybolmakla kalmaz, yüzeyin bir buçuk kilometreden fazla altında kalırdı.",
+   "extras": [
+    "submarine",
+    "flag"
+   ]
   },
   {
    "title": "1000 KATTAN FAZLA",
    "object": "dumbbell",
    "sub": "Dipteki basınç",
    "say": "Bu derinlikte basınç, yüzeydekinin bin katından fazla. Yani her santimetrekarenin üstünde yüzlerce kilogramlık bir ağırlık var. Buna rağmen bilim insanları 2005'te bu çukurun dibinde bile tek hücreli canlılar buldu. Hayat, en imkânsız görünen yerde bile bir yol buluyor.",
-   "theme": "lab"
+   "theme": "lab",
+   "extras": [
+    "submarine",
+    "drop"
+   ]
   },
   {
    "title": "23 OCAK 1960",
    "object": "submarine",
    "sub": "Trieste: ilk insanlı iniş",
    "say": "Peki insanlar oraya hiç indi mi? Evet. 23 Ocak 1960'ta Don Walsh ve Jacques Piccard, Trieste adlı bir dalış aracıyla Challenger Çukuru'nun dibine ulaştı. İniş yaklaşık beş saat sürdü. Yolda pencerelerden biri çatladı ama devam etmeye karar verdiler. Dipte ise sadece yaklaşık 20 dakika kalabildiler.",
-   "kicker": "6. DURAK"
+   "kicker": "6. DURAK",
+   "extras": [
+    "flag",
+    "clock"
+   ]
   },
   {
    "title": "PARLAYAN CANLILAR",
    "object": "jellyfish",
    "sub": "Karanlıktaki ışık gösterisi",
-   "say": "İniş sırasında pencereden dışarı bakan Walsh, karanlığın içinde binlerce parlayan canlı gördüğünü anlattı. Ona göre derinlerde kendi ışığını üreten canlılar her yerdeydi; üstelik oraları okyanusun pek de kalabalık olmayan bir bölgesiydi. Işığın hiç ulaşmadığı bir dünyada, canlılar kendi ışıklarını yakıyordu."
+   "say": "İniş sırasında pencereden dışarı bakan Walsh, karanlığın içinde binlerce parlayan canlı gördüğünü anlattı. Ona göre derinlerde kendi ışığını üreten canlılar her yerdeydi; üstelik oraları okyanusun pek de kalabalık olmayan bir bölgesiydi. Işığın hiç ulaşmadığı bir dünyada, canlılar kendi ışıklarını yakıyordu.",
+   "extras": [
+    "fish",
+    "lightbulb"
+   ]
   },
   {
    "title": "DİPTE BİR BALIK MI?",
@@ -107,14 +159,22 @@
    "title": "EN DERİN BALIK",
    "object": "fish",
    "sub": "Salyangoz balığı",
-   "say": "Bugüne kadar görülen en derin balık, salyangoz balığı adı verilen küçük, yarı saydam bir tür. 8 bin 300 metreyi aşan derinlikte görüntülendi. Bilim insanları bu derinliğin, balıkların basınca dayanabileceği sınıra çok yakın olduğunu düşünüyor."
+   "say": "Bugüne kadar görülen en derin balık, salyangoz balığı adı verilen küçük, yarı saydam bir tür. 8 bin 300 metreyi aşan derinlikte görüntülendi. Bilim insanları bu derinliğin, balıkların basınca dayanabileceği sınıra çok yakın olduğunu düşünüyor.",
+   "extras": [
+    "submarine",
+    "jellyfish"
+   ]
   },
   {
    "title": "HÂLÂ BİLİNMEYEN",
    "object": "submarine",
    "sub": "Deniz tabanının çoğu haritalanmadı",
    "say": "Ve belki de en şaşırtıcı gerçek şu: 2026 itibarıyla deniz tabanının sadece yaklaşık yüzde 29'u modern sonar sistemleriyle yüksek çözünürlükte haritalandı. Yani gezegenimizin büyük bir kısmı, hâlâ hiç kimsenin net olarak görmediği bir dünya.",
-   "kicker": "7. DURAK"
+   "kicker": "7. DURAK",
+   "extras": [
+    "compass",
+    "whale"
+   ]
   }
  ],
  "outro": {

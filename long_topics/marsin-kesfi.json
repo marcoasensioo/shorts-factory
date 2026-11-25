@@ -14,7 +14,11 @@
   "say": "Mars'a henüz hiçbir insan ayak basmadı. Ama orada yaklaşık yarım asırdır bizim adımıza çalışan robotlar var. Tekerlekli laboratuvarlar, bir helikopter ve başka bir gezegende kaydedilen ilk sesler. Bugün Mars'ın keşif hikâyesini anlatıyoruz.",
   "kicker": "BELGESEL",
   "headline": "MARS'IN KEŞFİ",
-  "object": "mars"
+  "object": "mars",
+  "extras": [
+   "rover",
+   "rocket"
+  ]
  },
  "scenes": [
   {
@@ -22,52 +26,83 @@
    "object": "mars",
    "sub": "Güneş'e en yakın dördüncü gezegen",
    "say": "Mars, Güneş'e en yakın dördüncü gezegen ve rengini yüzeyindeki demir oksitten, yani bir çeşit pastan alıyor. Atmosferi Dünya'nınkinin yüzde birinden bile daha ince. Buna rağmen, Güneş Sistemi'nde insanların en çok merak ettiği gezegenlerden biri.",
-   "kicker": "1. BÖLÜM"
+   "kicker": "1. BÖLÜM",
+   "extras": [
+    "sun",
+    "earth"
+   ]
   },
   {
    "title": "1971: İLK YÖRÜNGE",
    "object": "satellite",
    "sub": "Mariner 9",
-   "say": "Mars keşfinde önemli bir dönüm noktası 1971'de yaşandı. NASA'nın Mariner 9 aracı, başka bir gezegenin yörüngesine giren ilk uzay aracı oldu. Gezegeni yukarıdan haritalayarak bilim insanlarına Mars'ın yüzeyini ilk kez bu kadar ayrıntılı gösterdi."
+   "say": "Mars keşfinde önemli bir dönüm noktası 1971'de yaşandı. NASA'nın Mariner 9 aracı, başka bir gezegenin yörüngesine giren ilk uzay aracı oldu. Gezegeni yukarıdan haritalayarak bilim insanlarına Mars'ın yüzeyini ilk kez bu kadar ayrıntılı gösterdi.",
+   "extras": [
+    "mars",
+    "telescope"
+   ]
   },
   {
    "title": "VİKİNG: İLK İNİŞ",
    "object": "lander",
    "sub": "Her şey ilk kez deneniyordu",
    "say": "Ardından Viking iniş araçları geldi. NASA ilk kez başka bir gezegene iniş yapıyor ve ilk kez minyatür bir laboratuvar inşa ediyordu. Bir müze küratörünün dediği gibi, Viking'le ilgili neredeyse her şey ilk defa deneniyordu.",
-   "kicker": "2. BÖLÜM"
+   "kicker": "2. BÖLÜM",
+   "extras": [
+    "mars",
+    "computer"
+   ]
   },
   {
    "title": "SOJOURNER",
    "object": "rover",
    "sub": "Mars'taki ilk tekerlekli araç",
-   "say": "1997'de Pathfinder görevi, yanında Sojourner adlı küçük bir gezici taşıyordu. Sadece yaklaşık 10 kilogram ağırlığındaki bu araç, Mars'ta hareket eden ilk tekerlekli araç oldu. Artık Mars'ı tek bir noktadan değil, gezerek keşfediyorduk."
+   "say": "1997'de Pathfinder görevi, yanında Sojourner adlı küçük bir gezici taşıyordu. Sadece yaklaşık 10 kilogram ağırlığındaki bu araç, Mars'ta hareket eden ilk tekerlekli araç oldu. Artık Mars'ı tek bir noktadan değil, gezerek keşfediyorduk.",
+   "extras": [
+    "mars",
+    "lander"
+   ]
   },
   {
    "title": "İKİZ GEZİCİLER",
    "object": "rover",
    "sub": "Spirit ve Opportunity",
    "say": "Sonra ikizler geldi: Spirit ve Opportunity. Her biri bir golf arabası büyüklüğündeydi ve Sojourner'a göre büyük bir sıçramaydı. 2004'te Mars'a inen bu iki gezici, gezegenin farklı bölgelerini incelemeye başladı.",
-   "kicker": "3. BÖLÜM"
+   "kicker": "3. BÖLÜM",
+   "extras": [
+    "mars"
+   ]
   },
   {
    "title": "CURIOSITY",
    "object": "rover",
    "sub": "Yeni bir iniş yöntemi",
-   "say": "Daha büyük ve daha gelişmiş bir laboratuvar olan Curiosity, Mars'a yepyeni bir yöntemle indi. 2022'de Mars'taki onuncu yılını doldurdu. Her yeni gezici, bir öncekinden daha yetenekli ve daha bağımsız hâle geliyordu."
+   "say": "Daha büyük ve daha gelişmiş bir laboratuvar olan Curiosity, Mars'a yepyeni bir yöntemle indi. 2022'de Mars'taki onuncu yılını doldurdu. Her yeni gezici, bir öncekinden daha yetenekli ve daha bağımsız hâle geliyordu.",
+   "extras": [
+    "mars",
+    "computer"
+   ]
   },
   {
    "title": "PERSEVERANCE",
    "object": "mars",
    "sub": "Jezero Krateri, 2021",
    "say": "18 Şubat 2021'de Perseverance gezicisi, Mars'taki Jezero Krateri'ne indi. Sadece iki gün sonra, 20 Şubat'ta tarihe geçen bir şey yaptı: Başka bir gezegenin yüzeyinden ilk sesi kaydetti. Mars'ın rüzgârını ilk kez duyabiliyorduk.",
-   "kicker": "4. BÖLÜM"
+   "kicker": "4. BÖLÜM",
+   "extras": [
+    "rover",
+    "helicopter"
+   ]
   },
   {
    "title": "GİZLİ YOLCU",
    "object": "helicopter",
    "sub": "Gezicinin altındaki helikopter",
-   "say": "Perseverance yalnız gitmemişti. Gövdesinin altına, Ingenuity adlı küçük bir helikopter bağlanmıştı. Boyu yarım metreden kısa bu araç, imkânsız görünen bir şeyi deneyecekti: Atmosferi bu kadar ince bir gezegende uçmak."
+   "say": "Perseverance yalnız gitmemişti. Gövdesinin altına, Ingenuity adlı küçük bir helikopter bağlanmıştı. Boyu yarım metreden kısa bu araç, imkânsız görünen bir şeyi deneyecekti: Atmosferi bu kadar ince bir gezegende uçmak.",
+   "extras": [
+    "rover",
+    "mars"
+   ]
   },
   {
    "title": "19 NİSAN 2021",
@@ -75,33 +110,53 @@
    "sub": "Başka bir gezegende ilk uçuş",
    "say": "19 Nisan 2021'de Ingenuity yerden yaklaşık 3 metre yükseldi, havada asılı kaldı ve geri indi. Bu, başka bir gezegende gerçekleştirilen ilk motorlu ve kontrollü uçuştu. Bilim insanları bu anı, Wright kardeşlerin ilk uçuşuna benzetti.",
    "kicker": "5. BÖLÜM",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "mars",
+    "flag"
+   ]
   },
   {
    "title": "5 UÇUŞ YERİNE 72",
    "object": "helicopter",
    "sub": "Beklentiyi kat kat aşan başarı",
-   "say": "Ingenuity'nin sadece 30 gün içinde birkaç deneme uçuşu yapması planlanıyordu. Ama küçük helikopter yaklaşık üç yıl boyunca çalıştı, 72 uçuş yaptı ve toplamda 17 kilometreden fazla yol kat etti. Ocak 2024'teki son uçuşunda pervanesi hasar görünce görevi sona erdi."
+   "say": "Ingenuity'nin sadece 30 gün içinde birkaç deneme uçuşu yapması planlanıyordu. Ama küçük helikopter yaklaşık üç yıl boyunca çalıştı, 72 uçuş yaptı ve toplamda 17 kilometreden fazla yol kat etti. Ocak 2024'teki son uçuşunda pervanesi hasar görünce görevi sona erdi.",
+   "extras": [
+    "clock",
+    "rover"
+   ]
   },
   {
    "title": "İLK SESLER",
    "object": "phone",
    "sub": "Bir aracı başka bir araç duydu",
-   "say": "30 Nisan 2021'de bir ilk daha yaşandı: Perseverance, başka bir gezegende başka bir uzay aracının, yani Ingenuity'nin sesini kaydetti. Mars, artık sadece görülen değil, duyulan bir dünya hâline gelmişti."
+   "say": "30 Nisan 2021'de bir ilk daha yaşandı: Perseverance, başka bir gezegende başka bir uzay aracının, yani Ingenuity'nin sesini kaydetti. Mars, artık sadece görülen değil, duyulan bir dünya hâline gelmişti.",
+   "extras": [
+    "helicopter",
+    "rover"
+   ]
   },
   {
    "title": "SIRADAKİ ADIM: İNSAN",
    "object": "astronaut",
    "sub": "Robotlar yolu açıyor",
    "say": "Bugün Mars'ta çalışan robotlar, aslında bir gün oraya gidecek insanlara yol açıyor. Helikopterler gibi yeni araçlar, gelecekteki keşiflerin nasıl yapılabileceğini gösteriyor. Belki de Mars'a ilk ayak basacak insan, şu an bu videoyu izleyenlerin kuşağından olacak.",
-   "kicker": "6. BÖLÜM"
+   "kicker": "6. BÖLÜM",
+   "extras": [
+    "mars",
+    "rocket"
+   ]
   }
  ],
  "outro": {
   "say": "Mars'ın keşif hikâyesini anlattık. Bir gün Mars'a gitme şansın olsa gider miydin? Yorumlara yaz, abone olmayı da unutma!",
   "headline": "MARS'A GİDER MİYDİN?",
   "cta": "Yorumlara yaz",
-  "object": "mars"
+  "object": "mars",
+  "extras": [
+   "astronaut",
+   "rover"
+  ]
  },
  "meta": {
   "title": "Mars'ın Keşfi 🔴 | Kızıl Gezegendeki Robotların Hikâyesi",

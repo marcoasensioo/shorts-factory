@@ -13,34 +13,54 @@
   "say": "Dev bir küvet bulsan, Satürn gezegeni içinde batmazdı. Yüzerdi!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "SATÜRN YÜZER",
-  "object": "saturn"
+  "object": "saturn",
+  "extras": [
+   "drop",
+   "moon"
+  ]
  },
  "scenes": [
   {
    "title": "DÜNYA'NIN 9 KATI",
    "object": "saturn",
    "sub": "Çok büyük ama çok hafif",
-   "say": "Satürn, Dünya'dan yaklaşık 9 kat daha geniş. Ama bu dev gezegen inanılmaz derecede hafif."
+   "say": "Satürn, Dünya'dan yaklaşık 9 kat daha geniş. Ama bu dev gezegen inanılmaz derecede hafif.",
+   "extras": [
+    "earth",
+    "jupiter"
+   ]
   },
   {
    "title": "SUDAN HAFİF",
    "object": "drop",
    "sub": "Yoğunluğu sudan az",
    "say": "Satürn'ün ortalama yoğunluğu, santimetreküp başına sadece 0,69 gram. Suyunki ise 1 gram. Yani Satürn, sudan yaklaşık yüzde 30 daha az yoğun.",
-   "theme": "ocean"
+   "theme": "ocean",
+   "extras": [
+    "saturn",
+    "ship"
+   ]
   },
   {
    "title": "GAZ DEVİ",
    "object": "saturn",
    "sub": "Gerçek bir yüzeyi yok",
-   "say": "Çünkü Satürn çoğunlukla hidrojen ve helyumdan oluşan bir gaz devi. Üzerine inebileceğin gerçek bir yüzeyi bile yok."
+   "say": "Çünkü Satürn çoğunlukla hidrojen ve helyumdan oluşan bir gaz devi. Üzerine inebileceğin gerçek bir yüzeyi bile yok.",
+   "extras": [
+    "jupiter",
+    "cloud"
+   ]
   },
   {
    "title": "{n} UYDU",
    "object": "moon",
    "sub": "Mart 2025 itibarıyla",
    "say": "Üstelik Satürn'ün Mart 2025 itibarıyla 274 onaylanmış uydusu var. Bu, Güneş Sistemi'ndeki bütün gezegenlerden fazla!",
-   "count": 274
+   "count": 274,
+   "extras": [
+    "saturn",
+    "telescope"
+   ]
   }
  ],
  "outro": {

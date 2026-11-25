@@ -13,7 +13,11 @@
   "say": "Şu an hareketsiz oturduğunu sanıyorsun. Aslında yolcu uçaklarından bile hızlı gidiyorsun.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "ÇOK HIZLI GİDİYORSUN",
-  "object": "earth"
+  "object": "earth",
+  "extras": [
+   "sun",
+   "moon"
+  ]
  },
  "scenes": [
   {
@@ -21,14 +25,22 @@
    "object": "earth",
    "sub": "Ekvatorda dönüş hızı",
    "say": "Dünya kendi etrafında dönerken ekvatordaki bir nokta saatte yaklaşık 1670 kilometre hızla ilerler.",
-   "count": 1670
+   "count": 1670,
+   "extras": [
+    "sun",
+    "clock"
+   ]
   },
   {
    "title": "TÜRKİYE'DE ~{n} KM",
    "object": "earth",
    "sub": "Kuzeye gittikçe hız düşer",
    "say": "Kutuplara yaklaştıkça bu hız azalır. Türkiye'de ise sen saatte yaklaşık 1300 kilometre hızla dönüyorsun.",
-   "count": 1300
+   "count": 1300,
+   "extras": [
+    "flag",
+    "compass"
+   ]
   },
   {
    "title": "SAATTE {n} KM",
@@ -36,13 +48,21 @@
    "sub": "Güneş'in etrafında",
    "say": "Üstelik Dünya, Güneş'in etrafında saatte yaklaşık 107000 kilometre hızla dolanıyor.",
    "count": 107000,
-   "theme": "space"
+   "theme": "space",
+   "extras": [
+    "clock",
+    "earth"
+   ]
   },
   {
    "title": "NEDEN HİSSETMİYORUZ?",
    "object": "question",
    "sub": "Hız neredeyse sabit",
-   "say": "Bunu hissetmezsin, çünkü bu hız neredeyse hiç değişmez. Vücudun hızı değil, ani hız değişimlerini hisseder."
+   "say": "Bunu hissetmezsin, çünkü bu hız neredeyse hiç değişmez. Vücudun hızı değil, ani hız değişimlerini hisseder.",
+   "extras": [
+    "earth",
+    "rocket"
+   ]
   }
  ],
  "outro": {

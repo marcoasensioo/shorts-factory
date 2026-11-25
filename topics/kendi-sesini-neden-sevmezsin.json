@@ -20,19 +20,31 @@
    "title": "2 FARKLI YOL",
    "object": "brain",
    "sub": "Hava ve kemik",
-   "say": "Konuşurken kendi sesini iki yoldan duyarsın: havadan kulağına gelen ses ve kafatası kemiklerinden geçen titreşim."
+   "say": "Konuşurken kendi sesini iki yoldan duyarsın: havadan kulağına gelen ses ve kafatası kemiklerinden geçen titreşim.",
+   "extras": [
+    "bone",
+    "phone"
+   ]
   },
   {
    "title": "KEMİK SESİ KALINLAŞTIRIR",
    "object": "bone",
    "sub": "Kalın tonlar güçlenir",
-   "say": "Kemikten gelen titreşim, sesinin kalın tonlarını güçlendirir. Bu yüzden kendi sesin sana daha dolgun gelir."
+   "say": "Kemikten gelen titreşim, sesinin kalın tonlarını güçlendirir. Bu yüzden kendi sesin sana daha dolgun gelir.",
+   "extras": [
+    "brain",
+    "phone"
+   ]
   },
   {
    "title": "MİKROFON HAVAYI DUYAR",
    "object": "phone",
    "sub": "Kemik yolu yok",
-   "say": "Mikrofon ise yalnızca havadaki sesi yakalar. Kemik katkısı gidince sesin daha ince ve yabancı gelir."
+   "say": "Mikrofon ise yalnızca havadaki sesi yakalar. Kemik katkısı gidince sesin daha ince ve yabancı gelir.",
+   "extras": [
+    "cloud",
+    "brain"
+   ]
   },
   {
    "title": "SESİN BOZUK DEĞİL",

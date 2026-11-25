@@ -1,0 +1,87 @@
+{
+ "id": "vucudun-en-sert-maddesi",
+ "title": "Vücudun En Sert Maddesi",
+ "template": "explainer3d",
+ "theme": "body",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Vücudundaki en sert madde kemik değil!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "EN SERT MADDE",
+  "object": "tooth",
+  "extras": [
+   "bone",
+   "question"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "DİŞ MİNESİ",
+   "object": "tooth",
+   "sub": "Kemikten bile sert",
+   "say": "Vücudundaki en sert madde, dişlerinin dış katmanı olan diş minesi. Kemiklerinden bile daha sert.",
+   "extras": [
+    "bone",
+    "crown"
+   ]
+  },
+  {
+   "title": "MİNERAL ZIRH",
+   "object": "tooth",
+   "sub": "Kristal bir zırh",
+   "say": "Diş minesinin neredeyse tamamı mineral. Bu da onu dişlerin içini koruyan sağlam bir zırha dönüştürüyor.",
+   "extras": [
+    "atom",
+    "crown"
+   ]
+  },
+  {
+   "title": "KENDİNİ YENİLEYEMEZ",
+   "object": "hourglass",
+   "sub": "Canlı hücre yok",
+   "say": "Ama bir sorun var: Minede canlı hücre yok. Bu yüzden bir kez aşınırsa vücut onu yeniden üretemiyor.",
+   "extras": [
+    "tooth",
+    "bone"
+   ]
+  },
+  {
+   "title": "ASİT DÜŞMANI",
+   "object": "drop",
+   "sub": "Dikkat edilmesi gerekenler",
+   "say": "Asitli yiyecek ve içecekler mineyi zamanla aşındırabiliyor. Yani dişlerine iyi bakmak, bu zırhı korumak demek.",
+   "extras": [
+    "tooth",
+    "strawberry"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Günde kaç kez dişlerini fırçalıyorsun? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN KAÇ KEZ?",
+  "cta": "Yorumlara yaz",
+  "object": "tooth",
+  "extras": [
+   "drop",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Vücudunun en sert maddesi kemik değil! 🦷 #shorts",
+  "caption": "Vücudundaki en sert madde ne? Cevap ağzında! 🦷",
+  "hashtags": [
+   "#shorts",
+   "#sağlık",
+   "#insanvücudu",
+   "#diş",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

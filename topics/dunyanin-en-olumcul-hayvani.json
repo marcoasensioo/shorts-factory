@@ -13,7 +13,11 @@
   "say": "Köpekbalığı değil, yılan değil. Dünyanın en ölümcül hayvanı minicik bir böcek: sivrisinek.",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "EN ÖLÜMCÜL HAYVAN",
-  "object": "virus"
+  "object": "virus",
+  "extras": [
+   "bacteria",
+   "drop"
+  ]
  },
  "scenes": [
   {
@@ -34,14 +38,22 @@
    "title": "DİŞİLER ISIRIR",
    "object": "bacteria",
    "sub": "Erkekler kan emmez",
-   "say": "Seni ısıran her zaman dişi sivrisinektir. Erkek sivrisinekler kan emmez."
+   "say": "Seni ısıran her zaman dişi sivrisinektir. Erkek sivrisinekler kan emmez.",
+   "extras": [
+    "drop",
+    "heart"
+   ]
   },
   {
    "title": "TEK BİR ISIRIK",
    "object": "virus",
    "sub": "Sıtma, dang, zika, sarı humma",
    "say": "Sivrisinekler sıtmanın yanında dang humması, zika ve sarı humma gibi hastalıkları da taşır.",
-   "theme": "storm"
+   "theme": "storm",
+   "extras": [
+    "bacteria",
+    "thermometer"
+   ]
   }
  ],
  "outro": {

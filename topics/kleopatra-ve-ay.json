@@ -1,0 +1,89 @@
+{
+ "id": "kleopatra-ve-ay",
+ "title": "Kleopatra Ay'a Daha Yakın",
+ "template": "explainer3d",
+ "theme": "warm",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Kleopatra, piramitlerin yapılışından çok Ay'a inişe daha yakın bir zamanda yaşadı!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "KLEOPATRA",
+  "object": "crown",
+  "extras": [
+   "pyramid",
+   "moon"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "MÖ 2560 CİVARI",
+   "object": "pyramid",
+   "sub": "Büyük Giza Piramidi",
+   "say": "Büyük Giza Piramidi yaklaşık milattan önce 2560 yılında tamamlandı.",
+   "extras": [
+    "crown",
+    "hourglass"
+   ]
+  },
+  {
+   "title": "MÖ 30",
+   "object": "crown",
+   "sub": "Kleopatra'nın ölümü",
+   "say": "Kleopatra milattan önce 30 yılında öldü. Yani piramit, onun zamanında zaten yaklaşık 2.500 yıllıktı.",
+   "extras": [
+    "pyramid",
+    "hourglass"
+   ]
+  },
+  {
+   "title": "1969: AY",
+   "object": "moon",
+   "sub": "Apollo 11",
+   "say": "Kleopatra'dan Ay'a ilk inişe kadar ise yaklaşık 2.000 yıl geçti.",
+   "theme": "space",
+   "extras": [
+    "rocket",
+    "astronaut"
+   ]
+  },
+  {
+   "title": "{n} YIL DAHA YAKIN",
+   "object": "hourglass",
+   "sub": "Tarih çok uzun",
+   "say": "Yani Kleopatra, Ay'a inişe piramitlerden yaklaşık 500 yıl daha yakın. Tarihin ne kadar uzun olduğunu düşünsene!",
+   "count": 500,
+   "extras": [
+    "crown",
+    "moon"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Seni en çok şaşırtan tarih bilgisi hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENİ NE ŞAŞIRTTI?",
+  "cta": "Yorumlara yaz",
+  "object": "crown",
+  "extras": [
+   "pyramid",
+   "rocket"
+  ]
+ },
+ "meta": {
+  "title": "Kleopatra Ay'a inişe piramitlerden daha yakın! 👑 #shorts",
+  "caption": "Tarihin en şaşırtıcı zaman çizelgesi 👑",
+  "hashtags": [
+   "#shorts",
+   "#tarih",
+   "#mısır",
+   "#kleopatra",
+   "#ilginçbilgiler",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

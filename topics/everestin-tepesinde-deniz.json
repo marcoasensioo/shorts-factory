@@ -13,33 +13,53 @@
   "say": "Dünyanın en yüksek noktasında, deniz canlılarının fosilleri var!",
   "kicker": "BUNU BİLİYOR MUYDUN?",
   "headline": "ZİRVEDE DENİZ",
-  "object": "mountain"
+  "object": "mountain",
+  "extras": [
+   "fish",
+   "snowflake"
+  ]
  },
  "scenes": [
   {
    "title": "ZİRVEDE KİREÇTAŞI",
    "object": "mountain",
    "sub": "Deniz tabanından gelen kaya",
-   "say": "Everest'in zirvesindeki kireçtaşı, bir zamanlar okyanus tabanının bir parçasıydı."
+   "say": "Everest'in zirvesindeki kireçtaşı, bir zamanlar okyanus tabanının bir parçasıydı.",
+   "extras": [
+    "fish",
+    "drop"
+   ]
   },
   {
    "title": "{n} MİLYON YIL",
    "object": "clock",
    "sub": "Britannica'ya göre",
    "say": "Britannica'ya göre bu kayalar, yaklaşık 470 milyon yıl önce deniz tabanındaydı. İçlerinde pek çok deniz fosili bulunuyor.",
-   "count": 470
+   "count": 470,
+   "extras": [
+    "mountain",
+    "fish"
+   ]
   },
   {
    "title": "KITALAR ÇARPIŞTI",
    "object": "earth",
    "sub": "Hindistan ve Asya",
-   "say": "Peki deniz tabanı nasıl dünyanın zirvesine çıktı? Kıta levhaları çarpıştıkça kayalar yukarı itildi ve Himalayalar yükseldi."
+   "say": "Peki deniz tabanı nasıl dünyanın zirvesine çıktı? Kıta levhaları çarpıştıkça kayalar yukarı itildi ve Himalayalar yükseldi.",
+   "extras": [
+    "mountain",
+    "volcano"
+   ]
   },
   {
    "title": "HÂLÂ YÜKSELİYOR",
    "object": "mountain",
    "sub": "Levhalar durmuyor",
-   "say": "Bu levha hareketleri bugün de devam ediyor. Yani Everest, yavaş yavaş da olsa hâlâ değişmeye devam ediyor."
+   "say": "Bu levha hareketleri bugün de devam ediyor. Yani Everest, yavaş yavaş da olsa hâlâ değişmeye devam ediyor.",
+   "extras": [
+    "earth",
+    "flag"
+   ]
   }
  ],
  "outro": {

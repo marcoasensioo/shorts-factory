@@ -1,0 +1,87 @@
+{
+ "id": "deja-vu-nedir",
+ "title": "Déjà Vu Nedir?",
+ "template": "explainer3d",
+ "theme": "mind",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "'Bunu daha önce yaşamıştım!' dediğin o an. Peki beynin o anda ne yapıyor?",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "DÉJÀ VU",
+  "object": "brain",
+  "extras": [
+   "eye",
+   "question"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "ZATEN GÖRÜLMÜŞ",
+   "object": "book",
+   "sub": "Fransızca bir ifade",
+   "say": "Déjà vu, Fransızcada 'zaten görülmüş' demek. Yeni bir anın tuhaf bir şekilde tanıdık gelmesi.",
+   "extras": [
+    "eye",
+    "brain"
+   ]
+  },
+  {
+   "title": "3 KİŞİDEN 2'Sİ",
+   "object": "brain",
+   "sub": "Çok yaygın",
+   "say": "Araştırmalara göre insanların yaklaşık üçte ikisi bunu en az bir kez yaşıyor. Yani tek başına değilsin.",
+   "extras": [
+    "eye",
+    "question"
+   ]
+  },
+  {
+   "title": "GENÇLERDE DAHA SIK",
+   "object": "hourglass",
+   "sub": "Yaşla azalıyor",
+   "say": "Déjà vu gençlerde daha sık görülüyor. Yaş ilerledikçe de daha seyrek yaşanıyor.",
+   "extras": [
+    "brain",
+    "clock"
+   ]
+  },
+  {
+   "title": "HAFIZA KARIŞIKLIĞI",
+   "object": "brain",
+   "sub": "En güçlü açıklama",
+   "say": "En güçlü açıklamalardan biri hafızayla ilgili: Yeni bir yerdeki bir detay sana tanıdık gelir ve beyin, tüm anı tanıdık sanır. Ama kesin sebebi hâlâ bilinmiyor.",
+   "extras": [
+    "eye",
+    "lightning"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Sen en son ne zaman déjà vu yaşadın? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SEN NE ZAMAN?",
+  "cta": "Yorumlara yaz",
+  "object": "brain",
+  "extras": [
+   "eye",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Déjà vu yaşarken beynine ne oluyor? 🧠 #shorts",
+  "caption": "'Bunu daha önce yaşamıştım!' hissinin arkasındaki bilim 🧠",
+  "hashtags": [
+   "#shorts",
+   "#psikoloji",
+   "#beyin",
+   "#dejavu",
+   "#bilim",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}

@@ -12,7 +12,10 @@ def nesne_kontrol(spec):
         return
     gecerli = set(json.load(open(NESNELER, encoding="utf-8")))
     parcalar = [spec.get("hook", {}), spec.get("outro", {})] + spec.get("scenes", [])
-    yanlis = sorted({p.get("object", "question") for p in parcalar} - gecerli)
+    adlar = {p.get("object", "question") for p in parcalar}
+    for p in parcalar:
+        adlar |= {e if isinstance(e, str) else e.get("object", "question") for e in p.get("extras", [])}
+    yanlis = sorted(adlar - gecerli)
     if yanlis:
         raise ValueError(f"Bilinmeyen 3D nesne: {yanlis}. Geçerliler: render/nesneler.json")
 

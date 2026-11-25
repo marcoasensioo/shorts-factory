@@ -1,0 +1,87 @@
+{
+ "id": "cilegin-tohumlari",
+ "title": "Çileğin Tohumları Tohum Değil",
+ "template": "explainer3d",
+ "theme": "nature",
+ "voice": {
+  "engine": "edge",
+  "edge_voice": "tr-TR-AhmetNeural",
+  "edge_rate": "+8%",
+  "gap": 0.2
+ },
+ "hook": {
+  "say": "Çileğin üzerindeki o minik taneler aslında tohum değil!",
+  "kicker": "BUNU BİLİYOR MUYDUN?",
+  "headline": "ÇİLEK SIRRI",
+  "object": "strawberry",
+  "extras": [
+   "flower",
+   "question"
+  ]
+ },
+ "scenes": [
+  {
+   "title": "HER BİRİ MEYVE",
+   "object": "strawberry",
+   "sub": "Adı: aken",
+   "say": "Çileğin üzerindeki her bir minik tane, aslında ayrı bir küçük meyve. Botanikte bunlara aken deniyor.",
+   "extras": [
+    "flower",
+    "question"
+   ]
+  },
+  {
+   "title": "TOHUM İÇİNDE",
+   "object": "strawberry",
+   "sub": "Her akende bir tohum",
+   "say": "Asıl tohum, bu akenlerin içinde saklı. Her akende yalnızca bir tane tohum var.",
+   "extras": [
+    "dna",
+    "flower"
+   ]
+  },
+  {
+   "title": "KIRMIZI KISIM?",
+   "object": "flower",
+   "sub": "Çiçeğin bir parçası",
+   "say": "Peki yediğimiz kırmızı, sulu kısım ne? O, çiçeğin tabla denen kısmının büyüyüp şişmesiyle oluşuyor.",
+   "extras": [
+    "strawberry",
+    "drop"
+   ]
+  },
+  {
+   "title": "MUZ, ÜZÜM, DOMATES",
+   "object": "question",
+   "sub": "Botanik şaşırtıyor",
+   "say": "Botanikte üzümsü meyve, yani berry sayılanlar arasında muz, üzüm ve domates var. Çilek ise bu gruba girmiyor!",
+   "extras": [
+    "strawberry",
+    "flower"
+   ]
+  }
+ ],
+ "outro": {
+  "say": "Sence en şaşırtıcı meyve hangisi? Yorumlara yaz, takip etmeyi unutma!",
+  "headline": "SENCE HANGİSİ?",
+  "cta": "Yorumlara yaz",
+  "object": "strawberry",
+  "extras": [
+   "flower",
+   "question"
+  ]
+ },
+ "meta": {
+  "title": "Çileğin tohumları aslında tohum değil! 🍓 #shorts",
+  "caption": "Çileğin üzerindeki taneler aslında ayrı birer meyve! 🍓",
+  "hashtags": [
+   "#shorts",
+   "#yemek",
+   "#meyve",
+   "#bilim",
+   "#ilginçbilgiler",
+   "#keşfet",
+   "#bilgi"
+  ]
+ }
+}
