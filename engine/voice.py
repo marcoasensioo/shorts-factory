@@ -269,17 +269,63 @@ def regions_sr(mask, n, sr, min_gap):
     return [(a * n / sr, b * n / sr) for a, b in merged if (b - a) * n / sr > 0.06]
 
 
+INGILIZCE_IZ = ("narrator", "turkish", "documentary", "youtube", "aloud", "paragraph", "instruction", "surprised",
+                "amazed", "curious", "excited", "serious", "intonation", "robotic", "pronounce", "bracket")
+
+
+def _ingilizce_kontrol(x, sr):
+    """Sesi Gemini metin modeline yazıya döktürür; talimat ya da İngilizce etiket okunduysa True döner.
+    Kontrol yapılamazsa (kota/ağ) videoyu durdurmaz, False döner."""
+    import io
+    import urllib.request
+    import soundfile as sf
+    try:
+        step = max(1, int(sr // 16000))
+        buf = io.BytesIO(); sf.write(buf, x[::step], sr // step, format="WAV", subtype="PCM_16")
+        body = {"contents": [{"parts": [
+            {"inlineData": {"mimeType": "audio/wav", "data": base64.b64encode(buf.getvalue()).decode()}},
+            {"text": "Bu sesi kelimesi kelimesine yazıya dök. Sadece duyduğunu yaz, Türkçe olmayan kelimeleri de olduğu gibi yaz."}]}]}
+        for model in ("gemini-flash-latest", "gemini-2.5-flash"):
+            try:
+                req = urllib.request.Request(
+                    f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                    data=json.dumps(body).encode(),
+                    headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+                with urllib.request.urlopen(req, timeout=180) as r:
+                    yazi = json.load(r)["candidates"][0]["content"]["parts"][0]["text"].lower()
+                bulunan = [w for w in INGILIZCE_IZ if re.search(r"\b" + w + r"\b", yazi)]
+                if bulunan:
+                    print("UYARI - seste İngilizce/talimat okundu:", bulunan)
+                    return True
+                print("Ses kontrolü: temiz")
+                return False
+            except Exception as e:  # noqa
+                last = e
+        print("UYARI - ses kontrolü yapılamadı:", last)
+    except Exception as e:  # noqa
+        print("UYARI - ses kontrolü yapılamadı:", e)
+    return False
+
+
 def synth_gemini_all(texts, paths, voice=None):
     """Bütün anlatımı TEK istekle seslendirir (ücretsiz katmanın günlük istek sınırı düşük), sonra böler."""
     import soundfile as sf
     voice = voice or os.environ.get("GEMINI_TTS_VOICE") or GEMINI_VOICE
     sesli = [tepkiler(t, ilk=(k == 0)) for k, t in enumerate(texts)]
     texts = [temiz(t) for t in texts]
-    x, sr = _gemini_request("\n\n".join(sesli), voice)
-    dur = len(x) / sr
     expected = sum(syllables(w) for t in texts for w in t.split()) / 6.5
-    if not (0.5 * expected < dur < 1.9 * expected):
-        raise RuntimeError(f"ses süresi beklenmedik ({dur:.1f} sn, beklenen ~{expected:.1f} sn)")
+    for deneme in range(2):  # İngilizce talimat okunursa bir kez yeniden seslendir
+        x, sr = _gemini_request("\n\n".join(sesli), voice)
+        dur = len(x) / sr
+        if not (0.5 * expected < dur < 1.6 * expected):
+            hata = f"ses süresi beklenmedik ({dur:.1f} sn, beklenen ~{expected:.1f} sn)"
+        elif _ingilizce_kontrol(x, sr):
+            hata = "seste İngilizce talimat/etiket okundu"
+        else:
+            break
+        print("UYARI -", hata, "- yeniden deneniyor" if deneme == 0 else "")
+    else:
+        raise RuntimeError(hata)
     parts = _split_by_pauses(x, sr, texts)
     for y, p in zip(parts, paths):
         tmp = p + ".wav"
@@ -465,21 +511,32 @@ def word_timings(text, x, offset):
     regs = regions(mask, n, min_gap=0.09)
     # öbek sayısı kadar bölgeye indir: hece oranlarına en iyi uyan durak kombinasyonunu seç
     if len(regs) > len(phrases) and len(phrases) > 1:
-        from itertools import combinations
+        # dinamik programlama: öbek sonları, konuşma süresinin (duraklar hariç) birikimli hece oranına
+        # en yakın olduğu ve uzun durağa denk gelen yerlerden kesilir; birikimli hata kaymayı engeller
         syl = np.array([sum(syllables(w) for w in p) for p in phrases], float)
-        exp = syl / syl.sum()
-        span = regs[-1][1] - regs[0][0]
-        best, best_err = None, 1e9
-        cands = list(range(1, len(regs)))
-        if len(cands) <= 14:
-            for cut in combinations(cands, len(phrases) - 1):
-                b = [0, *cut, len(regs)]
-                durs = np.array([regs[b[k + 1] - 1][1] - regs[b[k]][0] for k in range(len(phrases))])
-                gapw = sum(regs[c][0] - regs[c - 1][1] for c in cut)  # uzun duraklar tercih edilir
-                err = np.sum((durs / span - exp) ** 2) - 0.02 * gapw
-                if err < best_err:
-                    best, best_err = b, err
-            regs = [(regs[best[k]][0], regs[best[k + 1] - 1][1]) for k in range(len(phrases))]
+        ce = np.cumsum(syl) / syl.sum()
+        P, R = len(phrases), len(regs)
+        cs = np.concatenate([[0.0], np.cumsum([r[1] - r[0] for r in regs])]); S = cs[-1]
+        G = float(os.environ.get("ALTYAZI_DURAK", "1.5"))
+        INF = 1e18
+        cost = [[INF] * (R + 1) for _ in range(P + 1)]
+        back = [[0] * (R + 1) for _ in range(P + 1)]
+        cost[0][0] = 0.0
+        for k in range(1, P + 1):
+            for j in range(k, R - (P - k) + 1):
+                gap = (regs[j][0] - regs[j - 1][1]) if j < R else 0.0
+                here = (cs[j] - ce[k - 1] * S) ** 2 - G * gap
+                best, bi = INF, 0
+                for i in range(k - 1, j):
+                    if cost[k - 1][i] < best:
+                        best, bi = cost[k - 1][i], i
+                cost[k][j], back[k][j] = best + here, bi
+        b, j = [R], R
+        for k in range(P, 0, -1):
+            j = back[k][j]; b.append(j)
+        b = b[::-1]
+        groups = [regs[b[k]:b[k + 1]] for k in range(P)]
+        regs = [(g[0][0], g[-1][1]) for g in groups]
     while len(regs) > len(phrases):
         gaps = [regs[i + 1][0] - regs[i][1] for i in range(len(regs) - 1)]
         i = int(np.argmin(gaps))
@@ -491,14 +548,19 @@ def word_timings(text, x, offset):
         span = total[1] - total[0]
         for s in syl:
             d = span * s / sum(syl); regs.append((acc, acc + d)); acc += d
+    if "groups" not in locals() or len(groups) != len(regs):
+        groups = [[r] for r in regs]
     out = []
-    for p, (a, b) in zip(phrases, regs):
-        wts = [syllables(w) + 0.35 for w in p]
-        acc = a
-        for w, wt in zip(p, wts):
-            d = (b - a) * wt / sum(wts)
-            out.append({"w": w, "t0": round(offset + acc, 3), "t1": round(offset + acc + d, 3)})
-            acc += d
+    for p, g in zip(phrases, groups):
+        # kelimeleri yalnızca konuşulan kısımlara dağıt: öbek içindeki duraklarda altyazı donmasın
+        sp = np.cumsum([0.0] + [r[1] - r[0] for r in g]); tot = sp[-1] or 1e-6
+        def at(f):
+            x_ = f * tot; m = min(len(g) - 1, int(np.searchsorted(sp, x_, side="right") - 1))
+            return g[m][0] + (x_ - sp[m])
+        wts = np.array([syllables(w) + 0.35 for w in p], float); cw = np.concatenate([[0.0], np.cumsum(wts)]) / wts.sum()
+        for k, w in enumerate(p):
+            t0, t1 = at(cw[k]), at(min(cw[k + 1], 0.99999))
+            out.append({"w": w, "t0": round(offset + t0, 3), "t1": round(offset + max(t1, t0 + 0.05), 3)})
     return out
 
 
