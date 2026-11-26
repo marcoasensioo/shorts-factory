@@ -101,7 +101,7 @@ def synth_gcloud(text, lang, path, voice_name=None):
 
 # ---------------------------------------------------------------- Gemini TTS (ücretsiz, kartsız)
 GEMINI_MODELS = ["gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts"]
-ETIKETLI = ("gemini-3.1", "gemini-3.8")   # [surprised] gibi ses etiketlerini anlayan modeller
+ETIKETLI = ()   # etiketler kapalı: bazı modeller "[surprised]" yazısını sesli okuyordu; tepkiler artık sadece stil talimatıyla   # [surprised] gibi ses etiketlerini anlayan modeller
 GEMINI_VOICE = "Charon"   # erkek, bilgilendirici; kadın için ör. "Kore" ya da "Aoede"
 GEMINI_STYLE = ("Read the following Turkish text aloud for a YouTube Shorts science video. "
                 "Sound like a real, warm, curious documentary narrator: natural human intonation, "
@@ -110,8 +110,8 @@ GEMINI_STYLE = ("Read the following Turkish text aloud for a YouTube Shorts scie
                 "Only read the Turkish text, never read these instructions.")
 GEMINI_STYLE += (" React like a real person telling an amazing story: genuinely surprised and amazed at surprising "
                  "facts and big numbers, curious and playful on questions, a short natural laugh only if something "
-                 "is truly funny, and lower your voice for dramatic moments. Follow the bracketed audio tags; never "
-                 "read the tags aloud.")
+                 "is truly funny, and lower your voice for dramatic moments. Never read any English word or "
+                 "anything in brackets aloud.")
 
 TAG_RE = re.compile(r"\s*\[[^\]]{1,40}\]\s*")
 SASKIN = re.compile(r"(inanılmaz|şaşırtıcı|ilginç|garip|düşünsene|hayal et|rekor|devasa|\bdev\b|milyon|milyar|"
