@@ -1,7 +1,7 @@
 name: Uzun Belgesel
 on:
   schedule:
-    - cron: "23 18 * * *"   # her gün ~21:23 (TR)
+    - cron: "23 11 * * *"   # her gün 14:23 (TR); GitHub gecikmesiyle ~15:00-16:00 başlar
   workflow_dispatch:
 permissions:
   contents: write
