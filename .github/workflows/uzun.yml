@@ -1,7 +1,7 @@
 name: Uzun Belgesel
 on:
   schedule:
-    - cron: "23 9 * * 0"   # her pazar ~12:23 (TR)
+    - cron: "23 18 * * *"   # her gün ~21:23 (TR)
   workflow_dispatch:
 permissions:
   contents: write
