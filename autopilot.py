@@ -119,6 +119,9 @@ if os.environ.get("IG_TOKEN") and os.environ.get("IG_UPLOAD", "1") != "0" and os
                 print("UYARI - Instagram hikayesi paylasilamadi:", e)
     except Exception as e:  # Instagram hatası YouTube'u/durumu bozmasın
         print("UYARI - Instagram'a yuklenemedi:", e)
+        import datetime  # hatayı depoya da yaz: kayıtlara bakmadan sebebi görebilelim
+        with open(os.path.join(ROOT, "state", "ig_hata.txt"), "a", encoding="utf-8") as f:
+            f.write(f"{(datetime.datetime.utcnow() + datetime.timedelta(hours=3)):%Y-%m-%d %H:%M} {d['id']}: {str(e)[:600]}\n")
 
 done.append(d["id"])
 os.makedirs(os.path.dirname(STATE), exist_ok=True)
